@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mule_moving_development
+  pool: 5
+  username: raphael
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mule_moving_test
+  pool: 5
+  username: raphael
