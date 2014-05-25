@@ -1,8 +1,8 @@
 Find your perfect mover
 
-= form_tag moves_path do
+= form_tag movers_path, method: :get do
   = label_tag :from
-  = text_field_tag :from, "Boulder", readonly: true
+  = text_field_tag :from, 'Boulder', readonly: true
   = label_tag :to
   = text_field_tag :to
   = submit_tag :discover, value: 'Discover'

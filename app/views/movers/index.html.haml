@@ -3,4 +3,4 @@
 
 %ul
   - @movers.each do |mover|
-    %li= mover.name
+    %li= link_to mover.name, mover_path(mover.id)

@@ -1,12 +1,11 @@
 module ObjectCreationMethods
   def new_mover(overrides = {})
-    defaults = { name: "My Little Mover #{counter}", description: "I am the best mover." }
+    defaults = { name: "My Little Mover #{counter}", description: 'I am the best mover.' }
     Mover.new { |mover| apply(mover, defaults, overrides) }
   end
 
   private
 
-  # with this code you can remove all your create methods
   def method_missing(method, *args, &block)
     new_method = method.to_s.gsub(/^create_/, 'new_')
     if method.to_s != new_method && self.respond_to?(new_method)

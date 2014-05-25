@@ -12,6 +12,7 @@ describe 'Home', type: :feature do
     fill_in :to, with: 'Denver'
 
     click_button 'Discover'
+
     expect(page).to have_content 'Boulder'
     expect(page).to have_content 'Denver'
   end
