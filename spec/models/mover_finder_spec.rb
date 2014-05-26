@@ -6,7 +6,10 @@ describe MoverFinder do
       mover1 = create_mover
       mover2 = create_mover
 
-      expect(subject.all).to match_array [mover1, mover2]
+      all = subject.all
+      expect(all.length).to eq 2
+      expect(all.first.class).to eq MoverEntity
+      expect(all.map(&:name)).to match_array [mover1.name, mover2.name]
     end
   end
 
@@ -14,7 +17,10 @@ describe MoverFinder do
     it 'returns mover entity' do
       mover = create_mover
 
-      expect(subject.find_by_id(mover.id)).to eq mover
+      found = subject.find_by_id(mover.id)
+
+      expect(found.id).to eq mover.id
+      expect(found.class).to eq MoverEntity
     end
 
     it 'raises when not found' do
