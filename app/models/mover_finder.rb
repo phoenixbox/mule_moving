@@ -1,9 +1,9 @@
 class MoverFinder
   def all
-    Mover.all
+    MoverRecord.all
   end
 
   def find_by_id(id)
-    Mover.find(id)
+    MoverRecord.find(id)
   end
 end

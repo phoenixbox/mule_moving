@@ -1,7 +1,7 @@
 module ObjectCreationMethods
   def new_mover(overrides = {})
     defaults = { name: "My Little Mover #{counter}", description: 'I am the best mover.' }
-    Mover.new { |mover| apply(mover, defaults, overrides) }
+    MoverRecord.new { |mover| apply(mover, defaults, overrides) }
   end
 
   private

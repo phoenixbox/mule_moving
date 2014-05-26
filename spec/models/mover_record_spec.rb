@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe Mover do
+describe MoverRecord do
 end
