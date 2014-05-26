@@ -22,6 +22,7 @@ describe YelpFinder do
 
       business = subject.find_business('yelp-san-francisco')
 
+      expect(business).to be_a YelpBusiness
       expect(business.rating).to eq 2.5
       expect(business.review_count).to eq 12
       expect(business.url).to eq 'www.yelp.com/your-mover'
