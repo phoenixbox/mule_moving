@@ -24,11 +24,22 @@ describe MoversController do
 
     it 'assigns all movers' do
       all_movers = [double]
-      allow(Mover).to receive(:all).and_return(all_movers)
+      allow_any_instance_of(MoverFinder).to receive(:all).and_return(all_movers)
 
       get :index
 
       expect(assigns(:movers)).to eq all_movers
+    end
+  end
+
+  describe 'GET #show' do
+    it 'assigns mover' do
+      mover = double('mover')
+      allow_any_instance_of(MoverFinder).to receive(:find_by_id).with('4').and_return(mover)
+
+      get :show, id: 4
+
+      expect(assigns(:mover)).to eq mover
     end
   end
 end
