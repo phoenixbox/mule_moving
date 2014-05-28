@@ -17,14 +17,14 @@ describe 'Movers', type: :feature do
   end
 
   it 'viewing a mover' do
-    create_mover name: 'Mafia Movers', description: 'You\'re under out protection now'
+    create_mover name: 'Mafia Movers', description: 'You\'re under our protection now'
 
     visit movers_path(from: 'Boulder', to: 'Denver')
 
     click_on 'Mafia Movers'
 
     expect(page).to have_content 'Mafia Movers'
-    expect(page).to have_content 'You\'re under out protection now'
+    expect(page).to have_content 'You\'re under our protection now'
 
     click_on 'Back'
 
