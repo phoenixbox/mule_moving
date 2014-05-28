@@ -1,4 +1,5 @@
 class MoverListItem
-  attr_accessor :name,
+  attr_accessor :id,
+                :name,
                 :description
 end

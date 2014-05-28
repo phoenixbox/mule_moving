@@ -5,16 +5,13 @@ class MoversController < ApplicationController
 
     @from = session[:from]
     @to = session[:to]
-    @movers = mover_finder.all
+    @mover_list_items = MoverListFinder.new.for_location(@from)
   end
 
   def show
-    @mover = mover_finder.find_by_id(params[:id])
+    @mover = MoverFinder.new.find_by_id(params[:id])
   end
 
   private
 
-  def mover_finder
-    MoverFinder.new
-  end
 end

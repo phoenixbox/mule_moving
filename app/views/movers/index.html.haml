@@ -2,5 +2,5 @@
 = @to
 
 %ul
-  - @movers.each do |mover|
-    %li= link_to mover.name, mover_path(mover.id)
+  - @mover_list_items.each do |mover_list_item|
+    %li= link_to mover_list_item.name, mover_path(mover_list_item.id)

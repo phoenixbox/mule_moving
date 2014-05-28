@@ -22,13 +22,13 @@ describe MoversController do
       expect(assigns(:to)).to eq 'Madagascar'
     end
 
-    it 'assigns all movers' do
-      all_movers = [double]
-      allow_any_instance_of(MoverFinder).to receive(:all).and_return(all_movers)
+    it 'assigns mover_list_items for location' do
+      mover_list_items = [double]
+      allow_any_instance_of(MoverListFinder).to receive(:for_location).with('Madagascar').and_return(mover_list_items)
 
-      get :index
+      get :index, from: 'Madagascar'
 
-      expect(assigns(:movers)).to eq all_movers
+      expect(assigns(:mover_list_items)).to eq mover_list_items
     end
   end
 

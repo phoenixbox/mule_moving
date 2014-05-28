@@ -8,9 +8,8 @@ describe MoverListFinder do
 
       mover_list_items = subject.for_location('Vail, CO')
 
-      expect(mover_list_items.length).to eq 2
-
       expect(mover_list_items.first).to be_a MoverListItem
+      expect(mover_list_items.length).to eq 2
       expect(mover_list_items.map(&:name)).to match_array ['Mafia Movers', 'Friendly Movers']
     end
   end
