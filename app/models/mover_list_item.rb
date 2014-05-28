@@ -5,4 +5,8 @@ class MoverListItem
                 :rating,
                 :review_count,
                 :review
+
+  def yelp?
+    !!rating
+  end
 end

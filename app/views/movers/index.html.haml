@@ -3,4 +3,9 @@
 
 %ul
   - @mover_list_items.each do |mover_list_item|
-    %li= link_to mover_list_item.name, mover_path(mover_list_item.id)
+    %li
+      = link_to mover_list_item.name, mover_path(mover_list_item.id)
+      = "#{mover_list_item.rating} Stars"
+      = "#{mover_list_item.review_count} Reviewers"
+      = "Latest Review #{mover_list_item.review}"
+

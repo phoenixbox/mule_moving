@@ -3,11 +3,15 @@ class MoverListFinder
     movers = MoverFinder.new.all
 
     movers.map do |mover|
-      MoverListItem.new.tap do |mover_list_item|
-        mover_list_item.id = mover.id
-        mover_list_item.name = mover.name
-        mover_list_item.description = mover.description
+      mover_yelp = MoverYelpRecord.find_by(mover_id: mover.id)
+      business = nil
+
+      if mover_yelp
+        mover.yelp_id = mover_yelp.yelp_id
+        business = YelpFinder.new.find_business(mover.yelp_id)
       end
+
+      MoverListItemBuilder.new.build(mover, business)
     end
   end
 end

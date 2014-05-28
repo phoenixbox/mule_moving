@@ -2,7 +2,14 @@ require 'spec_helper'
 
 describe 'Movers', type: :feature do
   it 'lists all movers' do
-    create_mover name: 'Taylor Moving'
+    taylor_moving = create_mover name: 'Taylor Moving'
+    MoverYelpRecord.create(mover_id: taylor_moving.id, yelp_id: 'taylors')
+    yelp_business = YelpBusiness.new
+    yelp_business.rating = 2.5
+    yelp_business.review_count = 10
+    yelp_business.snippet_text = 'These guys were horrible!'
+    allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(yelp_business)
+
     create_mover name: 'Your Personal Mover'
     create_mover name: 'Mafia Movers'
 
@@ -14,6 +21,13 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'Taylor Moving'
     expect(page).to have_content 'Your Personal Mover'
     expect(page).to have_content 'Mafia Movers'
+
+    and_it 'displays yelp information for movers' do
+      expect(page).to have_content '2.5 Stars'
+      expect(page).to have_content '10 Reviewers'
+      expect(page).to have_content 'Latest Review'
+      expect(page).to have_content 'These guys were horrible!'
+    end
   end
 
   it 'viewing a mover' do

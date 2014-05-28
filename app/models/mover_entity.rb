@@ -1,5 +1,6 @@
 class MoverEntity
   attr_accessor :id,
                 :name,
-                :description
+                :description,
+                :yelp_id
 end

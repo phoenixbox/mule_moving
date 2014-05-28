@@ -19,3 +19,11 @@ RSpec.configure do |config|
 
   config.order = "random"
 end
+
+def and_it(message)
+  if block_given?
+    yield
+  else
+    pending message
+  end
+end

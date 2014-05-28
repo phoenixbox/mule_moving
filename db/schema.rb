@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525004125) do
+ActiveRecord::Schema.define(version: 20140528040115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mover_yelp_ids", force: true do |t|
+    t.integer  "mover_id",   null: false
+    t.string   "yelp_id",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mover_yelp_ids", ["mover_id", "yelp_id"], name: "index_mover_yelp_ids_on_mover_id_and_yelp_id", unique: true, using: :btree
 
   create_table "movers", force: true do |t|
     t.string   "name",        null: false
