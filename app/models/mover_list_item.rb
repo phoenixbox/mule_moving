@@ -1,5 +1,8 @@
 class MoverListItem
   attr_accessor :id,
                 :name,
-                :description
+                :description,
+                :rating,
+                :review_count,
+                :review
 end
