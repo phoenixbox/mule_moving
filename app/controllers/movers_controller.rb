@@ -11,7 +11,4 @@ class MoversController < ApplicationController
   def show
     @mover = MoverFinder.new.find_by_id(params[:id])
   end
-
-  private
-
 end
