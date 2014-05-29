@@ -12,4 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+  $('#hero input').floatlabel({
+    slideInput: false,
+    paddingOffset: "5px",
+    labelStartTop: '30px',
+    labelEndTop: '0px'
+  });
+})
