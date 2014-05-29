@@ -9,5 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+@mixin white-with-border($percent: 0.45) {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,$percent);
+}
+
+@import 'bootstrap';
+@import 'components/navigation';
+@import 'components/landing_hero';

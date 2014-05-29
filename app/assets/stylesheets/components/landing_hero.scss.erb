@@ -1,0 +1,35 @@
+$hero-input-size: 2.5em;
+
+.row#hero {
+  background-image: url(<%= asset_path 'landing_hero.png' %>);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    margin: 20px auto;
+  }
+
+  .title {
+    // responsive font size from jquery fittext.js
+    @include white-with-border;
+  }
+
+  form {
+    input[type="text"] {
+      font-size: $hero-input-size;
+      width: 100%;
+      outline: 0;
+      color: $gray;
+    }
+  }
+}
+
+.btn-discover {
+  font-size: $hero-input-size;
+  @extend .btn-block;
+  @extend .btn-lg;
+  @extend .btn-default;
+  border-radius: 0px;
+  outline: 0;
+  margin: 35px auto 20px;
+}
