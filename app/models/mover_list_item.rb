@@ -3,8 +3,10 @@ class MoverListItem
                 :name,
                 :description,
                 :rating,
-                :review_count,
-                :review
+                :avg_price_per_hour,
+                :general_liability_insurance,
+                :years_in_business,
+                :employees
 
   def yelp?
     !!rating

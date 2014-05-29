@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528040115) do
+ActiveRecord::Schema.define(version: 20140529030257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mover_compliances", force: true do |t|
+    t.integer  "mover_id",                    null: false
+    t.string   "general_liability_insurance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mover_pricings", force: true do |t|
+    t.integer  "mover_id",           null: false
+    t.integer  "avg_price_per_hour"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mover_statistics", force: true do |t|
+    t.integer  "mover_id",          null: false
+    t.integer  "employees"
+    t.integer  "years_in_business"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "mover_yelp_ids", force: true do |t|
     t.integer  "mover_id",   null: false

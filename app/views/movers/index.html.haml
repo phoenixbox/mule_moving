@@ -6,6 +6,8 @@
     %li
       = link_to mover_list_item.name, mover_path(mover_list_item.id)
       = "#{mover_list_item.rating} Stars"
-      = "#{mover_list_item.review_count} Reviewers"
-      = "Latest Review #{mover_list_item.review}"
-
+      = "#{mover_list_item.years_in_business} Years in Business"
+      = "$#{mover_list_item.avg_price_per_hour} avg per hour"
+      - if mover_list_item.general_liability_insurance
+        = "Insured"
+      = "#{mover_list_item.description}"

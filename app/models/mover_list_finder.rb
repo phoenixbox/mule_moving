@@ -11,7 +11,11 @@ class MoverListFinder
         business = YelpFinder.new.find_business(mover.yelp_id)
       end
 
-      MoverListItemBuilder.new.build(mover, business)
+      pricing = MoverPricingRecord.find_by(mover_id: mover.id)
+      compliance = MoverComplianceRecord.find_by(mover_id: mover.id)
+      statistics = MoverStatisticsRecord.find_by(mover_id: mover.id)
+
+      MoverListItemBuilder.new.build(mover, business, pricing, compliance, statistics)
     end
   end
 end

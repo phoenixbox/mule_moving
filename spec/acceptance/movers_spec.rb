@@ -2,12 +2,15 @@ require 'spec_helper'
 
 describe 'Movers', type: :feature do
   it 'lists all movers' do
-    taylor_moving = create_mover name: 'Taylor Moving'
+    taylor_moving = create_mover name: 'Taylor Moving', description: 'Taylor Moving Description'
     MoverYelpRecord.create(mover_id: taylor_moving.id, yelp_id: 'taylors')
     yelp_business = YelpBusiness.new
     yelp_business.rating = 2.5
-    yelp_business.review_count = 10
-    yelp_business.snippet_text = 'These guys were horrible!'
+
+    MoverPricingRecord.create(mover_id: taylor_moving.id, avg_price_per_hour: 45)
+    MoverComplianceRecord.create(mover_id: taylor_moving.id, general_liability_insurance: 'http://ss3.com/gen_liab_insurance_5')
+    MoverStatisticsRecord.create(mover_id: taylor_moving.id, years_in_business: 10)
+
     allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(yelp_business)
 
     create_mover name: 'Your Personal Mover'
@@ -23,10 +26,11 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'Mafia Movers'
 
     and_it 'displays yelp information for movers' do
+      expect(page).to have_content '10 Years in Business'
+      expect(page).to have_content '$45 avg per hour'
+      expect(page).to have_content 'Insured'
       expect(page).to have_content '2.5 Stars'
-      expect(page).to have_content '10 Reviewers'
-      expect(page).to have_content 'Latest Review'
-      expect(page).to have_content 'These guys were horrible!'
+      expect(page).to have_content 'Taylor Moving Description'
     end
   end
 

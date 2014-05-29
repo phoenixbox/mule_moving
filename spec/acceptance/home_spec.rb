@@ -5,8 +5,8 @@ describe 'Home', type: :feature do
     visit root_path
 
     expect(page).to have_content 'Find your perfect mover'
-    expect(page).to have_field 'From', with: 'Boulder'
-    expect(page).to have_field 'To'
+    expect(page).to have_field :from, with: 'Boulder'
+    expect(page).to have_field :to
     expect(page).to have_button 'Discover'
 
     fill_in :to, with: 'Denver'
