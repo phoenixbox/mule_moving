@@ -1,8 +1,12 @@
-Find your perfect mover
+.row#hero
+  .container
+    .title.text-center
+      Find your perfect mover
 
-= form_tag movers_path, method: :get do
-  = label_tag :from
-  = text_field_tag :from, 'Boulder', readonly: true
-  = label_tag :to
-  = text_field_tag :to
-  = submit_tag :discover, value: 'Discover'
+    = form_tag movers_path, method: :get do
+      .col-xs-12.col-md-4.col-md-offset-2
+        = text_field_tag :from, 'Boulder', readonly: true, data: {label: "From:"}
+      .col-xs-12.col-md-4
+        = text_field_tag :to, nil, placeholder: "Denver...?", data: {label: "To:"}
+      .col-xs-12.col-md-4.col-md-offset-4
+        = submit_tag :discover, value: 'Discover', class: "btn-discover"
