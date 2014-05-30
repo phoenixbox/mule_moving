@@ -1,21 +1,16 @@
 class MoverListFinder
   def for_location(_)
     movers = MoverFinder.new.all
+    mover_items = movers.map { |mover| MoverListItem.new(mover) }
 
-    movers.map do |mover|
-      mover_yelp = MoverYelpRecord.find_by(mover_id: mover.id)
-      business = nil
-
-      if mover_yelp
-        mover.yelp_id = mover_yelp.yelp_id
-        business = YelpFinder.new.find_business(mover.yelp_id)
-      end
-
-      pricing = MoverPricingRecord.find_by(mover_id: mover.id)
-      compliance = MoverComplianceRecord.find_by(mover_id: mover.id)
-      statistics = MoverStatisticsRecord.find_by(mover_id: mover.id)
-
-      MoverListItemBuilder.new.build(mover, business, pricing, compliance, statistics)
+    hydrator = MoverAssociationsHydrator.new
+    mover_items.map do |mover_item|
+      hydrator.yelp(mover_item)
+      hydrator.compliance(mover_item)
+      hydrator.pricing(mover_item)
+      hydrator.statistics(mover_item)
     end
+
+    mover_items
   end
 end
