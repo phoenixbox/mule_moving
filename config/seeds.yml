@@ -26,33 +26,34 @@ movers:
     name: "Your Personal Mover"
     operating_hours:
       fri:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       mon:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       sat:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       sun:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       thu:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       tue:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       wed:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
     pricing: "45"
     primary_contact: #Internal
       name: "Annette Nelson"
       phone: "3032771221"
-    resources:
+    statistics:
       employees: "8"
       trucks: "1"
+      year_started: "2004"
     services:
       appliances_install: false
       appliances_uninstall: true
@@ -72,7 +73,6 @@ movers:
       shuttling: true
       storage: true
     website: "http://yourpersonalmover.net/" #Internal
-    year_started: "2004"
   -
     address: "4949 Broadway St, Ste 110 Boulder, CO 80304"
     compliance:
@@ -105,31 +105,32 @@ movers:
     name: "Taylor Moving"
     operating_hours:
       fri:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       mon:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       sat:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       sun:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       thu:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       tue:
-        from: "8:00"
-        to: "16:00"
+        open: "8:00"
+        close: "16:00"
       wed:
-        from: "8:00"
-        to: "13:00"
+        open: "8:00"
+        close: "13:00"
     pricing: ""
     primary_contact: #Internal
       name: "Leah Taylor"
       phone: "3034435885"
-    resources:
+    statistics:
+      year_started: "1996"
       employees: ""
       trucks: ""
     services:
@@ -151,7 +152,6 @@ movers:
       shuttling: true
       storage: true
     website: "http://www.taylormove.com" #Internal
-    year_started: "1996"
   -
     address: "10500 E. 56th Ave, Ste 106 Denver, CO 80239"
     compliance:
@@ -178,31 +178,32 @@ movers:
     name: "Abe Lincoln Movers"
     operating_hours:
       fri:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       mon:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       sat:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       sun:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       thu:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       tue:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
       wed:
-        from: "8:00"
-        to: "17:00"
+        open: "8:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Dwayne Lopez"
       phone: "3034586683"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -224,7 +225,6 @@ movers:
       shuttling: true
       storage: true
     website: "" #Internal
-    year_started: ""
   -
     address: "745 Lipan St, Denver, Colorado, 80204"
     compliance:
@@ -251,31 +251,32 @@ movers:
     name: Movemasters
     operating_hours:
       fri:
-        from: "08:00"
-        to: "16:00"
+        open: "08:00"
+        close: "16:00"
       mon:
-        from: "08:00"
-        to: "16:00"
+        open: "08:00"
+        close: "16:00"
       sat:
-        from: "00:00"
-        to: "00:00"
+        open: "00:00"
+        close: "00:00"
       sun:
-        from: "00:00"
-        to: "00:00"
+        open: "00:00"
+        close: "00:00"
       thu:
-        from: "08:00"
-        to: "16:00"
+        open: "08:00"
+        close: "16:00"
       tue:
-        from: "08:00"
-        to: "16:00"
+        open: "08:00"
+        close: "16:00"
       wed:
-        from: "08:00"
-        to: "16:00"
+        open: "08:00"
+        close: "16:00"
     pricing: "44"
     primary_contact: #Internal
       name: "Randal Hirzel"
       phone: "3038938200"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -297,7 +298,6 @@ movers:
       shuttling: false
       storage: true
     website: movemastersdenver.com #Internal
-    year_started: ""
   -
     address: "8201 E Iliff Ave, Denver, CO 80231"
     compliance:
@@ -324,31 +324,32 @@ movers:
     name: "All The Right Moves"
     operating_hours:
       fri:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       mon:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       sat:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       sun:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       thu:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       tue:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
       wed:
-        from: "08:00"
-        to: "20:00"
+        open: "08:00"
+        close: "20:00"
     pricing: ""
     primary_contact: #Internal
       name: "Susanna Marez"
       phone: "7202204319"
-    resources:
+    statistics:
+      year_started: "1998"
       employees: ""
       trucks: ""
     services:
@@ -370,7 +371,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://alltherightmovesdenver.com/" #Internal
-    year_started: "1998"
   -
     address: "4321 Broadway 5, Denver, Colorado 80216"
     compliance:
@@ -397,31 +397,32 @@ movers:
     name: "Stallion Moving Services"
     operating_hours:
       fri:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       mon:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       sat:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       sun:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       thu:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       tue:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       wed:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Bella K"
       phone: "7208808554"
-    resources:
+    statistics:
+      year_started: "2009"
       employees: ""
       trucks: ""
     services:
@@ -443,7 +444,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://www.moversdenver.co" #Internal
-    year_started: "2009"
   -
     address: "651 E 66th Ave, Denver, Colorado, 80229"
     compliance:
@@ -470,31 +470,32 @@ movers:
     name: "Fischer Van Lines, Moving & Storage LLC"
     operating_hours:
       fri:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       mon:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       sat:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       sun:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       thu:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       tue:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       wed:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Jeff Fisher"
       phone: "7202979904"
-    resources:
+    statistics:
+      year_started: ""
       employees: "20"
       trucks: ""
     services:
@@ -516,7 +517,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://www.fischervanlines.com/index.php/more" #Internal
-    year_started: ""
   -
     address: "5700 E. 56th Ave, Commerce City, CO 80022"
     compliance:
@@ -543,31 +543,32 @@ movers:
     name: "Exodus Moving & Storage"
     operating_hours:
       fri:
-        from: "07:30"
-        to: "17:00"
+        open: "07:30"
+        close: "17:00"
       mon:
-        from: "07:30"
-        to: "17:00"
+        open: "07:30"
+        close: "17:00"
       sat:
-        from: "08:00"
-        to: "11:00"
+        open: "08:00"
+        close: "11:00"
       sun:
-        from: "00:00"
-        to: "00:00"
+        open: "00:00"
+        close: "00:00"
       thu:
-        from: "07:30"
-        to: "17:00"
+        open: "07:30"
+        close: "17:00"
       tue:
-        from: "07:30"
-        to: "17:00"
+        open: "07:30"
+        close: "17:00"
       wed:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Ilan Levy"
       phone: "9704841488"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -589,7 +590,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://www.exodusmoving.com" #Internal
-    year_started: ""
   -
     address: "1615 California St 401, Denver, CO 80202"
     compliance:
@@ -616,31 +616,32 @@ movers:
     name: "Altitude Movers Denver"
     operating_hours:
       fri:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       mon:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       sat:
-        from: "08:00"
-        to: "11:00"
+        open: "08:00"
+        close: "11:00"
       sun:
-        from: "00:00"
-        to: "00:00"
+        open: "00:00"
+        close: "00:00"
       thu:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       tue:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
       wed:
-        from: "09:00"
-        to: "17:00"
+        open: "09:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Megan S"
       phone: "7202985909"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -662,7 +663,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://altitudemoversdenver.com/" #Internal
-    year_started: ""
   -
     address: "2323 S Troy St, 2-105 Aurora, CO 80014"
     compliance:
@@ -689,31 +689,32 @@ movers:
     name: "A Simple Move LLC"
     operating_hours:
       fri:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       mon:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       sat:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       sun:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       thu:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       tue:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
       wed:
-        from: "08:00"
-        to: "18:00"
+        open: "08:00"
+        close: "18:00"
     pricing: ""
     primary_contact: #Internal
       name: "Dwayne McFall"
       phone: "3033680700"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -735,7 +736,6 @@ movers:
       shuttling: false
       storage: false
     website: "http://www.asimplemovedenver.com" #Internal
-    year_started: ""
   -
     address: "12000 E 45th Ave 103, Denver, CO 80239"
     compliance:
@@ -762,31 +762,32 @@ movers:
     name: "Amazing Moves Moving & Storage"
     operating_hours:
       fri:
-        from: "08:00"
-        to: "17:00"
+        open: "08:00"
+        close: "17:00"
       mon:
-        from: "08:00"
-        to: "17:00"
+        open: "08:00"
+        close: "17:00"
       sat:
-        from: "09:00"
-        to: "13:00"
+        open: "09:00"
+        close: "13:00"
       sun:
-        from: "09:00"
-        to: "13:00"
+        open: "09:00"
+        close: "13:00"
       thu:
-        from: "08:00"
-        to: "17:00"
+        open: "08:00"
+        close: "17:00"
       tue:
-        from: "08:00"
-        to: "17:00"
+        open: "08:00"
+        close: "17:00"
       wed:
-        from: "08:00"
-        to: "17:00"
+        open: "08:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: "Marshall Aikman"
       phone: "3036687444"
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -808,7 +809,6 @@ movers:
       shuttling: false
       storage: false
     website: www.amazingmoves.com #Internal
-    year_started: ""
   -
     address: ""
     compliance:
@@ -835,31 +835,32 @@ movers:
     name: ""
     operating_hours:
       fri:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       mon:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       sat:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       sun:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       thu:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       tue:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
       wed:
-        from: "00:00"
-        to: "17:00"
+        open: "00:00"
+        close: "17:00"
     pricing: ""
     primary_contact: #Internal
       name: ""
       phone: ""
-    resources:
+    statistics:
+      year_started: ""
       employees: ""
       trucks: ""
     services:
@@ -881,4 +882,3 @@ movers:
       shuttling: false
       storage: false
     website: "" #Internal
-    year_started: ""

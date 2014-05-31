@@ -1,0 +1,3 @@
+class MoverDetailFinder
+
+end
