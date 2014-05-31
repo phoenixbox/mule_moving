@@ -10,21 +10,12 @@ module ObjectCreationMethods
   end
 
   def new_yelp_business(overrides = {})
-    defaults = {
-      rating: 2.5,
-      review_count: 12,
-      url: 'www.yelp.com/your-mover',
-      rating_img_url: 'www.example.com/image/1',
-      rating_img_url_small: 'www.example.com/image/1/small',
-      snippet_text: 'These guys were...'
-    }
+    defaults = {}
     YelpBusiness.new.tap { |business| apply(business, defaults, overrides) }
   end
 
   def new_mover_pricing(overrides = {})
-    defaults = {
-      avg_price_per_hour: 25
-    }
+    defaults = {}
     MoverPricingRecord.new { |record| apply(record, defaults, overrides) }
   end
 
@@ -34,21 +25,12 @@ module ObjectCreationMethods
   end
 
   def new_mover_statistics(overrides = {})
-    defaults = {
-      year_started: 2011,
-      employees: 8,
-      trucks: 2
-    }
+    defaults = {}
     MoverStatisticsRecord.new { |record| apply(record, defaults, overrides) }
   end
 
   def new_mover_address(overrides = {})
-    defaults = {
-      line1: '123 Circle Road',
-      city: 'Boulder',
-      state: 'CO',
-      zip: '80301'
-    }
+    defaults = {}
     MoverAddressRecord.new { |record| apply(record, defaults, overrides) }
   end
 
@@ -62,7 +44,7 @@ module ObjectCreationMethods
     MoverOpeningHourRecord.new { |record| apply(record, defaults, overrides) }
   end
 
-  def new_mover_services(overrides  = {})
+  def new_mover_services(overrides = {})
     defaults = {}
     MoverServicesRecord.new { |record| apply(record, defaults, overrides) }
   end
