@@ -18,8 +18,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://yourpersonalmover.net/wp-content/uploads/2012/01/your-personal-mover-2012-denver-crew.jpg"
+        url: "http://yourpersonalmover.net/wp-content/uploads/2012/01/your-personal-mover-2012-denver-crew.jpg"
       secondary:
         -
           url: "http://yourpersonalmover.net/wp-content/uploads/2013/08/Brian-Annette-and-family-Your-Personal-Movers-owners.jpg"
@@ -102,8 +101,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://www.taylormove.com/images/slide2/DSCN0190.jpg"
+        url: "http://www.taylormove.com/images/slide2/DSCN0190.jpg"
       secondary:
         -
           url: "http://www.taylormove.com/images/slide2/truck1.jpg"
@@ -180,8 +178,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: "http://www.taylormove.com/images/slide2/truck1.jpg"
@@ -258,8 +255,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: ""
@@ -336,8 +332,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://alltherightmovesdenver.com/.cm4all/iproc.php/CustomerImages/Our%20trucks%20are%20well%20serviced%20and%20ready%20to%20head%20to%20the%20hills.JPG/scale_800_600%3Bdonotenlarge/"
+        url: "http://alltherightmovesdenver.com/.cm4all/iproc.php/CustomerImages/Our%20trucks%20are%20well%20serviced%20and%20ready%20to%20head%20to%20the%20hills.JPG/scale_800_600%3Bdonotenlarge/"
       secondary:
         -
           url: ""
@@ -414,8 +409,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: ""
@@ -492,8 +486,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://www.fischervanlines.com/images/IMG_5853.jpg"
+        url: "http://www.fischervanlines.com/images/IMG_5853.jpg"
       secondary:
         -
           url: ""
@@ -570,8 +563,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://www.exodusmoving.com/img/slide3.jpg"
+        url: "http://www.exodusmoving.com/img/slide3.jpg"
       secondary:
         -
           url: "http://www.exodusmoving.com/img/slide1.jpg"
@@ -648,8 +640,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: "http://altitudemoversdenver.com/wp-content/uploads/2013/06/packing-headboard.jpg"
+        url: "http://altitudemoversdenver.com/wp-content/uploads/2013/06/packing-headboard.jpg"
       secondary:
         -
           url: ""
@@ -726,8 +717,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: ""
@@ -804,8 +794,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: ""
@@ -882,8 +871,7 @@ movers:
       yelp: ""
     images:
       hero:
-        -
-          url: ""
+        url: ""
       secondary:
         -
           url: ""
