@@ -49,6 +49,11 @@ module ObjectCreationMethods
     MoverServicesRecord.new { |record| apply(record, defaults, overrides) }
   end
 
+  def new_mover_hero(overrides = {})
+    defaults = {}
+    MoverHeroRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
   private
 
   def method_missing(method, *args, &block)

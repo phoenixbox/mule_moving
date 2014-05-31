@@ -17,7 +17,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'only hydrated with setter attributes they allow' do
-      MoverYelpRecord.create(mover_id: 12, yelp_id: 'abc-123')
+      create_mover_yelp(mover_id: 12, yelp_id: 'abc-123')
       yelp_business = YelpBusiness.new
       yelp_business.stars = 2.5
       yelp_business.review_count = 90
@@ -39,7 +39,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns the yelp properties' do
-      MoverYelpRecord.create(mover_id: 12, yelp_id: 'abc-123')
+      create_mover_yelp(mover_id: 12, yelp_id: 'abc-123')
       yelp_business = YelpBusiness.new
       yelp_business.stars = 2.5
       yelp_business.review_count = 90
@@ -73,7 +73,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns pricing details' do
-      MoverPricingRecord.create(mover_id: 12, avg_price_per_hour: 19)
+      create_mover_pricing(mover_id: 12, avg_price_per_hour: 19)
 
       subject.pricing(hydratee)
 
@@ -99,11 +99,11 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns compliance details' do
-      MoverComplianceRecord.create!(mover_id: 12,
-                                    automobile_insurance: 'Super Duper Ins. 1',
-                                    cargo_insurance: 'Super Duper Ins. 2',
-                                    general_liability_insurance: 'Super Duper Ins. 3',
-                                    workers_compensation: 'Super Duper Ins. 4'
+      create_mover_compliance(mover_id: 12,
+                              automobile_insurance: 'Super Duper Ins. 1',
+                              cargo_insurance: 'Super Duper Ins. 2',
+                              general_liability_insurance: 'Super Duper Ins. 3',
+                              workers_compensation: 'Super Duper Ins. 4'
       )
 
       subject.compliance(hydratee)
@@ -131,7 +131,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns statistics' do
-      MoverStatisticsRecord.create(mover_id: 12, employees: 2, trucks: 9, year_started: 2012)
+      create_mover_statistics(mover_id: 12, employees: 2, trucks: 9, year_started: 2012)
 
       subject.statistics(hydratee)
 
@@ -155,7 +155,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns address' do
-      MoverAddressRecord.create!(
+      create_mover_address(
         mover_id: 12,
         line1: '123 Central Place',
         line2: 'Apt 5',
@@ -184,7 +184,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns hero' do
-      MoverHeroRecord.create!(
+      create_mover_hero(
         mover_id: 12,
         image_url: 'www.example.com/hero-img'
       )
@@ -225,7 +225,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns services' do
-      MoverServicesRecord.create!(
+      create_mover_services(
         mover_id: 12,
         appliances_install: true,
         appliances_uninstall: true,
@@ -285,7 +285,7 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns licenses' do
-      MoverLicensesRecord.create!(
+      create_mover_licenses(
         mover_id: 12,
         company_registration: 'abc-123',
         puc: 'abc-124',
@@ -322,13 +322,13 @@ describe MoverAssociationsHydrator do
     }
 
     it 'assigns hours' do
-      MoverOpeningHourRecord.create!(
+      create_mover_opening_hour(
         mover_id: 12,
         day_of_week: 1,
         open: Time.zone.parse('8:00'),
         close: Time.zone.parse('16:00')
       )
-      MoverOpeningHourRecord.create!(
+      create_mover_opening_hour(
         mover_id: 12,
         day_of_week: 5,
         open: Time.zone.parse('6:00'),
