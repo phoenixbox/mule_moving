@@ -5,7 +5,7 @@ describe 'Movers', type: :feature do
     taylor_moving = create_mover name: 'Taylor Moving', description: 'Taylor Moving Description'
     create_mover_yelp mover_id: taylor_moving.id, yelp_id: 'taylors'
     create_mover_pricing(mover_id: taylor_moving.id, avg_price_per_hour: 45)
-    create_mover_compliance(mover_id: taylor_moving.id, general_liability_insurance: 'http://ss3.com/gen_liab_insurance_5')
+    create_mover_compliance(mover_id: taylor_moving.id, general_liability_insurance: true)
     create_mover_statistics(mover_id: taylor_moving.id, year_started: 2004)
 
     allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(new_yelp_business stars: 2.5)
@@ -35,7 +35,7 @@ describe 'Movers', type: :feature do
     create_mover_pricing(mover_id: mover.id, avg_price_per_hour: 46)
     create_mover_address(mover_id: mover.id, line1: '123 Circle Road', city: 'Boulder', state: 'CO', zip: '80301')
     create_mover_yelp(mover_id: mover.id, yelp_id: 'mafioso')
-    create_mover_compliance(mover_id: mover.id, automobile_insurance: 'www.example.com/insurance-doc-2', cargo_insurance: 'www.example.com/insurance-doc-3')
+    create_mover_compliance(mover_id: mover.id, automobile_insurance: true, cargo_insurance: true)
     create_mover_licenses(mover_id: mover.id, company_registration: 'Z123', puc: 'A123', state_dot: 'B123', us_dot: 'C123')
     create_mover_opening_hour(mover_id: mover.id, day_of_week: 1, open: Time.zone.parse('8:00'), close: Time.zone.parse('10:00'))
     create_mover_opening_hour(mover_id: mover.id, day_of_week: 7, open: Time.zone.parse('8:00'), close: Time.zone.parse('20:00'))

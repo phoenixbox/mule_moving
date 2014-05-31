@@ -100,18 +100,18 @@ describe MoverAssociationsHydrator do
 
     it 'assigns compliance details' do
       create_mover_compliance(mover_id: 12,
-                              automobile_insurance: 'Super Duper Ins. 1',
-                              cargo_insurance: 'Super Duper Ins. 2',
-                              general_liability_insurance: 'Super Duper Ins. 3',
-                              workers_compensation: 'Super Duper Ins. 4'
+                              automobile_insurance: true,
+                              cargo_insurance: false,
+                              general_liability_insurance: true,
+                              workers_compensation: true
       )
 
       subject.compliance(hydratee)
 
-      expect(hydratee.automobile_insurance).to eq 'Super Duper Ins. 1'
-      expect(hydratee.cargo_insurance).to eq 'Super Duper Ins. 2'
-      expect(hydratee.general_liability_insurance).to eq 'Super Duper Ins. 3'
-      expect(hydratee.workers_compensation).to eq 'Super Duper Ins. 4'
+      expect(hydratee.automobile_insurance).to eq true
+      expect(hydratee.cargo_insurance).to eq false
+      expect(hydratee.general_liability_insurance).to eq true
+      expect(hydratee.workers_compensation).to eq true
     end
 
     it 'handles not found' do
