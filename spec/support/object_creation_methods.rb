@@ -1,7 +1,70 @@
 module ObjectCreationMethods
   def new_mover(overrides = {})
     defaults = { name: "My Little Mover #{counter}", description: 'I am the best mover.' }
-    MoverRecord.new { |mover| apply(mover, defaults, overrides) }
+    MoverRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_yelp(overrides = {})
+    defaults = {}
+    MoverYelpRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_yelp_business(overrides = {})
+    defaults = {
+      rating: 2.5,
+      review_count: 12,
+      url: 'www.yelp.com/your-mover',
+      rating_img_url: 'www.example.com/image/1',
+      rating_img_url_small: 'www.example.com/image/1/small',
+      snippet_text: 'These guys were...'
+    }
+    YelpBusiness.new.tap { |business| apply(business, defaults, overrides) }
+  end
+
+  def new_mover_pricing(overrides = {})
+    defaults = {
+      avg_price_per_hour: 25
+    }
+    MoverPricingRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_compliance(overrides = {})
+    defaults = {}
+    MoverComplianceRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_statistics(overrides = {})
+    defaults = {
+      year_started: 2011,
+      employees: 8,
+      trucks: 2
+    }
+    MoverStatisticsRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_address(overrides = {})
+    defaults = {
+      line1: '123 Circle Road',
+      city: 'Boulder',
+      state: 'CO',
+      zip: '80301'
+    }
+    MoverAddressRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_licenses(overrides = {})
+    defaults = {}
+    MoverLicensesRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_opening_hour(overrides = {})
+    defaults = {}
+    MoverOpeningHourRecord.new { |record| apply(record, defaults, overrides) }
+  end
+
+  def new_mover_services(overrides  = {})
+    defaults = {}
+    MoverServicesRecord.new { |record| apply(record, defaults, overrides) }
   end
 
   private

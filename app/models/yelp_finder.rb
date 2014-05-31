@@ -18,7 +18,6 @@ class YelpFinder
       yelp_business.rating = business.rating
       yelp_business.review_count = business.review_count
       yelp_business.url = business.url
-      yelp_business.mobile_url = business.mobile_url
       yelp_business.rating_img_url = business.rating_img_url
       yelp_business.rating_img_url_small = business.rating_img_url_small
       yelp_business.snippet_text = business.snippet_text

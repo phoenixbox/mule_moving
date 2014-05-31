@@ -5,8 +5,8 @@
   - @mover_list_items.each do |mover_list_item|
     %li
       = link_to mover_list_item.name, mover_path(mover_list_item.id)
-      = "#{mover_list_item.rating} Stars"
-      = "#{mover_list_item.years_in_business} Years in Business"
+      = "#{mover_list_item.yelp_rating} Stars"
+      = "Since #{mover_list_item.year_started}"
       = "$#{mover_list_item.avg_price_per_hour} avg per hour"
       - if mover_list_item.general_liability_insurance
         = "Insured"

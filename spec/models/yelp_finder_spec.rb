@@ -12,7 +12,6 @@ describe YelpFinder do
         rating: 2.5,
         review_count: 12,
         url: 'www.yelp.com/your-mover',
-        mobile_url: 'm.yelp.com/your-mover',
         rating_img_url: 'www.example.com/image/1',
         rating_img_url_small: 'www.example.com/image/1/small',
         snippet_text: 'These guys were...'
@@ -26,7 +25,6 @@ describe YelpFinder do
       expect(business.rating).to eq 2.5
       expect(business.review_count).to eq 12
       expect(business.url).to eq 'www.yelp.com/your-mover'
-      expect(business.mobile_url).to eq 'm.yelp.com/your-mover'
       expect(business.rating_img_url).to eq 'www.example.com/image/1'
       expect(business.rating_img_url_small).to eq 'www.example.com/image/1/small'
       expect(business.snippet_text).to eq 'These guys were...'

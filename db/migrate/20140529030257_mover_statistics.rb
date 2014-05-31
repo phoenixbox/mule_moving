@@ -3,7 +3,7 @@ class MoverStatistics < ActiveRecord::Migration
     create_table :mover_statistics do |t|
       t.integer :mover_id, null: false
       t.integer :employees
-      t.integer :years_in_business
+      t.integer :year_started
 
       t.timestamps
     end

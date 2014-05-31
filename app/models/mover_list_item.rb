@@ -2,10 +2,10 @@ class MoverListItem
   attr_accessor :id,
                 :name,
                 :description,
-                :rating,
+                :yelp_rating,
                 :avg_price_per_hour,
                 :general_liability_insurance,
-                :years_in_business,
+                :year_started,
                 :employees
 
   def initialize(mover = nil)
@@ -15,6 +15,6 @@ class MoverListItem
   end
 
   def yelp?
-    !!rating
+    !!yelp_rating
   end
 end

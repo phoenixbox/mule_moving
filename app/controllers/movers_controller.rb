@@ -9,6 +9,6 @@ class MoversController < ApplicationController
   end
 
   def show
-    @mover = MoverFinder.new.find_by_id(params[:id])
+    @mover_detail = MoverDetailFinder.new.for_id(params[:id])
   end
 end

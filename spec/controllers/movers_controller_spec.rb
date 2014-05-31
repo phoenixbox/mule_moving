@@ -33,13 +33,13 @@ describe MoversController do
   end
 
   describe 'GET #show' do
-    it 'assigns mover' do
-      mover = double('mover')
-      allow_any_instance_of(MoverFinder).to receive(:find_by_id).with('4').and_return(mover)
+    it 'assigns mover_detail' do
+      mover_detail = double('mover detail')
+      allow_any_instance_of(MoverDetailFinder).to receive(:for_id).with('4').and_return(mover_detail)
 
       get :show, id: 4
 
-      expect(assigns(:mover)).to eq mover
+      expect(assigns(:mover_detail)).to eq mover_detail
     end
   end
 end
