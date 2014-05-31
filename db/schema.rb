@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531164444) do
+ActiveRecord::Schema.define(version: 20140531184048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20140531164444) do
 
   create_table "mover_compliances", force: true do |t|
     t.integer  "mover_id",                    null: false
-    t.string   "general_liability_insurance"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "automobile_insurance"
-    t.string   "cargo_insurance"
-    t.string   "workers_compensation"
+    t.boolean  "cargo_insurance"
+    t.boolean  "automobile_insurance"
+    t.boolean  "workers_compensation"
+    t.boolean  "general_liability_insurance"
   end
 
   add_index "mover_compliances", ["mover_id"], name: "index_mover_compliances_on_mover_id", unique: true, using: :btree
