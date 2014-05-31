@@ -1,0 +1,4 @@
+@mixin white-with-border($percent: 0.45) {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,$percent);
+}
