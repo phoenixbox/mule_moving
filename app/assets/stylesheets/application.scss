@@ -11,8 +11,16 @@
  *= require_self
  */
 
+$mule-aqua: #43C1C7;
+$mule-color: $mule-aqua;
+$brand-primary: $mule-aqua; // this overwrites bootstraps primary color
+$panel-mule-border: $mule-color;
+$panel-mule-border-width: 3px;
+$panel-mule-text: black;
+$panel-mule-heading-bg: white;
 
 @import 'bootstrap';
 @import 'components/mixins';
 @import 'components/navigation';
 @import 'components/landing_hero';
+@import 'components/lists';

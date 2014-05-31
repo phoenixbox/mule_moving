@@ -1,0 +1,26 @@
+%li.row
+  .panel-mule
+    .panel-body
+      .row
+        .col-md-12
+          %p.lead
+            = link_to mover_list_item.name, mover_path(mover_list_item.id)
+      .row
+        .col-md-4
+          %ul
+            - if mover_list_item.yelp_stars
+              %li
+                = "#{mover_list_item.yelp_stars} Stars"
+            - if mover_list_item.year_started
+              %li
+                = "Since #{mover_list_item.year_started}"
+            - if mover_list_item.avg_price_per_hour
+              %li
+                = "$#{mover_list_item.avg_price_per_hour} avg per hour"
+            - if mover_list_item.general_liability_insurance
+              %li
+                = "Insured"
+          %img.img-rounded.img-responsive{src: "http://placehold.it/120/120"}
+        .col-md-8
+          %p.mover-description
+            = truncate(mover_list_item.description, length: 400) { link_to "Read More", mover_path(mover_list_item.id) }
