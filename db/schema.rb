@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531032306) do
+ActiveRecord::Schema.define(version: 20140531164444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 20140531032306) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "mover_pricings", ["mover_id"], name: "index_mover_pricings_on_mover_id", unique: true, using: :btree
 
   create_table "mover_services", force: true do |t|
     t.integer  "mover_id",                               null: false
