@@ -1,7 +1,12 @@
 ---
 movers:
   -
-    address: "879 Brickyard Circle, Golden, CO 80403"
+    address:
+      line1: "879 Brickyard Circle"
+      line2: ""
+      city: "Golden"
+      state: "CO"
+      zip: "80403"
     compliance:
       automobile_insurance: true
       cargo_insurance: true
@@ -74,7 +79,12 @@ movers:
       storage: true
     website: "http://yourpersonalmover.net/" #Internal
   -
-    address: "4949 Broadway St, Ste 110 Boulder, CO 80304"
+    address:
+      line1: "4949 Broadway St"
+      line2: "Ste 110"
+      city: "Boulder"
+      state: "CO"
+      zip: "80304"
     compliance:
       automobile_insurance:
         coverage: "1000000"
@@ -153,7 +163,12 @@ movers:
       storage: true
     website: "http://www.taylormove.com" #Internal
   -
-    address: "10500 E. 56th Ave, Ste 106 Denver, CO 80239"
+    address:
+      line1: "10500 E. 56th Ave"
+      line2: "Ste 106"
+      city: "Denver"
+      state: "CO"
+      zip: "80239"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -226,7 +241,12 @@ movers:
       storage: true
     website: "" #Internal
   -
-    address: "745 Lipan St, Denver, Colorado, 80204"
+    address:
+      line1: "879 Brickyard Circle"
+      line2: ""
+      city: "Denver"
+      state: "CO"
+      zip: "80204"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -299,7 +319,12 @@ movers:
       storage: true
     website: movemastersdenver.com #Internal
   -
-    address: "8201 E Iliff Ave, Denver, CO 80231"
+    address:
+      line1: "8201 E Iliff Ave"
+      line2: ""
+      city: "Denver"
+      state: "CO"
+      zip: "80231"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -372,7 +397,12 @@ movers:
       storage: false
     website: "http://alltherightmovesdenver.com/" #Internal
   -
-    address: "4321 Broadway 5, Denver, Colorado 80216"
+    address:
+      line1: "4321 Broadway"
+      line2: "5"
+      city: "Denver"
+      state: "CO"
+      zip: "80216"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -445,7 +475,12 @@ movers:
       storage: false
     website: "http://www.moversdenver.co" #Internal
   -
-    address: "651 E 66th Ave, Denver, Colorado, 80229"
+    address:
+      line1: "651 E 66th Ave"
+      line2: ""
+      city: "Denver"
+      state: "CO"
+      zip: "80229"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -518,7 +553,12 @@ movers:
       storage: false
     website: "http://www.fischervanlines.com/index.php/more" #Internal
   -
-    address: "5700 E. 56th Ave, Commerce City, CO 80022"
+    address:
+      line1: "5700 E. 56th Ave"
+      line2: ""
+      city: "Commerce City"
+      state: "CO"
+      zip: "80022"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -591,7 +631,12 @@ movers:
       storage: false
     website: "http://www.exodusmoving.com" #Internal
   -
-    address: "1615 California St 401, Denver, CO 80202"
+    address:
+      line1: "1615 California St"
+      line2: "401"
+      city: "Denver"
+      state: "CO"
+      zip: "80202"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -664,7 +709,12 @@ movers:
       storage: false
     website: "http://altitudemoversdenver.com/" #Internal
   -
-    address: "2323 S Troy St, 2-105 Aurora, CO 80014"
+    address:
+      line1: "2323 S Troy St"
+      line2: "2-105"
+      city: "Aurora"
+      state: "CO"
+      zip: "80014"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -737,7 +787,12 @@ movers:
       storage: false
     website: "http://www.asimplemovedenver.com" #Internal
   -
-    address: "12000 E 45th Ave 103, Denver, CO 80239"
+    address:
+      line1: "12000 E 45th Ave"
+      line2: "103"
+      city: "Denver"
+      state: "CO"
+      zip: "80239"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
@@ -810,7 +865,12 @@ movers:
       storage: false
     website: www.amazingmoves.com #Internal
   -
-    address: ""
+    address:
+      line1: ""
+      line2: ""
+      city: ""
+      state: ""
+      zip: ""
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
