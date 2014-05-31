@@ -1,8 +1,8 @@
 class YelpBusiness
-  attr_accessor :rating,
+  attr_accessor :stars,
                 :review_count,
+                :review_snippet,
                 :url,
-                :rating_img_url,
-                :rating_img_url_small,
-                :snippet_text
+                :stars_img_url,
+                :stars_img_url_small
 end

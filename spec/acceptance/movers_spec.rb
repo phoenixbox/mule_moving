@@ -8,7 +8,7 @@ describe 'Movers', type: :feature do
     create_mover_compliance(mover_id: taylor_moving.id, general_liability_insurance: 'http://ss3.com/gen_liab_insurance_5')
     create_mover_statistics(mover_id: taylor_moving.id, year_started: 2004)
 
-    allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(new_yelp_business rating: 2.5)
+    allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(new_yelp_business stars: 2.5)
 
     create_mover name: 'Mafia Movers'
 
@@ -43,7 +43,7 @@ describe 'Movers', type: :feature do
     create_mover_opening_hour(mover_id: mover.id, day_of_week: 7, open: Time.zone.parse('8:00'), close: Time.zone.parse('20:00'))
     create_mover_services(mover_id: mover.id, appliances_install: true, storage: true)
 
-    allow_any_instance_of(YelpFinder).to receive(:find_business).with('mafioso').and_return(new_yelp_business rating: 4.5, review_count: 12, snippet_text: 'These guys took great care of our furniture!')
+    allow_any_instance_of(YelpFinder).to receive(:find_business).with('mafioso').and_return(new_yelp_business stars: 4.5, review_count: 12, review_snippet: 'These guys took great care of our furniture!')
 
     visit movers_path(from: 'Boulder', to: 'Denver')
 

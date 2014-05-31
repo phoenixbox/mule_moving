@@ -7,27 +7,28 @@ describe YelpFinder do
 
   describe '#find_business' do
     it 'returns a yelp business' do
-      yelp_business = double(
-        'yelp business',
+      remote_business = double(
+        'remote business',
         rating: 2.5,
         review_count: 12,
         url: 'www.yelp.com/your-mover',
+        mobile_url: 'm.yelp.com/your-mover',
         rating_img_url: 'www.example.com/image/1',
         rating_img_url_small: 'www.example.com/image/1/small',
         snippet_text: 'These guys were...'
       )
 
-      allow(client).to receive(:business).with('yelp-san-francisco').and_return(yelp_business)
+      allow(client).to receive(:business).with('yelp-san-francisco').and_return(remote_business)
 
       business = subject.find_business('yelp-san-francisco')
 
       expect(business).to be_a YelpBusiness
-      expect(business.rating).to eq 2.5
+      expect(business.stars).to eq 2.5
       expect(business.review_count).to eq 12
+      expect(business.review_snippet).to eq 'These guys were...'
       expect(business.url).to eq 'www.yelp.com/your-mover'
-      expect(business.rating_img_url).to eq 'www.example.com/image/1'
-      expect(business.rating_img_url_small).to eq 'www.example.com/image/1/small'
-      expect(business.snippet_text).to eq 'These guys were...'
+      expect(business.stars_img_url).to eq 'www.example.com/image/1'
+      expect(business.stars_img_url_small).to eq 'www.example.com/image/1/small'
     end
 
     it 'returns nil if not found' do

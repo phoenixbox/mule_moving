@@ -12,21 +12,21 @@ describe MoverAssociationsHydrator do
   describe 'partially conforming presenters' do
     let(:hydratee) {
       Class.new(hydratee_class) do
-        attr_accessor :yelp_rating
+        attr_accessor :yelp_stars
       end.new
     }
 
     it 'only hydrated with setter attributes they allow' do
       MoverYelpRecord.create(mover_id: 12, yelp_id: 'abc-123')
       yelp_business = YelpBusiness.new
-      yelp_business.rating = 2.5
+      yelp_business.stars = 2.5
       yelp_business.review_count = 90
 
       expect_any_instance_of(YelpFinder).to receive(:find_business).with('abc-123').and_return(yelp_business)
 
       subject.yelp(hydratee)
 
-      expect(hydratee.yelp_rating).to eq 2.5
+      expect(hydratee.yelp_stars).to eq 2.5
       expect(hydratee).to_not respond_to :yelp_review_count
     end
   end
@@ -34,28 +34,28 @@ describe MoverAssociationsHydrator do
   describe '#yelp' do
     let(:hydratee) {
       Class.new(hydratee_class) do
-        attr_accessor :yelp_rating, :yelp_review_count, :yelp_review_snippet, :yelp_url, :yelp_rating_img_url
+        attr_accessor :yelp_stars, :yelp_review_count, :yelp_review_snippet, :yelp_url, :yelp_stars_img_url
       end.new
     }
 
     it 'assigns the yelp properties' do
       MoverYelpRecord.create(mover_id: 12, yelp_id: 'abc-123')
       yelp_business = YelpBusiness.new
-      yelp_business.rating = 2.5
+      yelp_business.stars = 2.5
       yelp_business.review_count = 90
+      yelp_business.review_snippet = 'These movers were amazing..'
       yelp_business.url = 'www.example.com/yelp-url'
-      yelp_business.snippet_text = 'These movers were amazing..'
-      yelp_business.rating_img_url = 'www.example.com/yelp-img'
+      yelp_business.stars_img_url = 'www.example.com/yelp-img'
 
       expect_any_instance_of(YelpFinder).to receive(:find_business).with('abc-123').and_return(yelp_business)
 
       subject.yelp(hydratee)
 
-      expect(hydratee.yelp_rating).to eq 2.5
+      expect(hydratee.yelp_stars).to eq 2.5
       expect(hydratee.yelp_review_count).to eq 90
       expect(hydratee.yelp_review_snippet).to eq 'These movers were amazing..'
       expect(hydratee.yelp_url).to eq 'www.example.com/yelp-url'
-      expect(hydratee.yelp_rating_img_url).to eq 'www.example.com/yelp-img'
+      expect(hydratee.yelp_stars_img_url).to eq 'www.example.com/yelp-img'
     end
 
     it 'does not assign properties if no association exists' do

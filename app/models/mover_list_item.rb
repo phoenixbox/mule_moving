@@ -2,7 +2,7 @@ class MoverListItem
   attr_accessor :id,
                 :name,
                 :description,
-                :yelp_rating,
+                :yelp_stars,
                 :avg_price_per_hour,
                 :general_liability_insurance,
                 :year_started,
@@ -15,6 +15,6 @@ class MoverListItem
   end
 
   def yelp?
-    !!yelp_rating
+    !!yelp_stars
   end
 end

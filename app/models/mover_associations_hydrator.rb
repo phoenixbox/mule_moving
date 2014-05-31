@@ -5,11 +5,11 @@ class MoverAssociationsHydrator
 
     yelp_business = YelpFinder.new.find_business(mover_yelp_record.yelp_id)
 
-    hydratee.try(:yelp_rating=, yelp_business.rating)
+    hydratee.try(:yelp_stars=, yelp_business.stars)
     hydratee.try(:yelp_review_count=, yelp_business.review_count)
-    hydratee.try(:yelp_review_snippet=, yelp_business.snippet_text)
+    hydratee.try(:yelp_review_snippet=, yelp_business.review_snippet)
     hydratee.try(:yelp_url=, yelp_business.url)
-    hydratee.try(:yelp_rating_img_url=, yelp_business.rating_img_url)
+    hydratee.try(:yelp_stars_img_url=, yelp_business.stars_img_url)
   end
 
   def pricing(hydratee)
