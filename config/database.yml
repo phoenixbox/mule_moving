@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: mule_moving_development
   pool: 5
-  username: raphael
+  username: rawlabs
   host: localhost
   port: 5432
 
@@ -12,4 +12,4 @@ test:
   encoding: unicode
   database: mule_moving_test
   pool: 5
-  username: raphael
+  username: rawlabs
