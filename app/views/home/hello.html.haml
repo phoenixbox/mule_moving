@@ -7,6 +7,6 @@
       .col-xs-12.col-md-4.col-md-offset-2
         = text_field_tag :from, 'Boulder', readonly: true, data: {label: "From:"}
       .col-xs-12.col-md-4
-        = text_field_tag :to, nil, placeholder: "Denver...?", data: {label: "To:"}
+        = text_field_tag :to, nil, placeholder: 'To', data: {label: "To:"}
       .col-xs-12.col-md-4.col-md-offset-4
-        = submit_tag :discover, value: 'Discover', class: "btn-discover"
+        = submit_tag :discover, value: 'Discover', name: nil, class: "btn-discover"
