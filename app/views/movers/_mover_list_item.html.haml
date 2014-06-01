@@ -9,7 +9,7 @@
             .col-xs-12
               %p.lead
                 = link_to mover_list_item.name, mover_path(mover_list_item.id)
-              .rating-continer
+              .rating-container
                 .rating.pull-right{data: {rating: (mover_list_item.yelp_stars || (1..5).to_a.sample)}}
                   = image_tag('reviewsFromYelpWHT.gif', class: "yelp")
                   %i.star-1 ★
