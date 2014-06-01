@@ -6,11 +6,12 @@
   @extend .panel;
   @include panel-variant(white, $panel-mule-text, $panel-mule-heading-bg, $panel-mule-border);
   border-width: 1px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 
   &:hover {
     border-width: 1px;
     border-color: $panel-mule-border;
+    box-shadow: 1px 1px 1px 0px $panel-mule-border;
     background-color: darken(white, 2%);
     transition: all 0.5s;
   }
