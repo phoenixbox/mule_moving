@@ -9,9 +9,16 @@
             .col-xs-12
               %p.lead
                 = link_to mover_list_item.name, mover_path(mover_list_item.id)
-              %p.lead
-                - if mover_list_item.yelp_stars
-                  = "#{mover_list_item.yelp_stars} Stars"
+              .rating-continer
+                .rating.pull-right{data: {rating: (mover_list_item.yelp_stars || (1..5).to_a.sample)}}
+                  = image_tag('reviewsFromYelpWHT.gif', class: "yelp")
+                  %i.star-1 ★
+                  %i.star-2 ★
+                  %i.star-3 ★
+                  %i.star-4 ★
+                  %i.star-5 ★
+
+
           .row
             .col-xs-4
               %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
@@ -28,6 +35,7 @@
 
       .row
         .col-xs-8
-          %p= truncate(mover_list_item.description, length: 400) { link_to "Read More", mover_path(mover_list_item.id) }
+          %p.lead Company Description:
+          %p= truncate(mover_list_item.description, length: 130) { link_to "Read More", mover_path(mover_list_item.id) }
         .col-sx-4
           = link_to mover_list_item.name, mover_path(mover_list_item.id)
