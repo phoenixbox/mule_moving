@@ -4,11 +4,12 @@
 
 .panel-mule {
   @extend .panel;
-  @include panel-variant($panel-mule-border, $panel-mule-text, $panel-mule-heading-bg, $panel-mule-border);
-  border-width: $panel-mule-border-width;
+  @include panel-variant(white, $panel-mule-text, $panel-mule-heading-bg, $panel-mule-border);
+  border-width: 1px;
 
   &:hover {
-    border-color: darken($panel-mule-border, 20%);
+    border-width: 1px;
+    border-color: $panel-mule-border;
     background-color: darken(white, 2%);
     transition: all 0.5s;
   }

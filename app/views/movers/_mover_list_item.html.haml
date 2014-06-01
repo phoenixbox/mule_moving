@@ -2,25 +2,32 @@
   .panel-mule
     .panel-body
       .row
-        .col-md-12
-          %p.lead
-            = link_to mover_list_item.name, mover_path(mover_list_item.id)
-      .row
-        .col-md-4
-          %ul
-            - if mover_list_item.yelp_stars
-              %li
-                = "#{mover_list_item.yelp_stars} Stars"
-            - if mover_list_item.year_started
-              %li
-                = "Since #{mover_list_item.year_started}"
-            - if mover_list_item.avg_price_per_hour
-              %li
-                = "$#{mover_list_item.avg_price_per_hour} avg per hour"
-            - if mover_list_item.general_liability_insurance
-              %li
+        .col-xs-5
+          %img.img-rounded.img-responsive{src: "http://placehold.it/300x150"}
+        .col-xs-7
+          .row
+            .col-xs-12
+              %p.lead
+                = link_to mover_list_item.name, mover_path(mover_list_item.id)
+              %p.lead
+                - if mover_list_item.yelp_stars
+                  = "#{mover_list_item.yelp_stars} Stars"
+          .row
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if mover_list_item.general_liability_insurance
                 = "Insured"
-          %img.img-rounded.img-responsive{src: "http://placehold.it/120/120"}
-        .col-md-8
-          %p.mover-description
-            = truncate(mover_list_item.description, length: 400) { link_to "Read More", mover_path(mover_list_item.id) }
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if mover_list_item.year_started
+                = "Since #{mover_list_item.year_started}"
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if mover_list_item.avg_price_per_hour
+                = "$#{mover_list_item.avg_price_per_hour} avg per hour"
+
+      .row
+        .col-xs-8
+          %p= truncate(mover_list_item.description, length: 400) { link_to "Read More", mover_path(mover_list_item.id) }
+        .col-sx-4
+          = link_to mover_list_item.name, mover_path(mover_list_item.id)
