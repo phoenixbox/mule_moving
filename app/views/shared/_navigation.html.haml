@@ -1,14 +1,6 @@
-.navbar{role: "navigation"}
-  .navbar-header
-    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-      %span.sr-only Toggle navigation
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    = link_to 'Mule', root_path, class: 'navbar-brand'
-  / .collapse.navbar-collapse
-  /   %ul.nav.navbar-nav
-  /     %li
-  /       %a{href: "#services"} Services
-  /     %li
-  /       %a{href: "#contact"} Contact
+.navbar.navbar-default.navbar-static-top{role: 'navigation'}
+  .container
+    %ul.nav.navbar-nav
+      %li
+        = link_to 'Mule', root_path
+      %li

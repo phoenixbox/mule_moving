@@ -1,12 +1,22 @@
-.row#hero
-  .container
+%section.row.hero#hero
+  .col-sm-11
     .title.text-center
       Find your perfect mover
 
     = form_tag movers_path, method: :get do
-      .col-xs-12.col-md-4.col-md-offset-2
+      .col-xs-12.col-sm-5.col-sm-offset-1
         = text_field_tag :from, 'Boulder', readonly: true, data: {label: "From:"}
-      .col-xs-12.col-md-4
+      .col-xs-12.col-sm-5
         = text_field_tag :to, nil, placeholder: 'To', data: {label: "To:"}
-      .col-xs-12.col-md-4.col-md-offset-4
+      .col-xs-12.col-sm-4.col-sm-offset-4
         = submit_tag :discover, value: 'Discover', name: nil, class: "btn-discover"
+%section.row
+  .col-xs-12.col-sm-4.explanation
+    %h3 Transparency
+    %p Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No?
+  .col-xs-12.col-sm-4.explanation
+    %h3 Control
+    %p You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide...
+  .col-xs-12.col-sm-4.explanation
+    %h3 Trust
+    %p Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.

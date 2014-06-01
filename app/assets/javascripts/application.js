@@ -22,4 +22,4 @@ $(document).ready(function(){
     labelStartTop: '30px',
     labelEndTop: '0px'
   });
-})
+});
