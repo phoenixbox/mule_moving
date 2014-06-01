@@ -67,7 +67,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: true
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: true
       furniture_wrapping: true
       gun_safe: false
@@ -139,18 +139,18 @@ movers:
       appliances_install: false
       appliances_uninstall: true
       auto_transport: false
-      bulky_items: false
+      bulky_items: true
       cleaning: false
       crating: false
       electronics_packaging: false
       extra_stops: true
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: true
       furniture_wrapping: true
       gun_safe: false
       packaging: true
       personal_truck_loading: false
-      pianos: false
+      pianos: true
       shuttling: true
       storage: true
     website: taylormove.com #Internal
@@ -204,7 +204,7 @@ movers:
       wed:
         open: "8:00"
         close: "17:00"
-    pricing: ""
+    pricing: "55"
     primary_contact: #Internal
       name: "Dwayne Lopez"
       phone: "3034586683"
@@ -221,7 +221,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: true
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: true
       furniture_wrapping: true
       gun_safe: false
@@ -298,7 +298,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: true
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: true
       furniture_wrapping: true
       gun_safe: false
@@ -358,7 +358,7 @@ movers:
       wed:
         open: "08:00"
         close: "20:00"
-    pricing: ""
+    pricing: "43"
     primary_contact: #Internal
       name: "Susanna Marez"
       phone: "7202204319"
@@ -375,7 +375,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -435,7 +435,7 @@ movers:
       wed:
         open: "09:00"
         close: "17:00"
-    pricing: ""
+    pricing: "44"
     primary_contact: #Internal
       name: "Bella K"
       phone: "7208808554"
@@ -452,7 +452,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -529,7 +529,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -606,7 +606,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -666,7 +666,7 @@ movers:
       wed:
         open: "09:00"
         close: "17:00"
-    pricing: ""
+    pricing: "45"
     primary_contact: #Internal
       name: "Megan S"
       phone: "7202985909"
@@ -683,7 +683,7 @@ movers:
       crating: true
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -760,7 +760,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -837,7 +837,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -846,20 +846,20 @@ movers:
       pianos: false
       shuttling: false
       storage: false
-    website: www.amazingmoves.com #Internal
-  -
+    website: amazingmoves.com #Internal
+  - # All my sons
     address:
-      line1: ""
-      line2: ""
-      city: ""
-      state: ""
-      zip: ""
+      line1: "16456 Airport Circle"
+      line2: "Unit 300"
+      city: "Aurora"
+      state: "CO"
+      zip: "80011"
     compliance:
       automobile_insurance: ~
       cargo_insurance: ~
       general_liability_insurance: ~
       workers_compensation: ~
-    description: "''"
+    description: "For over four generations, All My Sons Moving of Denver has served this community and abroad. We offer local, long distance, commercial, international, auto and corporate moves with a promise that your move will be filled with courteous and friendly staff and quality care. No matter what your moving need is our Denver movers will move at a fast professional pace. Our Denver moving company is a full service moving company, offering complete packing and unpacking services. You can leave the packing to the experts or do it yourself.  Either way we will make certain that every component of your move is a great experience. All My Sons Moving of Denver is a first rate mover that values our clients.  So as you prepare for your upcoming move we want you to know that we will work to make sure your move is safe, packed with superior care, and fair and honest pricing."
     email: "" #Internal
     external_ids:
       yelp: ""
@@ -873,7 +873,7 @@ movers:
       company_registration: ""
       puc: ""
       state_dot: ""
-      us_dot: ""
+      us_dot: "900253"
     name: ""
     operating_hours:
       fri:
@@ -897,10 +897,10 @@ movers:
       wed:
         open: "00:00"
         close: "17:00"
-    pricing: ""
+    pricing: "45"
     primary_contact: #Internal
       name: ""
-      phone: ""
+      phone: "3033293217"
     statistics:
       year_started: ""
       employees: ""
@@ -914,7 +914,7 @@ movers:
       crating: false
       electronics_packaging: false
       extra_stops: false
-      furniture_assembly: false
+      furniture_assembly: true
       furniture_disassembly: false
       furniture_wrapping: false
       gun_safe: false
@@ -923,4 +923,312 @@ movers:
       pianos: false
       shuttling: false
       storage: false
-    website: "" #Internal
+    website: allmysons.com/denver #Internal
+  - # The Wright Move
+    address:
+      line1: ""
+      line2: ""
+      city: "Aurora"
+      state: "CO"
+      zip: "80011"
+    compliance:
+      automobile_insurance: ~
+      cargo_insurance: ~
+      general_liability_insurance: ~
+      workers_compensation: ~
+    description: "After being in the moving industry over 10 years, We decided to start a moving company that dedicate its self on good customer service! “Our top priority is good customer care” No hidden fees, professional and reliable! We want customers to return and make us their #1 moving company. We’re one of the fastest growing local moving companies in Colorado!"
+    email: "" #Internal
+    external_ids:
+      yelp: ""
+    images:
+      hero:
+        url: ""
+      secondary:
+        -
+          url: ""
+    licenses:
+      company_registration: ""
+      puc: ""
+      state_dot: ""
+      us_dot: ""
+    name: "The Wright Move"
+    operating_hours:
+      fri:
+        open: "00:00"
+        close: "17:00"
+      mon:
+        open: "00:00"
+        close: "17:00"
+      sat:
+        open: "00:00"
+        close: "17:00"
+      sun:
+        open: "00:00"
+        close: "17:00"
+      thu:
+        open: "00:00"
+        close: "17:00"
+      tue:
+        open: "00:00"
+        close: "17:00"
+      wed:
+        open: "00:00"
+        close: "17:00"
+    pricing: "35"
+    primary_contact: #Internal
+      name: ""
+      phone: "7202811929"
+    statistics:
+      year_started: ""
+      employees: ""
+      trucks: ""
+    services:
+      appliances_install: false
+      appliances_uninstall: false
+      auto_transport: false
+      bulky_items: false
+      cleaning: false
+      crating: false
+      electronics_packaging: false
+      extra_stops: false
+      furniture_assembly: true
+      furniture_disassembly: false
+      furniture_wrapping: false
+      gun_safe: false
+      packaging: false
+      personal_truck_loading: falsee
+      pianos: false
+      shuttling: false
+      storage: false
+    website: thewrightmovingcompany.com/ #Internal
+  - # The Boulder Moving Company
+    address:
+      line1: "3365 Diagonal Hwy"
+      line2: ""
+      city: "Boulder"
+      state: "CO"
+      zip: "80301"
+    compliance:
+      automobile_insurance: ~
+      cargo_insurance: ~
+      general_liability_insurance: ~
+      workers_compensation: ~
+    description: "Trust your most prized possessions to the top quality movers at Boulder Moving LLC. We will haul your biggest, most awkward items with ease so that nothing gets scratched or damaged. We will take the time to properly pack the small things so that you can rest easy knowing that your belongings are in safe hands. You can count on us to do a great job getting you and your stuff where they need to be. We are a licensed and insured company that is committed to giving you great service at a low rate."
+    email: "bouldermovingservices@gmail.com" #Internal
+    external_ids:
+      yelp: ""
+    images:
+      hero:
+        url: ""
+      secondary:
+        -
+          url: ""
+    licenses:
+      company_registration: ""
+      puc: "HHG-00221"
+      state_dot: ""
+      us_dot: ""
+    name: "Boulder Moving"
+    operating_hours:
+      fri:
+        open: "09:00"
+        close: "18:00"
+      mon:
+        open: "09:00"
+        close: "18:00"
+      sat:
+        open: "09:00"
+        close: "18:00"
+      sun:
+        open: "09:00"
+        close: "18:00"
+      thu:
+        open: "09:00"
+        close: "18:00"
+      tue:
+        open: "09:00"
+        close: "18:00"
+      wed:
+        open: "09:00"
+        close: "18:00"
+    pricing: "39"
+    primary_contact: #Internal
+      name: ""
+      phone: "3038079388"
+    statistics:
+      year_started: ""
+      employees: ""
+      trucks: ""
+    services:
+      appliances_install: false
+      appliances_uninstall: false
+      auto_transport: false
+      bulky_items: false
+      cleaning: false
+      crating: false
+      electronics_packaging: false
+      extra_stops: false
+      furniture_assembly: true
+      furniture_disassembly: false
+      furniture_wrapping: false
+      gun_safe: false
+      packaging: false
+      personal_truck_loading: falsee
+      pianos: false
+      shuttling: false
+      storage: false
+    website: bouldermovingservices.com #Internal
+  - # Behoove Moving & Cleaning
+    address:
+      line1: ""
+      line2: ""
+      city: ""
+      state: "CO"
+      zip: ""
+    compliance:
+      automobile_insurance: ~
+      cargo_insurance: ~
+      general_liability_insurance: ~
+      workers_compensation: ~
+    description: "Our company is based on the belief that our customer's come first. We capitalize where our competition does not. With our 7 years of experience of working in this field. The customer's common concerns are damages, time management and lack of customer service.The Behoove staff put forth serious efforts in training and procedures in these areas. So that these are not the common issues throughout our company. Is to treat the customer as if they where our-self (professional, respectful). The Behoove staff common goals is to have a proud, satisfied and stress-free customer at the end of the day."
+    email: "" #Internal
+    external_ids:
+      yelp: ""
+    images:
+      hero:
+        url: ""
+      secondary:
+        -
+          url: ""
+    licenses:
+      company_registration: ""
+      puc: ""
+      state_dot: ""
+      us_dot: ""
+    name: "Behoove Moving & Cleaning"
+    operating_hours:
+      fri:
+        open: "09:00"
+        close: "18:00"
+      mon:
+        open: "09:00"
+        close: "18:00"
+      sat:
+        open: "09:00"
+        close: "18:00"
+      sun:
+        open: "09:00"
+        close: "18:00"
+      thu:
+        open: "09:00"
+        close: "18:00"
+      tue:
+        open: "09:00"
+        close: "18:00"
+      wed:
+        open: "09:00"
+        close: "18:00"
+    pricing: "30"
+    primary_contact: #Internal
+      name: "Behoove Moving & Cleaning"
+      phone: "7202515797"
+    statistics:
+      year_started: ""
+      employees: ""
+      trucks: ""
+    services:
+      appliances_install: false
+      appliances_uninstall: false
+      auto_transport: false
+      bulky_items: false
+      cleaning: false
+      crating: false
+      electronics_packaging: false
+      extra_stops: false
+      furniture_assembly: true
+      furniture_disassembly: false
+      furniture_wrapping: false
+      gun_safe: false
+      packaging: false
+      personal_truck_loading: falsee
+      pianos: false
+      shuttling: false
+      storage: false
+    website: behoovemovingcleaningllc.com #Internal
+  - # Mile High Movers
+    address:
+      line1: ""
+      line2: ""
+      city: ""
+      state: "CO"
+      zip: ""
+    compliance:
+      automobile_insurance: ~
+      cargo_insurance: ~
+      general_liability_insurance: ~
+      workers_compensation: ~
+    description: "Mile High Movers was originally established as a moving company but quickly evolved into providing additional services in response to the needs of our customers. The business has grown to accommodate our existing customers into what I describe as a full residential moving service. Our goal is to offer our customers a headache-free, all-inclusive moving experience. Our services include packing/unpacking, disassemble/reassemble furniture, and move-in and move-out cleaning. We also provide additional services such as item(s) donation, junk disposal and pick up of new furniture and assembly. We can help with all aspects from beginning to end or whatever fits your individual needs.We offer commercial and residential cleaning services from on-time, move in/out, weekly, bi-weekly, monthly and construction clean-up. Small moves and installation of new furniture is our specialty!"
+    email: "" #Internal
+    external_ids:
+      yelp: ""
+    images:
+      hero:
+        url: ""
+      secondary:
+        -
+          url: ""
+    licenses:
+      company_registration: ""
+      puc: ""
+      state_dot: ""
+      us_dot: ""
+    name: "Mile High Movers"
+    operating_hours:
+      fri:
+        open: "09:00"
+        close: "19:00"
+      mon:
+        open: "09:00"
+        close: "19:00"
+      sat:
+        open: "09:00"
+        close: "19:00"
+      sun:
+        open: "09:00"
+        close: "19:00"
+      thu:
+        open: "09:00"
+        close: "19:00"
+      tue:
+        open: "09:00"
+        close: "19:00"
+      wed:
+        open: "09:00"
+        close: "19:00"
+    pricing: "42"
+    primary_contact: #Internal
+      name: "Manny Trujillo"
+      phone: "7204252432"
+    statistics:
+      year_started: ""
+      employees: ""
+      trucks: ""
+    services:
+      appliances_install: false
+      appliances_uninstall: false
+      auto_transport: false
+      bulky_items: false
+      cleaning: false
+      crating: false
+      electronics_packaging: false
+      extra_stops: false
+      furniture_assembly: true
+      furniture_disassembly: false
+      furniture_wrapping: false
+      gun_safe: false
+      packaging: false
+      personal_truck_loading: falsee
+      pianos: false
+      shuttling: false
+      storage: false
+    website: milehighmoversllc.com #Internal
