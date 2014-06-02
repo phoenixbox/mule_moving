@@ -5,7 +5,7 @@ seed_data['movers'].each do |mover|
   base = { mover_id: id }
   MoverAddressRecord.create!(base.merge(mover['address']))
   MoverComplianceRecord.create!(base.merge(mover['compliance']))
-  MoverYelpRecord.create!(base.merge(yelp_id: mover['external_ids']['yelp_id'])) if mover['external_ids']['yelp_id']
+  MoverYelpRecord.create!(base.merge(yelp_id: mover['external_ids']['yelp'])) if mover['external_ids']['yelp']
   MoverHeroRecord.create!(base.merge(image_url: mover['images']['hero']['url']))
   MoverLicensesRecord.create!(base.merge(mover['licenses']))
   MoverStatisticsRecord.create!(base.merge(mover['statistics']))

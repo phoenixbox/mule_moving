@@ -15,7 +15,7 @@ movers:
     description: "Your Personal Mover, Inc is owned and operated by Brian and Annette Nelson and based in the Denver metro area. We specialize in intra-metro area moves with a typical distance of 100 miles or less. This means we cover central Colorado, from about Fort Collins to Colorado Springs and from Vail to Limon."
     email: "http://www.yourpersonalmover.net"  #Internal
     external_ids:
-      yelp: ""
+      yelp: "your-personal-mover-inc-golden"
     images:
       hero:
         url: "http://yourpersonalmover.net/wp-content/uploads/2012/01/your-personal-mover-2012-denver-crew.jpg"
@@ -92,7 +92,7 @@ movers:
     description: "'Locally owned and operated by the Taylor family. Licensed, bonded and insured. Members of the Better Business Bureau and Tom Martino's Exclusive Referral list. Glen Taylor worked as a mover in Boulder for many years. After retiring from moving he recruited all the top movers he knew and Taylor Moving was created. All the movers at Taylor Moving have at least two years on the job experience and many have been with us for longer. We have the highest regard for our customers. You can count on us to give you the best move at the best price every time. All of our local moves include free insurance. Everyone at Taylor Moving know the stress a move can cause and our goal is make your move as easy and stress free as possible. All of our trucks are outfitted with professional moving pads and equipment that ensure your belongings make it safely to your new home. We have professional packing services available. We also sell a complete selection of boxes and packing supplies for the do it yourselfers. We have climate controlled, secure storage in our warehouse and we offer customized long distance moves with direct, express service to your new home with guaranteed pick up and delivery dates AND guaranteed price. From the smallest apartment move to the largest office move, you will receive the same quality move at the same low price 365 days a year. Call today to speak to Glen, Leah or Sandy Taylor or the two office dogs Scout and George.'"
     email: "bouldermovers@aol.com" #Internal
     external_ids:
-      yelp: ""
+      yelp: "taylor-moving-boulder"
     images:
       hero:
         url: "http://www.taylormove.com/images/slide2/DSCN0210.jpg"
@@ -169,7 +169,7 @@ movers:
     description: "'At Abe Lincoln Movers, we strive to exceed the expectations of each and every customer. We do that by having the best employees in the city and constant attention to detail. You'll notice the difference immediately when you choose us to move your home. We are currently 2012's Angieslist Super Service Award winner, and we intend to be this years' too. Hiring a high-quality moving company is an important decision and we'll provide you with outstanding service - guaranteed.'"
     email: "abelincolnmovers@yahoo.com" #Internal
     external_ids:
-      yelp: ""
+      yelp: "abe-lincoln-movers-denver"
     images:
       hero:
         url: "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xfp1/t1.0-9/1512402_320330488116325_1407631389_n.jpg"
@@ -231,7 +231,7 @@ movers:
       shuttling: true
       storage: true
     website: facebook.com/abelincolnmovers #Internal
-  -
+  - # Movermasters
     address:
       line1: "879 Brickyard Circle"
       line2: ""
@@ -246,7 +246,7 @@ movers:
     description: "Movemasters has received a Better Business Bureau 'Gold Star Award' 10 times. A 'Gold Star Award' is only presented when a company has achieved 3 consecutive years without a complaint. Consumers have also given our company the most favorable ratings for Denver movers on Angie's List. Movemasters has been the recipient of the Angie's List Super Service Award each consecutive year since 2009. This background and proven dedication to understanding our customers' concerns have earned the full trust of our clientele. Under private ownership for 33 years, and trusted in such places as the Denver Art Museum. Movemasters has remained true to its philosophy of conscientious hard work, understanding our customers' concerns, and leaving our customers happy"
     email: "movemastersdenver@msn.com" #Internal
     external_ids:
-      yelp: ""
+      yelp: "movemasters-denver"
     images:
       hero:
         url: "http://www.movemastersdenver.com/040.jpg"
@@ -308,7 +308,7 @@ movers:
       shuttling: true
       storage: true
     website: movemastersdenver.com #Internal
-  -
+  - # All The Right Moves
     address:
       line1: "8201 E Iliff Ave"
       line2: ""
@@ -323,7 +323,7 @@ movers:
     description: "All The Right Moves is the premiere moving company of Denver and Aurora, Colorado. We specialize in local, residential, and commercial moves and can even pack your house or office. We also specialize in piano moving so you can be sure your piano will arrive in good condition. We are your one-stop-shop for movers. Have a sofa that doesn't fit in your apartment? We have the ability to hoist a sofa up as much as 15 floors if you have a balcony. We do not use temporary agencies or ready-man labor. As a family owned business, we are hands-on when working with our customers. We believe in providing personal attention to the needs of our valued customers, ensuring a good experience with our moving company."
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "all-the-right-moves-denver"
     images:
       hero:
         url: "http://alltherightmovesdenver.com/.cm4all/iproc.php/CustomerImages/Our%20trucks%20are%20well%20serviced%20and%20ready%20to%20head%20to%20the%20hills.JPG/scale_800_600%3Bdonotenlarge/"
@@ -385,7 +385,7 @@ movers:
       shuttling: false
       storage: false
     website: alltherightmovesdenver.com #Internal
-  - # ****** Stallion Movers ******
+  - # ****** Stallion Moving Services ******
     address:
       line1: "4321 Broadway"
       line2: "5"
@@ -400,7 +400,7 @@ movers:
     description: "Stallion Moving Services specializes in local moving and relocation for Denver, Aurora, Lakewood, Littleton, Centennial, Parker, Arvada, Thornton, Westminster, Boulder and more, including moving services for homes, offices, apartments, and storage facilities. We also offer delivery services for pianos, safes, furniture, and appliances. We have all of the professional equipment necessary to ensure your move is smooth, safe and efficient. Our local Denver movers will assess, protect and relocate your furniture safely and efficiently. We are licensed, insured, AMLPA certified, and members of the Denver Chamber of Commerce."
     email: denvermovers@stallionmoving.com #Internal
     external_ids:
-      yelp: ""
+      yelp: "stallion-moving-services-denver"
     images:
       hero:
         url: ""
@@ -462,7 +462,7 @@ movers:
       shuttling: false
       storage: false
     website: moversdenver.co #Internal
-  - # ****** Fisher Van Lines ******
+  - # ****** Fischer Van Lines ******
     address:
       line1: "651 E 66th Ave"
       line2: ""
@@ -477,7 +477,7 @@ movers:
     description: "Fischer Van Lines is a high-end moving & storage company in Denver, Boulder and all of Colorado. Our movers are well trained or seasoned veterans in the art of moving'. They show up to your real estate 'house' or apartment 'condo' with only one thing in mind, to give you the best relocation experience possible. The owner of Fischer Van Lines has been a mover since he was 18 years old. He worked for many different reputable moving companies throughout the years and around the country. He moved apartments, houses, condo's, self storage, warehouses, mansions, large houses, small houses, commercial property & the list goes on. By taking over 19 years of experience in the moving industry, he has applied this to all areas of his Moving Company."
     email: jfischer@fischervanlines.com #Internal
     external_ids:
-      yelp: ""
+      yelp: "fischer-van-lines-moving-and-storage-llc-denver-2"
     images:
       hero:
         url: "http://www.fischervanlines.com/images/IMG_5853.jpg"
@@ -554,7 +554,7 @@ movers:
     description: "Our experienced Colorado, Denver and Fort Collins movers specialize in helping families and businesses relocate safely and affordably. Trust our experienced team of movers to get you across town, or overseas, stress-free, with your personal belongings intact. If you value the best client service, find out what makes us a Colorado moving company with a competitive edge. Professional, prompt and courteous, our qualified professionals will help make the experience of moving your home or business simple and stress-free. Whether you are relocating across town, across the state, or across the world, we look forward to helping you make the move."
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "exodus-moving-and-storage-denver-commerce-city"
     images:
       hero:
         url: "http://www.exodusmoving.com/img/slide3.jpg"
@@ -631,7 +631,7 @@ movers:
     description: "Altitude Movers Denver is a high quality, full service moving company based in Denver Colorado. We specialize in moves throughout the metro Denver area, from Castle Rock to Boulder. Our professional team is standing by to help you. We will assess, protect and relocate your items quickly and efficiently. We offer services for local moves and long distance moves. We offer multiple sizes of moving van, or we can help pack your truck professionally and efficiently. We offer multiple sizes of moving truck. Our vans come equipped with the tools and products necessary to protect your belongings during the move at no extra charge. We can also help you find any additional protection you might need for your unique move."
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "altitude-movers-denver-denver-2"
     images:
       hero:
         url: "http://altitudemoversdenver.com/wp-content/uploads/2013/06/packing-headboard.jpg"
@@ -708,7 +708,7 @@ movers:
     description: "Based in Aurora, Colorado (just outside Denver), our mission is to help you move without headaches and hassles. We offer residential and commercial moving services, both local and long-distance, and we pride ourselves on our efficiency and honesty. We aren’t one of those moving companies that take advantage of your time and charge you for it. With over 16 years of experience, we understand the needs and expectations of our customers. We charge reasonable rates and offer various deals and discounts to help make your move more affordable. If you are planning a move, plan on making it a simple one with A Simple Move, LLC. Need to move suddenly? We are available 24/7 for sudden, emergency moves."
     email: mcfliteco@gmail.com #Internal
     external_ids:
-      yelp: ""
+      yelp: "a-simple-move-aurora-3"
     images:
       hero:
         url: ""
@@ -785,7 +785,7 @@ movers:
     description: "We offer full service moving and storage solutions with full time, experienced, and well-trained crews and a fleet of distinctive, late model, well maintained trucks. Amazing Moves provides the range of services you'd expect from the large national movers but we're nimble and flexible enough to provide customized Denver moving and storage services at a competitive price. Big national moving and storage companies (usually through an out of state call center) too often dictate the details of your move - whether it's timing, shared loads, or delivery schedules. Our core values include making efficient use of our customers' time. Amazing Moves' goal is to change the image of moving and storage companies. We take the term 'full service moving and storage' seriously and literally. We serve both residential and commercial clients. When it comes to packing, moving, and storage, Amazing Moves uses state of the art material and techniques, including specialized packing services for valuables, breakables, antiques, and fine art and for unique objects like pianos. We've seen it all and moved it all - safely. Our climate controlled storage solutions include long and short term arrangements. When you're looking for Denver movers that offer small company attention and service but big company expertise, Amazing Moves Moving & Storage is the best option for moving and storage services in Denver and the Front Range area of Colorado."
     email: marshallaikman@amazingmoves.com #Internal
     external_ids:
-      yelp: ""
+      yelp: "amazing-moves-moving-and-storage-denver"
     images:
       hero:
         url: ""
@@ -862,7 +862,7 @@ movers:
     description: "For over four generations, All My Sons Moving of Denver has served this community and abroad. We offer local, long distance, commercial, international, auto and corporate moves with a promise that your move will be filled with courteous and friendly staff and quality care. No matter what your moving need is our Denver movers will move at a fast professional pace. Our Denver moving company is a full service moving company, offering complete packing and unpacking services. You can leave the packing to the experts or do it yourself.  Either way we will make certain that every component of your move is a great experience. All My Sons Moving of Denver is a first rate mover that values our clients.  So as you prepare for your upcoming move we want you to know that we will work to make sure your move is safe, packed with superior care, and fair and honest pricing."
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "all-my-sons-moving-and-storage-of-denver-inc-denver"
     images:
       hero:
         url: ""
@@ -939,7 +939,7 @@ movers:
     description: "After being in the moving industry over 10 years, We decided to start a moving company that dedicate its self on good customer service! “Our top priority is good customer care” No hidden fees, professional and reliable! We want customers to return and make us their #1 moving company. We’re one of the fastest growing local moving companies in Colorado!"
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "the-wright-move-denver"
     images:
       hero:
         url: ""
@@ -1016,7 +1016,7 @@ movers:
     description: "Trust your most prized possessions to the top quality movers at Boulder Moving LLC. We will haul your biggest, most awkward items with ease so that nothing gets scratched or damaged. We will take the time to properly pack the small things so that you can rest easy knowing that your belongings are in safe hands. You can count on us to do a great job getting you and your stuff where they need to be. We are a licensed and insured company that is committed to giving you great service at a low rate."
     email: "bouldermovingservices@gmail.com" #Internal
     external_ids:
-      yelp: ""
+      yelp: "boulder-moving-boulder"
     images:
       hero:
         url: ""
@@ -1093,7 +1093,7 @@ movers:
     description: "Our company is based on the belief that our customer's come first. We capitalize where our competition does not. With our 7 years of experience of working in this field. The customer's common concerns are damages, time management and lack of customer service.The Behoove staff put forth serious efforts in training and procedures in these areas. So that these are not the common issues throughout our company. Is to treat the customer as if they where our-self (professional, respectful). The Behoove staff common goals is to have a proud, satisfied and stress-free customer at the end of the day."
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "behoove-moving-and-cleaning-denver"
     images:
       hero:
         url: ""
@@ -1170,7 +1170,7 @@ movers:
     description: "Mile High Movers was originally established as a moving company but quickly evolved into providing additional services in response to the needs of our customers. The business has grown to accommodate our existing customers into what I describe as a full residential moving service. Our goal is to offer our customers a headache-free, all-inclusive moving experience. Our services include packing/unpacking, disassemble/reassemble furniture, and move-in and move-out cleaning. We also provide additional services such as item(s) donation, junk disposal and pick up of new furniture and assembly. We can help with all aspects from beginning to end or whatever fits your individual needs.We offer commercial and residential cleaning services from on-time, move in/out, weekly, bi-weekly, monthly and construction clean-up. Small moves and installation of new furniture is our specialty!"
     email: "" #Internal
     external_ids:
-      yelp: ""
+      yelp: "mile-high-movers-llc-denver"
     images:
       hero:
         url: ""
