@@ -7,7 +7,7 @@ class YelpFinder
     remote_business = @client.business(business_id)
 
     build_business(remote_business)
-  rescue JSON::ParserError => _
+  rescue
     nil
   end
 

@@ -31,8 +31,12 @@ describe YelpFinder do
       expect(business.stars_img_url_small).to eq 'www.example.com/image/1/small'
     end
 
-    it 'returns nil if not found' do
+    it 'returns nil if not found (two cases)' do
       allow(client).to receive(:business).with('unknown-business-id').and_raise(JSON::ParserError)
+
+      expect(subject.find_business('unknown-business-id')).to eq nil
+
+      allow(client).to receive(:business).with('unknown-business-id').and_raise(Yelp::Error::BusinessUnavailable)
 
       expect(subject.find_business('unknown-business-id')).to eq nil
     end
