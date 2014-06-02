@@ -63,6 +63,16 @@ describe MoverAssociationsHydrator do
         subject.yelp(hydratee)
       }.to_not raise_exception
     end
+
+    it 'handles yelp record found, but not through yelp' do
+      create_mover_yelp(mover_id: 12, yelp_id: 'abc-123')
+
+      allow_any_instance_of(YelpFinder).to receive(:find_business).with('abc-123').and_return(nil)
+
+      expect {
+        subject.yelp(hydratee)
+      }.to_not raise_exception
+    end
   end
 
   describe '#pricing' do

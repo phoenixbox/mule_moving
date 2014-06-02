@@ -4,6 +4,7 @@ class MoverAssociationsHydrator
     return nil unless mover_yelp_record
 
     yelp_business = YelpFinder.new.find_business(mover_yelp_record.yelp_id)
+    return nil unless yelp_business
 
     hydratee.try(:yelp_stars=, yelp_business.stars)
     hydratee.try(:yelp_review_count=, yelp_business.review_count)
