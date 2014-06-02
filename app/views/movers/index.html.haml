@@ -1,7 +1,7 @@
 .container.movers
   .col-xs-8
 
-    %p.lead.text-center
+    %p.lead
       = "One Step Closer to <strong>#{@to.titleize}</strong>! Here are <strong>#{@mover_list_items.size}</strong> movers we've found in <strong>#{@from.titleize}</strong>".html_safe
 
     %ul.list-unstyled
@@ -14,3 +14,17 @@
       %li.lead Maybe include a simple graphic to show the process of moving?
       %li
         %img.img-rounded.img-responsive{src: "http://placehold.it/300/300"}
+
+= render partial: 'booking_modal'
+:javascript
+  $('[data-target=#bookModal]').click(function (e) {
+    var $target = $(e.target);
+    var moverId = $target.data('mover-id');
+    var moverName = $target.data('mover');
+    var moverStars = $target.data('stars');
+
+    $('#booking_mover_id').val(moverId);
+    $('#modalMoverName').text(moverName);
+    $('#modalMoverStars').attr('data-rating', moverStars);
+  });
+

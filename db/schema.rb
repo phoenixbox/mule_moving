@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531184048) do
+ActiveRecord::Schema.define(version: 20140602020242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "booking_records", force: true do |t|
+    t.integer  "mover_id"
+    t.string   "email"
+    t.string   "from"
+    t.string   "to"
+    t.date     "move_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "mover_addresses", force: true do |t|
     t.integer  "mover_id",   null: false

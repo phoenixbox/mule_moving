@@ -20,3 +20,13 @@
   .col-xs-12.col-sm-4.explanation
     %h3 Trust
     %p Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.
+
+:javascript
+  $(document).ready(function(){
+    $('#hero input').floatlabel({
+      slideInput: false,
+      paddingOffset: "5px",
+      labelStartTop: '30px',
+      labelEndTop: '0px'
+    });
+  });

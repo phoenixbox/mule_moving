@@ -37,4 +37,4 @@
         .col-xs-10
           %p= truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }
         .col-xs-2
-          %a.btn.btn-primary.btn-block.btn-large{src: "#"} Book
+          %a.btn.btn-primary.btn-block.btn-large{data: { toggle: :modal, target: '#bookModal', mover: mover_list_item.name, mover_id: mover_list_item.id, stars: (mover_list_item.yelp_stars || (1..5).to_a.sample) }} Book

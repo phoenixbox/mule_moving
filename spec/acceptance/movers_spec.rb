@@ -20,11 +20,12 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'Taylor Moving'
     expect(page).to have_content 'Mafia Movers'
 
-    and_it 'displays yelp information for movers' do
+    within 'li', text: 'Taylor Moving' do
       expect(page).to have_content 'Since 2004'
       expect(page).to have_content '$45 avg per hour'
       expect(page).to have_content 'Insured'
-      expect(page).to have_content '2.5 Stars'
+      rating = first('.rating')['data-rating']
+      expect(rating).to eq '2.5'
       expect(page).to have_content 'Taylor Moving Description'
     end
   end
