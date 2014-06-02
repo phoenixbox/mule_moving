@@ -1,44 +1,116 @@
 = link_to "Back", movers_path
+.container
+  .col-xs-8
+    .panel-heading
+      %span.lead= @mover_detail.name
+    .panel-body
+      .row
+        .col-xs-5
+          %img.img-rounded.img-responsive{src: "http://placehold.it/300x150"}
+        .col-xs-7
+          .row
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if @mover_detail.general_liability_insurance
+                = "Insured"
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if @mover_detail.year_started
+                = "Since #{@mover_detail.year_started}"
+            .col-xs-4
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
+              - if @mover_detail.avg_price_per_hour
+                = "$#{@mover_detail.avg_price_per_hour} avg per hour"
+          .rating-container
+            .rating{data: {rating: (@mover_detail.yelp_stars || (1..5).to_a.sample)}}
+              %i.star-1 ★
+              %i.star-2 ★
+              %i.star-3 ★
+              %i.star-4 ★
+              %i.star-5 ★
+    .panel-mover-detail
+      .panel-heading
+        %span.lead Description
+      .panel-body
+        %p= @mover_detail.description
+    .panel-mover-detail
+      .panel-heading
+        %span.lead Licenses & Compliance
+      .panel-body
+        .row
+          .col-xs-6.license
+            = "State Dot: #{@mover_detail.state_dot}"
+            = "US Dot: #{@mover_detail.us_dot}"
+            = "Automobile Insurance: #{icon_checkmark_or_not !!@mover_detail.automobile_insurance}".html_safe
+            = "Cargo Insurance: #{icon_checkmark_or_not !!@mover_detail.cargo_insurance}".html_safe
+            = "General Liability Insurance: #{icon_checkmark_or_not !!@mover_detail.general_liability_insurance}".html_safe
+          .col-xs-6.compliance
+            = "Workers Compensation: #{icon_checkmark_or_not !!@mover_detail.workers_compensation}".html_safe
+            = "Company Registration: #{@mover_detail.company_registration}"
+            = "PUC: #{@mover_detail.puc}"
 
-= @mover_detail.name
-= @mover_detail.description
-= "Since #{@mover_detail.year_started}"
-= "$#{@mover_detail.avg_price_per_hour} avg per hour"
-= @mover_detail.address
-= "#{@mover_detail.yelp_stars} Stars"
-= "#{@mover_detail.yelp_review_count} Reviews"
-= @mover_detail.yelp_review_snippet
-= "Automobile Insurance: #{!!@mover_detail.automobile_insurance}"
-= "Cargo Insurance: #{!!@mover_detail.cargo_insurance}"
-= "General Liability Insurance: #{!!@mover_detail.general_liability_insurance}"
-= "Workers Compensation: #{!!@mover_detail.workers_compensation}"
-= "Company Registration: #{@mover_detail.company_registration}"
-= "PUC: #{@mover_detail.puc}"
-= "State Dot: #{@mover_detail.state_dot}"
-= "US Dot: #{@mover_detail.us_dot}"
-= "Mon: #{@mover_detail.hours_mon || 'Closed'}"
-= "Tue: #{@mover_detail.hours_tue || 'Closed'}"
-= "Wed: #{@mover_detail.hours_wed || 'Closed'}"
-= "Thu: #{@mover_detail.hours_thu || 'Closed'}"
-= "Fri: #{@mover_detail.hours_fri || 'Closed'}"
-= "Sat: #{@mover_detail.hours_sat || 'Closed'}"
-= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
-= "Employees: #{@mover_detail.employees}"
-= "Trucks: #{@mover_detail.trucks}"
-= "Appliances Install: #{@mover_detail.appliances_install}"
-= "Appliances Uninstall: #{@mover_detail.appliances_uninstall}"
-= "Auto Transport: #{@mover_detail.auto_transport}"
-= "Bulky Items: #{@mover_detail.bulky_items}"
-= "Cleaning: #{@mover_detail.cleaning}"
-= "Crating: #{@mover_detail.crating}"
-= "Electronics Packaging: #{@mover_detail.electronics_packaging}"
-= "Extra Stops: #{@mover_detail.extra_stops}"
-= "Furniture Assembly: #{@mover_detail.furniture_assembly}"
-= "Furniture Disassembly: #{@mover_detail.furniture_disassembly}"
-= "Furniture Wrapping: #{@mover_detail.furniture_wrapping}"
-= "Gun Safe: #{@mover_detail.gun_safe}"
-= "Packaging: #{@mover_detail.packaging}"
-= "Personal Truck Loading: #{@mover_detail.personal_truck_loading}"
-= "Pianos: #{@mover_detail.pianos}"
-= "Shuttling: #{@mover_detail.shuttling}"
-= "Storage: #{@mover_detail.storage}"
+    .panel-mover-detail
+      .panel-heading
+        %span.lead Services
+      .panel-body
+        .row
+          .col-xs-3
+            %ul.mover-detail-list
+              %li.title Pickup
+              %li= "Packaging: #{icon_checkmark_or_not @mover_detail.packaging}".html_safe
+              %li= "Crating: #{icon_checkmark_or_not @mover_detail.crating}".html_safe
+              %li= "Furniture Wrapping: #{icon_checkmark_or_not @mover_detail.furniture_wrapping}".html_safe
+              %li= "Furniture Disassembly: #{icon_checkmark_or_not @mover_detail.furniture_disassembly}".html_safe
+              %li= "Personal Truck Loading: #{icon_checkmark_or_not @mover_detail.personal_truck_loading}".html_safe
+              %li= "Appliances Uninstall: #{icon_checkmark_or_not @mover_detail.appliances_uninstall}".html_safe
+          .col-xs-3
+            %ul.mover-detail-list
+              %li.title Transport
+              %li= "Shuttling: #{icon_checkmark_or_not @mover_detail.shuttling}".html_safe
+              %li= "Storage: #{icon_checkmark_or_not @mover_detail.storage}".html_safe
+              %li= "Extra Stops: #{icon_checkmark_or_not @mover_detail.extra_stops}".html_safe
+          .col-xs-3
+            %ul.mover-detail-list
+              %li.title Dropoff
+              %li= "Furniture Assembly: #{icon_checkmark_or_not @mover_detail.furniture_assembly}".html_safe
+              %li= "Appliances Install: #{icon_checkmark_or_not @mover_detail.appliances_install}".html_safe
+          .col-xs-3
+            %ul.mover-detail-list
+              %li.title Dropoff
+              %li= "Electronics Packaging: #{icon_checkmark_or_not @mover_detail.electronics_packaging}".html_safe
+              %li= "Auto Transport: #{icon_checkmark_or_not @mover_detail.auto_transport}".html_safe
+              %li= "Bulky Items: #{icon_checkmark_or_not @mover_detail.bulky_items}".html_safe
+              %li= "Pianos: #{icon_checkmark_or_not @mover_detail.pianos}".html_safe
+              %li= "Gun Safe: #{icon_checkmark_or_not @mover_detail.gun_safe}".html_safe
+              %li= "Cleaning: #{icon_checkmark_or_not @mover_detail.cleaning}".html_safe
+    .panel-mover-detail
+      .panel-heading
+        %span.lead Other
+      .panel-body
+        .row
+          .col-xs-4
+            .row.resources
+              .col-xs-12
+                %span.lead Resources
+                = "Employees: #{@mover_detail.employees}"
+                = "Trucks: #{@mover_detail.trucks}"
+            .row.address
+              .col-xs-12
+                %span.lead Address
+                = @mover_detail.address
+          .col-xs-4
+            %span.lead Operating Hours
+            %ul.mover-detail-list
+              %li= "Mon: #{@mover_detail.hours_mon || 'Closed'}"
+              %li= "Tue: #{@mover_detail.hours_tue || 'Closed'}"
+              %li= "Wed: #{@mover_detail.hours_wed || 'Closed'}"
+              %li= "Thu: #{@mover_detail.hours_thu || 'Closed'}"
+              %li= "Fri: #{@mover_detail.hours_fri || 'Closed'}"
+              %li= "Sat: #{@mover_detail.hours_sat || 'Closed'}"
+              %li= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
+          .col-xs-4
+            %span.lead Testimonial
+            %span.lead= "#{@mover_detail.yelp_review_snippet} and some more testimonial stuff"
+
+  .col-xs-4
+    %h1 Sidebar Shiz
