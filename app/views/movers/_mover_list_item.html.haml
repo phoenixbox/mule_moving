@@ -32,7 +32,7 @@
                   %i.star-3 ★
                   %i.star-4 ★
                   %i.star-5 ★
-
+              = "#{mover_list_item.yelp_review_count || 0} reviews"
       .row
         .col-xs-10
           %p= truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }

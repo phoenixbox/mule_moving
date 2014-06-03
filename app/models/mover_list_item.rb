@@ -3,6 +3,7 @@ class MoverListItem
                 :name,
                 :description,
                 :yelp_stars,
+                :yelp_review_count,
                 :avg_price_per_hour,
                 :general_liability_insurance,
                 :year_started,
