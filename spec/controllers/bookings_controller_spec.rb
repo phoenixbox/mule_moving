@@ -5,6 +5,10 @@ describe BookingsController do
     let(:post_params) { { booking: { mover_id: 1, email: 'me@example.com', from: 'Boulder', to: 'Denver', move_date: '31/Dec/2015' } } }
 
     it 'creates the booking and redirects to confirmation' do
+      mover = MoverEntity.new
+      mover.name = 'Mafia Movers'
+      expect_any_instance_of(MoverFinder).to receive(:find_by_id).with('1').and_return(mover)
+
       post :create, post_params
 
       record = BookingRecord.last
@@ -15,6 +19,15 @@ describe BookingsController do
       expect(record.move_date).to eq Date.parse('31/12/2015')
 
       expect(response).to redirect_to confirmation_path
+    end
+
+    it 'sends a confirmation email' do
+      mover = MoverEntity.new
+      mover.name = 'Mafia Movers'
+      expect_any_instance_of(MoverFinder).to receive(:find_by_id).with('1').and_return(mover)
+      expect_any_instance_of(MailSender).to receive(:confirmation).with('me@example.com', 'Boulder', 'Denver', Date.parse('31/12/2015'), 'Mafia Movers')
+
+      post :create, post_params
     end
   end
 end

@@ -15,6 +15,8 @@ gem 'sass-rails', '4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'bootstrap-datepicker-rails', '1.3.0.2'
 
+gem 'postmark', '1.2.1'
+
 gem 'yelp', '2.0.1'
 
 group :development, :test do
