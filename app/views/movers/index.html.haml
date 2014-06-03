@@ -1,5 +1,5 @@
 .container.movers
-  .col-xs-8
+  .col-md-8.col-xs-12
 
     %p.lead
       = "One Step Closer to <strong>#{@to.titleize}</strong>! Here are <strong>#{@mover_list_items.size}</strong> movers we've found in <strong>#{@from.titleize}</strong>".html_safe
@@ -7,7 +7,7 @@
     %ul.list-unstyled
       = render partial: "mover_list_item", collection: @mover_list_items
 
-  .col-xs-4
+  .col-md-4.hidden-xs.hidden-sm
 
     %ul.list-unstyled
       %li.lead Here we can start educating the user!
@@ -27,4 +27,3 @@
     $('#modalMoverName').text(moverName);
     $('#modalMoverStars').attr('data-rating', moverStars);
   });
-
