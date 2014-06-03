@@ -11,15 +11,18 @@
           %img.img-rounded.img-responsive{src: "http://placehold.it/400x150"}
         .col-xs-12.col-sm-7
           .row
-            .col-xs-4
+            .col-xs-3
+              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
+              = "#{@mover_detail.yelp_review_count} Reviews"
+            .col-xs-3
               %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
               - if @mover_detail.general_liability_insurance
                 = "Insured"
-            .col-xs-4
+            .col-xs-3
               %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
               - if @mover_detail.year_started
                 = "Since #{@mover_detail.year_started}"
-            .col-xs-4
+            .col-xs-3
               %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
               - if @mover_detail.avg_price_per_hour
                 = "$#{@mover_detail.avg_price_per_hour} avg per hour"
@@ -112,7 +115,7 @@
                 %li= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
             .col-xs-12.col-md-4
               %span.lead Testimonial
-              %blockquote= "#{@mover_detail.yelp_review_snippet} MY MOVERS ARE THE BEST MOVERS IN THE WHOLE WIDE WORLD. DELETE THIS TEXT ONCE YELP IS WORKING"
+              %blockquote= "#{@mover_detail.yelp_review_snippet}"
 
     .col-md-4.hidden-xs.hidden-sm
       %h1 Sidebar Shiz
