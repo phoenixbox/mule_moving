@@ -1,13 +1,13 @@
 = link_to "Back", movers_path
 .container
-  .col-xs-8
+  .col-xs-12.col-md-8
     .panel-heading
       %span.lead= @mover_detail.name
     .panel-body
       .row
-        .col-xs-5
+        .col-xs-12.col-sm-5
           %img.img-rounded.img-responsive{src: "http://placehold.it/300x150"}
-        .col-xs-7
+        .col-xs-12.col-sm-7
           .row
             .col-xs-4
               %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
@@ -38,13 +38,13 @@
         %span.lead Licenses & Compliance
       .panel-body
         .row
-          .col-xs-6.license
+          .col-xs-12.col-md-6.license
             = "State Dot: #{@mover_detail.state_dot}"
             = "US Dot: #{@mover_detail.us_dot}"
             = "Automobile Insurance: #{icon_checkmark_or_not !!@mover_detail.automobile_insurance}".html_safe
             = "Cargo Insurance: #{icon_checkmark_or_not !!@mover_detail.cargo_insurance}".html_safe
             = "General Liability Insurance: #{icon_checkmark_or_not !!@mover_detail.general_liability_insurance}".html_safe
-          .col-xs-6.compliance
+          .col-xs-12.col-md-6.compliance
             = "Workers Compensation: #{icon_checkmark_or_not !!@mover_detail.workers_compensation}".html_safe
             = "Company Registration: #{@mover_detail.company_registration}"
             = "PUC: #{@mover_detail.puc}"
@@ -54,7 +54,7 @@
         %span.lead Services
       .panel-body
         .row
-          .col-xs-3
+          .col-sm-6.col-md-3
             %ul.mover-detail-list
               %li.title Pickup
               %li= "Packaging: #{icon_checkmark_or_not @mover_detail.packaging}".html_safe
@@ -63,18 +63,18 @@
               %li= "Furniture Disassembly: #{icon_checkmark_or_not @mover_detail.furniture_disassembly}".html_safe
               %li= "Personal Truck Loading: #{icon_checkmark_or_not @mover_detail.personal_truck_loading}".html_safe
               %li= "Appliances Uninstall: #{icon_checkmark_or_not @mover_detail.appliances_uninstall}".html_safe
-          .col-xs-3
+          .col-sm-6.col-md-3
             %ul.mover-detail-list
               %li.title Transport
               %li= "Shuttling: #{icon_checkmark_or_not @mover_detail.shuttling}".html_safe
               %li= "Storage: #{icon_checkmark_or_not @mover_detail.storage}".html_safe
               %li= "Extra Stops: #{icon_checkmark_or_not @mover_detail.extra_stops}".html_safe
-          .col-xs-3
+          .col-sm-6.col-md-3
             %ul.mover-detail-list
               %li.title Dropoff
               %li= "Furniture Assembly: #{icon_checkmark_or_not @mover_detail.furniture_assembly}".html_safe
               %li= "Appliances Install: #{icon_checkmark_or_not @mover_detail.appliances_install}".html_safe
-          .col-xs-3
+          .col-sm-6.col-md-3
             %ul.mover-detail-list
               %li.title Dropoff
               %li= "Electronics Packaging: #{icon_checkmark_or_not @mover_detail.electronics_packaging}".html_safe
@@ -88,7 +88,7 @@
         %span.lead Other
       .panel-body
         .row
-          .col-xs-4
+          .col-xs-12.col-md-4
             .row.resources
               .col-xs-12
                 %span.lead Resources
@@ -98,7 +98,7 @@
               .col-xs-12
                 %span.lead Address
                 = @mover_detail.address
-          .col-xs-4
+          .col-xs-12.col-md-4
             %span.lead Operating Hours
             %ul.mover-detail-list
               %li= "Mon: #{@mover_detail.hours_mon || 'Closed'}"
@@ -108,9 +108,9 @@
               %li= "Fri: #{@mover_detail.hours_fri || 'Closed'}"
               %li= "Sat: #{@mover_detail.hours_sat || 'Closed'}"
               %li= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
-          .col-xs-4
+          .col-xs-12.col-md-4
             %span.lead Testimonial
             %span.lead= "#{@mover_detail.yelp_review_snippet} and some more testimonial stuff"
 
-  .col-xs-4
+  .col-md-4.hidden-xs.hidden-sm
     %h1 Sidebar Shiz

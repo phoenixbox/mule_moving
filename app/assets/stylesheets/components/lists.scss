@@ -4,7 +4,7 @@
 
 .panel-mule, .panel-mover-detail {
   @extend .panel;
-  @include panel-variant(white, black, whitesmoke, white);
+  @include panel-variant(white, white, $mule-aqua, $mule-aqua);
   border-width: 1px;
 }
 
@@ -36,9 +36,7 @@
   .panel-body {
     @include border-top-radius(0px);
     @include border-bottom-radius(0px);
-    border: 1px solid whitesmoke;
-    border-top: none;
-    border-right: none;
+    border: 1px solid $mule-aqua;
   }
 }
 
