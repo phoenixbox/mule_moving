@@ -59,13 +59,6 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'PUC: A123'
     expect(page).to have_content 'State Dot: B123'
     expect(page).to have_content 'US Dot: C123'
-    expect(page).to have_content 'Mon: 08:00 - 10:00'
-    expect(page).to have_content 'Tue: Closed'
-    expect(page).to have_content 'Wed: Closed'
-    expect(page).to have_content 'Thu: Closed'
-    expect(page).to have_content 'Fri: Closed'
-    expect(page).to have_content 'Sat: Closed'
-    expect(page).to have_content 'Sun: 08:00 - 20:00'
     expect(page).to have_content 'Employees: 10'
     expect(page).to have_content 'Trucks: 2'
 

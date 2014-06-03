@@ -10,22 +10,7 @@
         .col-xs-12.col-sm-5
           %img.img-rounded.img-responsive{src: "http://placehold.it/400x150"}
         .col-xs-12.col-sm-7
-          .row
-            .col-xs-3
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
-              = "#{@mover_detail.yelp_review_count} Reviews"
-            .col-xs-3
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
-              - if @mover_detail.general_liability_insurance
-                = "Insured"
-            .col-xs-3
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
-              - if @mover_detail.year_started
-                = "Since #{@mover_detail.year_started}"
-            .col-xs-3
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/400x150"}
-              - if @mover_detail.avg_price_per_hour
-                = "$#{@mover_detail.avg_price_per_hour} avg per hour"
+          = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
           .rating-container
             .rating{data: {rating: (@mover_detail.yelp_stars || (1..5).to_a.sample)}}
               %i.star-1 ★
@@ -94,7 +79,7 @@
           %span.lead Other
         .panel-body
           .row
-            .col-xs-12.col-md-4
+            .col-xs-12.col-md-5
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Resources
                 %li= "Employees: #{@mover_detail.employees}"
@@ -103,17 +88,7 @@
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Address
                 %li= @mover_detail.address
-            .col-xs-12.col-md-4
-              %ul.mover-detail-list
-                %li.mover-detail-list-heading Operating Hours
-                %li= "Mon: #{@mover_detail.hours_mon || 'Closed'}"
-                %li= "Tue: #{@mover_detail.hours_tue || 'Closed'}"
-                %li= "Wed: #{@mover_detail.hours_wed || 'Closed'}"
-                %li= "Thu: #{@mover_detail.hours_thu || 'Closed'}"
-                %li= "Fri: #{@mover_detail.hours_fri || 'Closed'}"
-                %li= "Sat: #{@mover_detail.hours_sat || 'Closed'}"
-                %li= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
-            .col-xs-12.col-md-4
+            .col-xs-12.col-md-5
               %span.lead Testimonial
               %blockquote= "#{@mover_detail.yelp_review_snippet}"
 

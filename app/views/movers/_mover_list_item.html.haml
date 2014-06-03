@@ -9,19 +9,7 @@
         .col-xs-12.col-md-5
           %img.img-rounded.img-responsive.panel-hero{src: "http://placehold.it/300x150"}
         .col-xs-12.col-md-7
-          .row
-            .col-xs-4
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
-              - if mover_list_item.general_liability_insurance
-                = "Insured"
-            .col-xs-4
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
-              - if mover_list_item.year_started
-                = "Since #{mover_list_item.year_started}"
-            .col-xs-4
-              %img.img-rounded.img-responsive.thumbnail{src: "http://placehold.it/300x150"}
-              - if mover_list_item.avg_price_per_hour
-                = "$#{mover_list_item.avg_price_per_hour} avg per hour"
+          = render partial: "mover_icons", locals: {mover_list_item: mover_list_item}
     .description.col-xs-12
       %span= truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }
     .row

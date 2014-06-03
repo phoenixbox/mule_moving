@@ -1,0 +1,17 @@
+.row
+  .col-xs-3
+    = image_tag "paper_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
+    = "#{mover_list_item.yelp_review_count} Reviews"
+  .col-xs-3
+    = image_tag "grill_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
+    - if mover_list_item.general_liability_insurance
+      = "Insured"
+  .col-xs-3
+    = image_tag "air_con_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
+    - if mover_list_item.year_started
+      = "Since #{mover_list_item.year_started}"
+  .col-xs-3
+    = image_tag "air_con_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
+    - if mover_list_item.avg_price_per_hour
+      %span= "$#{mover_list_item.avg_price_per_hour}"
+      %span avg per hour
