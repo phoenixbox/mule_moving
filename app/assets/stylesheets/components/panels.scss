@@ -1,8 +1,19 @@
+.panel-heros {
+  img {
+    margin: 20px auto;
+  }
+}
+
 .panel-mule, .panel-mover-detail {
   @extend .panel;
   @include panel-variant(white, white, $mule-aqua, $mule-aqua);
   border-width: 1px;
+
+  img {
+    @extend .panel-hero;
+  }
 }
+
 
 .panel-mule {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
@@ -15,8 +26,10 @@
     transition: all 0.5s;
   }
 
-  img {
-    margin: 20px auto;
+  .description {
+    @media screen and (min-width: $screen-xs-max) {
+      margin-bottom: 40px;
+    }
   }
 }
 
