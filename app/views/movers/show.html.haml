@@ -2,7 +2,9 @@
 .container
   .col-xs-12.col-md-8
     .panel-heading
-      %span.lead= @mover_detail.name
+      .row
+        .col-xs-12
+          %span.lead= @mover_detail.name
     .panel-body
       .row
         .col-xs-12.col-sm-5
@@ -56,7 +58,7 @@
         .row
           .col-sm-6.col-md-3
             %ul.mover-detail-list
-              %li.title Pickup
+              %li.mover-detail-list-heading Pickup
               %li= "Packaging: #{icon_checkmark_or_not @mover_detail.packaging}".html_safe
               %li= "Crating: #{icon_checkmark_or_not @mover_detail.crating}".html_safe
               %li= "Furniture Wrapping: #{icon_checkmark_or_not @mover_detail.furniture_wrapping}".html_safe
@@ -65,42 +67,42 @@
               %li= "Appliances Uninstall: #{icon_checkmark_or_not @mover_detail.appliances_uninstall}".html_safe
           .col-sm-6.col-md-3
             %ul.mover-detail-list
-              %li.title Transport
+              %li.mover-detail-list-heading Transport
               %li= "Shuttling: #{icon_checkmark_or_not @mover_detail.shuttling}".html_safe
               %li= "Storage: #{icon_checkmark_or_not @mover_detail.storage}".html_safe
               %li= "Extra Stops: #{icon_checkmark_or_not @mover_detail.extra_stops}".html_safe
           .col-sm-6.col-md-3
             %ul.mover-detail-list
-              %li.title Dropoff
+              %li.mover-detail-list-heading Dropoff
               %li= "Furniture Assembly: #{icon_checkmark_or_not @mover_detail.furniture_assembly}".html_safe
               %li= "Appliances Install: #{icon_checkmark_or_not @mover_detail.appliances_install}".html_safe
           .col-sm-6.col-md-3
             %ul.mover-detail-list
-              %li.title Dropoff
+              %li.mover-detail-list-heading Dropoff
               %li= "Electronics Packaging: #{icon_checkmark_or_not @mover_detail.electronics_packaging}".html_safe
               %li= "Auto Transport: #{icon_checkmark_or_not @mover_detail.auto_transport}".html_safe
               %li= "Bulky Items: #{icon_checkmark_or_not @mover_detail.bulky_items}".html_safe
               %li= "Pianos: #{icon_checkmark_or_not @mover_detail.pianos}".html_safe
               %li= "Gun Safe: #{icon_checkmark_or_not @mover_detail.gun_safe}".html_safe
               %li= "Cleaning: #{icon_checkmark_or_not @mover_detail.cleaning}".html_safe
+
     .panel-mover-detail
       .panel-heading
         %span.lead Other
       .panel-body
         .row
           .col-xs-12.col-md-4
-            .row.resources
-              .col-xs-12
-                %span.lead Resources
-                = "Employees: #{@mover_detail.employees}"
-                = "Trucks: #{@mover_detail.trucks}"
-            .row.address
-              .col-xs-12
-                %span.lead Address
-                = @mover_detail.address
-          .col-xs-12.col-md-4
-            %span.lead Operating Hours
             %ul.mover-detail-list
+              %li.mover-detail-list-heading Resources
+              %li= "Employees: #{@mover_detail.employees}"
+              %li= "Trucks: #{@mover_detail.trucks}"
+
+            %ul.mover-detail-list
+              %li.mover-detail-list-heading Address
+              %li= @mover_detail.address
+          .col-xs-12.col-md-4
+            %ul.mover-detail-list
+              %li.mover-detail-list-heading Operating Hours
               %li= "Mon: #{@mover_detail.hours_mon || 'Closed'}"
               %li= "Tue: #{@mover_detail.hours_tue || 'Closed'}"
               %li= "Wed: #{@mover_detail.hours_wed || 'Closed'}"
@@ -110,7 +112,7 @@
               %li= "Sun: #{@mover_detail.hours_sun || 'Closed'}"
           .col-xs-12.col-md-4
             %span.lead Testimonial
-            %span.lead= "#{@mover_detail.yelp_review_snippet} and some more testimonial stuff"
+            %blockquote= "#{@mover_detail.yelp_review_snippet} MY MOVERS ARE THE BEST MOVERS IN THE WHOLE WIDE WORLD. DELETE THIS TEXT ONCE YELP IS WORKING"
 
   .col-md-4.hidden-xs.hidden-sm
     %h1 Sidebar Shiz
