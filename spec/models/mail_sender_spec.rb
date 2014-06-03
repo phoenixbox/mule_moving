@@ -19,6 +19,7 @@ describe MailSender do
       expect(mail_client).to have_received(:deliver).with({
                                                             from: 'team@rawlabs.co',
                                                             to: 'customer@example.com',
+                                                            bcc: 'team@rawlabs.co',
                                                             subject: 'Mule Moving: Got it!',
                                                             text_body: body
                                                           })

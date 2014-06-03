@@ -11,6 +11,7 @@ class MailSender
     @client.deliver({
                       from: 'team@rawlabs.co',
                       to: customer,
+                      bcc: 'team@rawlabs.co',
                       subject: 'Mule Moving: Got it!',
                       text_body: body
                     })
