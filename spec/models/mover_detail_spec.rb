@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MoverListItem do
+describe MoverDetail do
   describe '#yelp?' do
     it 'returns true when rating present' do
       subject.yelp_stars = 5

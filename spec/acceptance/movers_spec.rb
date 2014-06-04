@@ -6,7 +6,7 @@ describe 'Movers', type: :feature do
     create_mover_yelp mover_id: taylor_moving.id, yelp_id: 'taylors'
     create_mover_pricing(mover_id: taylor_moving.id, avg_price_per_hour: 45)
     create_mover_compliance(mover_id: taylor_moving.id, general_liability_insurance: true)
-    create_mover_statistics(mover_id: taylor_moving.id, year_started: 2004)
+    create_mover_statistics(mover_id: taylor_moving.id, year_started: (Time.now.year - 10))
 
     allow_any_instance_of(YelpFinder).to receive(:find_business).with('taylors').and_return(new_yelp_business stars: 2.5)
 
@@ -21,7 +21,7 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'Mafia Movers'
 
     within 'li', text: 'Taylor Moving' do
-      expect(page).to have_content 'Since 2004'
+      expect(page).to have_content '10 Years'
       expect(page).to have_content '$45 avg per hour'
       expect(page).to have_content 'Insured'
       rating = first('.rating')['data-rating']
@@ -32,7 +32,7 @@ describe 'Movers', type: :feature do
 
   it 'viewing a mover' do
     mover = create_mover name: 'Mafia Movers', description: 'You\'re under our protection now'
-    create_mover_statistics(mover_id: mover.id, year_started: 1999, employees: 10, trucks: 2)
+    create_mover_statistics(mover_id: mover.id, year_started: (Time.now.year - 2), employees: 10, trucks: 2)
     create_mover_pricing(mover_id: mover.id, avg_price_per_hour: 46)
     create_mover_address(mover_id: mover.id, line1: '123 Circle Road', city: 'Boulder', state: 'CO', zip: '80301')
     create_mover_yelp(mover_id: mover.id, yelp_id: 'mafioso')
@@ -50,7 +50,7 @@ describe 'Movers', type: :feature do
 
     expect(page).to have_content 'Mafia Movers'
     expect(page).to have_content 'You\'re under our protection now'
-    expect(page).to have_content 'Since 1999'
+    expect(page).to have_content '2 Years'
     expect(page).to have_content '123 Circle Road, Boulder, CO, 80301'
     expect(page).to have_content '$46 avg per hour'
     expect(page).to have_css('.rating')

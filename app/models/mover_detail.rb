@@ -21,7 +21,6 @@ class MoverDetail
                 :hours_sun,
                 :employees,
                 :trucks,
-                :year_started,
                 :yelp_stars,
                 :yelp_review_count,
                 :yelp_review_snippet,
@@ -47,9 +46,21 @@ class MoverDetail
                 :shuttling,
                 :storage
 
+  attr_writer :year_started
+
   def initialize(mover = nil)
     @id = mover.try(:id)
     @name = mover.try(:name)
     @description = mover.try(:description)
+  end
+
+  def years_in_business
+    return nil unless @year_started
+
+    Time.zone.now.year - @year_started
+  end
+
+  def yelp?
+    !!yelp_stars
   end
 end
