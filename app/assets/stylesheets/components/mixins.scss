@@ -2,3 +2,25 @@
   color: white;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, $percent);
 }
+
+
+// navbar mixin
+@mixin navbar-variant($color: white, $bg-color: $brand-primary){
+  background-color: $bg-color;
+  border-color: $bg-color;
+  color: $color;
+  font-size: 16px;
+
+  .navbar-nav > li {
+    > a {
+      color: $color;
+      &:hover, &:focus {
+        color: darken($color, 5%);
+        background-color: darken($bg-color, 5%);
+        transition: 1s all;
+      }
+    }
+  }
+  .navbar-link {color: $color;}
+  .navbar-text {color: $color;}
+}

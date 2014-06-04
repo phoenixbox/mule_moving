@@ -1,4 +1,7 @@
-$hero-input-size: 2.5em;
+$hero-input-size: 2em;
+@mixin hero-form-element() {
+  font-size: $hero-input-size;
+}
 
 .hero {
     background: url(<%= asset_path 'landing_hero.png' %>) no-repeat center center fixed;
@@ -17,20 +20,30 @@ $hero-input-size: 2.5em;
     }
 
     form {
-        input[type="text"] {
-            font-size: $hero-input-size;
-            width: 100%;
-            outline: 0;
-            color: $gray;
-        }
+      @extend .col-xs-12;
+      @extend .col-sm-6;
+      @extend .col-sm-offset-3;
+      @extend .col-md-4;
+      @extend .col-md-offset-4;
+
+
+      > div {
+        @extend .form-group;
+      }
+
+      input[type="text"]{
+        @extend .form-control;
+        height: $hero-input-size;
+              @include hero-form-element;
+        text-align: center;
+      }
+
     }
 }
 
 .btn-discover {
-    font-size: $hero-input-size;
-    @extend .btn-block;
-    @extend .btn-default;
-    border-radius: 0px;
-    outline: 0;
-    margin: 35px auto 20px;
+  @extend .btn;
+  @extend .btn-block;
+  @extend .btn-default;
+  @include hero-form-element;
 }

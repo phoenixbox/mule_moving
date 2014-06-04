@@ -1,8 +1,9 @@
-.navbar.navbar-default.navbar-static-top{role: 'navigation'}
+.navbar.navbar-mule{role: 'navigation'}
   .container
     %ul.nav.navbar-nav
       %li
-        = link_to 'Mule', root_path
+        = link_to root_path, class: "logo" do
+          = image_tag 'mule_logo.png', class: "logo"
     %p.navbar-text.navbar-right
       Mover?
       %a.navbar-link{href: 'mailto:team@rawlabs.co?Subject=Mule%20Moving'} Contact Us
