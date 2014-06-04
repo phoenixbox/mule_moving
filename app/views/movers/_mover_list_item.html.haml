@@ -21,5 +21,7 @@
             %i.star-3 ★
             %i.star-4 ★
             %i.star-5 ★
+            %a{href: mover_list_item.yelp_url, target: "_blank"}
+              = image_tag asset_path("yelp/yelp_logo_mini.png")
       .col-xs-12.col-md-4.col-md-offset-4
         %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: mover_list_item.name, mover_id: mover_list_item.id, stars: mover_list_item.yelp_stars }} Book

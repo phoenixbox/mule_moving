@@ -4,6 +4,7 @@ class MoverListItem
                 :description,
                 :hero_img,
                 :yelp_stars,
+                :yelp_url,
                 :yelp_review_count,
                 :avg_price_per_hour,
                 :general_liability_insurance,
