@@ -34,11 +34,11 @@
             .col-xs-12.col-md-6.license
               = "State Dot: #{@mover_detail.state_dot}"
               = "US Dot: #{@mover_detail.us_dot}"
-              = "Automobile Insurance: #{icon_checkmark_or_not !!@mover_detail.automobile_insurance}".html_safe
-              = "Cargo Insurance: #{icon_checkmark_or_not !!@mover_detail.cargo_insurance}".html_safe
-              = "General Liability Insurance: #{icon_checkmark_or_not !!@mover_detail.general_liability_insurance}".html_safe
+              = "Automobile Insurance: #{icon_checkmark_or_not @mover_detail.automobile_insurance}".html_safe
+              = "Cargo Insurance: #{icon_checkmark_or_not @mover_detail.cargo_insurance}".html_safe
+              = "General Liability Insurance: #{icon_checkmark_or_not @mover_detail.general_liability_insurance}".html_safe
             .col-xs-12.col-md-6.compliance
-              = "Workers Compensation: #{icon_checkmark_or_not !!@mover_detail.workers_compensation}".html_safe
+              = "Workers Compensation: #{icon_checkmark_or_not @mover_detail.workers_compensation}".html_safe
               = "Company Registration: #{@mover_detail.company_registration}"
               = "PUC: #{@mover_detail.puc}"
 

@@ -5,7 +5,11 @@
   .col-xs-3
     = image_tag "grill_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
     - if mover_list_item.general_liability_insurance
-      = "Insured"
+      Insured
+    - elsif mover_list_item.general_liability_insurance.nil?
+      Not Verified
+    - else
+      Not Insured
   .col-xs-3
     = image_tag "air_con_icon_aqua_240.png", class: "img-rounded img-responsive thumbnail"
     - if mover_list_item.year_started
