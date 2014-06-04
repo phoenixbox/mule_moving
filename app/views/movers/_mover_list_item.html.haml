@@ -7,7 +7,7 @@
             = link_to mover_list_item.name, mover_path(mover_list_item.id)
       .row
         .col-xs-12.col-md-5
-          %img.img-rounded.img-responsive.panel-hero{src: "http://placehold.it/300x150"}
+          %img.img-rounded.img-responsive.panel-hero{src: mover_list_item.hero_img, style: "width: 300px; height: 150px; overflow: hidden"}
         .col-xs-12.col-md-7
           = render partial: "mover_icons", locals: {mover_list_item: mover_list_item}
     .description.col-xs-12

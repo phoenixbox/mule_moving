@@ -9,6 +9,7 @@ class MoverListFinder
       hydrator.compliance(mover_item)
       hydrator.pricing(mover_item)
       hydrator.statistics(mover_item)
+      hydrator.hero(mover_item)
     end
 
     mover_items

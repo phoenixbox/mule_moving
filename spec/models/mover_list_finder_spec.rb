@@ -12,6 +12,7 @@ describe MoverListFinder do
       expect_any_instance_of(MoverAssociationsHydrator).to receive(:compliance).with(list_item)
       expect_any_instance_of(MoverAssociationsHydrator).to receive(:pricing).with(list_item)
       expect_any_instance_of(MoverAssociationsHydrator).to receive(:statistics).with(list_item)
+      expect_any_instance_of(MoverAssociationsHydrator).to receive(:hero).with(list_item)
 
       results = subject.for_location('Boulder')
 

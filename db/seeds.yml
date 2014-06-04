@@ -403,7 +403,7 @@ movers:
       yelp: "stallion-moving-services-denver"
     images:
       hero:
-        url: ""
+        url: "http://s3-media3.ak.yelpcdn.com/bphoto/scSIxhfNYSD_N0nm-8vSww/l.jpg"
       secondary:
         -
           url: ""
@@ -634,7 +634,7 @@ movers:
       yelp: "altitude-movers-denver-denver-2"
     images:
       hero:
-        url: "http://altitudemoversdenver.com/wp-content/uploads/2013/06/packing-headboard.jpg"
+        url: "http://s3-media2.ak.yelpcdn.com/bphoto/SXnRAngy7kZOywLLcoGFFw/l.jpg"
       secondary:
         -
           url: ""
@@ -711,7 +711,7 @@ movers:
       yelp: "a-simple-move-aurora-3"
     images:
       hero:
-        url: ""
+        url: "http://s3-media3.ak.yelpcdn.com/bphoto/ea_63r_L8ytkXeWM9jnEqw/l.jpg"
       secondary:
         -
           url: ""
@@ -788,7 +788,7 @@ movers:
       yelp: "amazing-moves-moving-and-storage-denver"
     images:
       hero:
-        url: ""
+        url: "http://www.amazingmoves.com/media-gallery/full/IMG_0391.jpg"
       secondary:
         -
           url: ""
@@ -865,7 +865,7 @@ movers:
       yelp: "all-my-sons-moving-and-storage-of-denver-inc-denver"
     images:
       hero:
-        url: ""
+        url: "http://s3-media3.ak.yelpcdn.com/bphoto/Duj41zOcTfc6HvhqbbMdrA/l.jpg"
       secondary:
         -
           url: ""
@@ -942,7 +942,7 @@ movers:
       yelp: "the-wright-move-denver"
     images:
       hero:
-        url: ""
+        url: "http://s3-media3.ak.yelpcdn.com/bphoto/T9Bw08KkZrNu4FiefTY3pQ/l.jpg"
       secondary:
         -
           url: ""
@@ -1019,7 +1019,7 @@ movers:
       yelp: "boulder-moving-boulder"
     images:
       hero:
-        url: ""
+        url: "http://media.point2.com/p2a/htmltext/8a16/36fb/946d/77124cc6c7468212872a/original.gif"
       secondary:
         -
           url: ""
@@ -1096,7 +1096,7 @@ movers:
       yelp: "behoove-moving-and-cleaning-denver"
     images:
       hero:
-        url: ""
+        url: "http://s3-media4.ak.yelpcdn.com/bphoto/PASQ2AB8F7NxSQBvefjF4g/l.jpg"
       secondary:
         -
           url: ""
@@ -1173,7 +1173,7 @@ movers:
       yelp: "mile-high-movers-llc-denver"
     images:
       hero:
-        url: ""
+        url: "http://s3-media1.ak.yelpcdn.com/bphoto/Ub-DBTvjN3fQNTyxCzXcLg/l.jpg"
       secondary:
         -
           url: ""

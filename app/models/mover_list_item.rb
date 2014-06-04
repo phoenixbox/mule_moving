@@ -2,6 +2,7 @@ class MoverListItem
   attr_accessor :id,
                 :name,
                 :description,
+                :hero_img,
                 :yelp_stars,
                 :yelp_review_count,
                 :avg_price_per_hour,

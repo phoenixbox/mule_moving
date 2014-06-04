@@ -8,11 +8,11 @@
             %span.lead= @mover_detail.name
       .row.panel-heros
         .col-xs-12.col-sm-5
-          %img.img-rounded.img-responsive{src: "http://placehold.it/400x150"}
+          %img.img-rounded.img-responsive{src: @mover_detail.hero_img, style: "width: 400px; height: 150px; overflow: hidden"}
         .col-xs-12.col-sm-7
           = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
           .rating-container
-            .rating{data: {rating: (@mover_detail.yelp_stars || (1..5).to_a.sample)}}
+            .rating{data: {rating: @mover_detail.yelp_stars}}
               %i.star-1 ★
               %i.star-2 ★
               %i.star-3 ★
