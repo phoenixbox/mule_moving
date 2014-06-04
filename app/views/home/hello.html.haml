@@ -7,15 +7,16 @@
       = text_field_tag :to, nil, placeholder: 'To', autofocus: true, data: {label: "To:"}
       = submit_tag :discover, value: 'Discover', name: nil, class: "btn-discover"
 %section.row
-  .col-xs-12.col-sm-4.explanation
-    %h3 Transparency
-    %p Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No?
-  .col-xs-12.col-sm-4.explanation
-    %h3 Control
-    %p You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide...
-  .col-xs-12.col-sm-4.explanation
-    %h3 Trust
-    %p Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.
+  .col-xs-12.col-md-10.col-md-offset-1.text-center
+    .col-xs-12.col-sm-4.col-md-4.explainer
+      %h2 Transparency
+      %p.lead We Won't Fuck with Your Shit
+    .col-xs-12.col-sm-4.col-md-4.explainer
+      %h2 Control
+      %p.lead You Make the Decisions!
+    .col-xs-12.col-sm-4.col-md-4.explainer
+      %h2 Trust
+      %p.lead We Won't Fuck with Your Shit
 
 :javascript
   $(document).ready(function(){

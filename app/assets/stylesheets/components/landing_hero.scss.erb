@@ -4,41 +4,45 @@ $hero-input-size: 2em;
 }
 
 .hero {
-    background: url(<%= asset_path 'landing_hero.png' %>) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url(<%= asset_path 'landing_hero.png' %>) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-    height: 500px;
-    padding-top: 80px;
+  height: 500px;
+  padding-top: 80px;
+  border-bottom: $mule-aqua solid 5px;
 
-    .title {
-        // responsive font size from jquery fittext.js
-        @include white-with-border;
-        padding-bottom: 20px;
+  .title {
+      // responsive font size from jquery fittext.js
+      @include white-with-border;
+      padding-bottom: 20px;
+  }
+
+  form {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-sm-offset-3;
+    @extend .col-md-4;
+    @extend .col-md-offset-4;
+
+
+    > div {
+      @extend .form-group;
     }
 
-    form {
-      @extend .col-xs-12;
-      @extend .col-sm-6;
-      @extend .col-sm-offset-3;
-      @extend .col-md-4;
-      @extend .col-md-offset-4;
-
-
-      > div {
-        @extend .form-group;
-      }
-
-      input[type="text"]{
-        @extend .form-control;
-        height: $hero-input-size;
-              @include hero-form-element;
-        text-align: center;
-      }
-
+    input[type="text"]{
+      @extend .form-control;
+      height: $hero-input-size;
+      @include hero-form-element;
     }
+
+  }
+}
+
+.explainer {
+  margin: 75px 0;
 }
 
 .btn-discover {
