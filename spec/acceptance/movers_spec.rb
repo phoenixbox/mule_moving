@@ -46,7 +46,9 @@ describe 'Movers', type: :feature do
 
     visit movers_path(from: 'Boulder', to: 'Denver')
 
-    click_on 'Mafia Movers'
+    within 'li.row', text: 'Mafia Movers' do
+      click_link 'View'
+    end
 
     expect(page).to have_content 'Mafia Movers'
     expect(page).to have_content 'You\'re under our protection now'
