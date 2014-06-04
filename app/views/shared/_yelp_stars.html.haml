@@ -1,0 +1,9 @@
+.rating-container
+  .rating{data: {rating: mover.yelp_stars}}
+    %i.star-1 ★
+    %i.star-2 ★
+    %i.star-3 ★
+    %i.star-4 ★
+    %i.star-5 ★
+    %a{href: mover.yelp_url, target: "_blank"}
+      = image_tag asset_path("yelp/yelp_logo_mini.png")

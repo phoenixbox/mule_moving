@@ -14,14 +14,6 @@
       %span= truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }
     .row
       .col-xs-12.col-md-4
-        .rating-container
-          .rating{data: {rating: mover_list_item.yelp_stars}}
-            %i.star-1 ★
-            %i.star-2 ★
-            %i.star-3 ★
-            %i.star-4 ★
-            %i.star-5 ★
-            %a{href: mover_list_item.yelp_url, target: "_blank"}
-              = image_tag asset_path("yelp/yelp_logo_mini.png")
+        = render partial: "shared/yelp_stars", locals: {mover: mover_list_item }
       .col-xs-12.col-md-4.col-md-offset-4
         %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: mover_list_item.name, mover_id: mover_list_item.id, stars: mover_list_item.yelp_stars }} Book
