@@ -9,6 +9,9 @@ class MoversController < ApplicationController
   end
 
   def show
+    @from = session[:from]
+    @to = session[:to]
+
     @mover_detail = MoverDetailFinder.new.for_id(params[:id])
   end
 end

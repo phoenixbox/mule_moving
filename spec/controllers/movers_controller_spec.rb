@@ -35,11 +35,23 @@ describe MoversController do
   describe 'GET #show' do
     it 'assigns mover_detail' do
       mover_detail = double('mover detail')
-      allow_any_instance_of(MoverDetailFinder).to receive(:for_id).with('4').and_return(mover_detail)
+      expect_any_instance_of(MoverDetailFinder).to receive(:for_id).with('4').and_return(mover_detail)
 
       get :show, id: 4
 
       expect(assigns(:mover_detail)).to eq mover_detail
+    end
+
+    it 'assigns from/to as session values if none given' do
+      session[:from] = 'Monkey Island'
+      session[:to] = 'Madagascar'
+
+      allow_any_instance_of(MoverDetailFinder).to receive(:for_id).with('4')
+
+      get :show, id: 4
+
+      expect(assigns(:from)).to eq 'Monkey Island'
+      expect(assigns(:to)).to eq 'Madagascar'
     end
   end
 end
