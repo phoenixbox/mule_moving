@@ -12,12 +12,12 @@
           = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
       .row
         .col-xs-12.col-sm-6
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
-        .col-xs-12.col-sm-6
           = render partial: "shared/yelp_stars", locals: {mover: @mover_detail }
           .text-center
             %span.lead
-              = "#{@mover_detail.yelp_review_count || 0} Reviews on Yelp"
+              = pluralize(@mover_detail.yelp_review_count || 0, "Review")
+        .col-xs-12.col-sm-6{style: "padding-top: 30px"}
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
       .panel
         .panel-heading
           %span.lead Description
