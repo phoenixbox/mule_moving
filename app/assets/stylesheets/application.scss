@@ -12,13 +12,17 @@
  *= require bootstrap-datepicker3
  */
 
-$mule-aqua: #43C1C7;
-$mule-color: $mule-aqua;
-$brand-primary: $mule-aqua; // this overwrites bootstraps primary color
-$panel-mule-border: $mule-color;
+$mule-aqua:               #43C1C7;
+$mule-color:              $mule-aqua;
+$brand-primary:           $mule-aqua; // this overwrites bootstraps primary color
+$panel-mule-border:       $mule-color;
 $panel-mule-border-width: 3px;
-$panel-mule-text: black;
-$panel-mule-heading-bg: white;
+$panel-mule-text:         black;
+$panel-mule-heading-bg:   white;
+
+$container-desktop:       850px;
+$container-large-desktop: 850px;
+
 
 @import 'bootstrap';
 @import 'components/mixins';

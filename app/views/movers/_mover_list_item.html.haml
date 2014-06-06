@@ -1,19 +1,17 @@
 %li.row
   .panel-mule
-    .panel-body
-      .row
-        .col-xs-12
-          %h2= mover_list_item.name
-      .row
-        .col-xs-12.col-md-5
-          %img.img-rounded.img-responsive.panel-hero{src: mover_list_item.hero_img, style: "width: 300px; height: 150px; overflow: hidden"}
-        .col-xs-12.col-md-7
-          = render partial: "mover_icons", locals: {mover_list_item: mover_list_item}
+    .col-xs-12
+      %h2= mover_list_item.name
+    .col-xs-12.col-md-6
+      %img.img-rounded.img-responsive.panel-hero{src: mover_list_item.hero_img}
+    .col-xs-12.col-md-6
+      = render partial: "mover_icons", locals: {mover_list_item: mover_list_item}
     .description.col-xs-12
+      %p.lead Description:
       %span= truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }
     .row
-      .col-xs-12.col-md-4
+      .col-xs-12.col-md-6
         = render partial: "shared/yelp_stars", locals: {mover: mover_list_item }
-      .col-xs-12.col-md-4.col-md-offset-4
-        %a.btn.btn-primary.col-xs-12{href: mover_path(mover_list_item.id)} View
+      .col-xs-12.col-md-5.col-md-offset-1
+        %a.btn.btn-primary.col-xs-12{href: mover_path(mover_list_item.id)} View Details
         %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: mover_list_item.name, mover_id: mover_list_item.id, stars: mover_list_item.yelp_stars }} Book

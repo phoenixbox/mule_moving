@@ -1,42 +1,49 @@
-= link_to "Back", movers_path
 .container
   .row
-    .col-xs-12.col-md-8
+    .col-xs-12
       .panel-heading
         .row
           .col-xs-12
             %span.lead= @mover_detail.name
       .row.panel-heros
-        .col-xs-12.col-sm-5
+        .col-xs-12.col-sm-6
           %img.img-rounded.img-responsive{src: @mover_detail.hero_img, style: "width: 400px; height: 150px; overflow: hidden"}
-        .row
-          .col-xs-6.col-sm-6
-            = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
-            = render partial: "shared/yelp_stars", locals: {mover: @mover_detail }
-          .col-xs-6.col-sm-6
-            %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
-      .panel-mover-detail
+        .col-xs-12.col-sm-6
+          = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
+      .row
+        .col-xs-12.col-sm-6
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
+        .col-xs-12.col-sm-6
+          = render partial: "shared/yelp_stars", locals: {mover: @mover_detail }
+          .text-center
+            %span.lead
+              = "#{@mover_detail.yelp_review_count || 0} Reviews on Yelp"
+      .panel
         .panel-heading
           %span.lead Description
         .panel-body
           %p= @mover_detail.description
-      .panel-mover-detail
+      .panel
         .panel-heading
           %span.lead Licenses & Compliance
         .panel-body
           .row
             .col-xs-12.col-md-6.license
-              = "State Dot: #{@mover_detail.state_dot}"
-              = "US Dot: #{@mover_detail.us_dot}"
-              = "Automobile Insurance: #{icon_checkmark_or_not @mover_detail.automobile_insurance}".html_safe
-              = "Cargo Insurance: #{icon_checkmark_or_not @mover_detail.cargo_insurance}".html_safe
-              = "General Liability Insurance: #{icon_checkmark_or_not @mover_detail.general_liability_insurance}".html_safe
+              %ul.mover-detail-list
+                %li.mover-detail-list-heading Licenses
+                %li= "State Dot: #{content_tag :span, @mover_detail.state_dot, class: 'pull-right'}".html_safe
+                %li= "US Dot: #{content_tag :span, @mover_detail.us_dot, class: 'pull-right'}".html_safe
+                %li= "Company Registration: #{content_tag :span, @mover_detail.company_registration, class: 'pull-right'}".html_safe
+                %li= "PUC: #{content_tag :span, @mover_detail.puc, class: 'pull-right'}".html_safe
             .col-xs-12.col-md-6.compliance
-              = "Workers Compensation: #{icon_checkmark_or_not @mover_detail.workers_compensation}".html_safe
-              = "Company Registration: #{@mover_detail.company_registration}"
-              = "PUC: #{@mover_detail.puc}"
+              %ul.mover-detail-list
+                %li.mover-detail-list-heading Compliance
+                %li= "Workers Compensation: #{icon_checkmark_or_not @mover_detail.workers_compensation}".html_safe
+                %li= "Automobile Insurance: #{icon_checkmark_or_not @mover_detail.automobile_insurance}".html_safe
+                %li= "Cargo Insurance: #{icon_checkmark_or_not @mover_detail.cargo_insurance}".html_safe
+                %li= "General Liability Insurance: #{icon_checkmark_or_not @mover_detail.general_liability_insurance}".html_safe
 
-      .panel-mover-detail
+      .panel
         .panel-heading
           %span.lead Services
         .panel-body
@@ -71,26 +78,20 @@
                 %li= "Gun Safe: #{icon_checkmark_or_not @mover_detail.gun_safe}".html_safe
                 %li= "Cleaning: #{icon_checkmark_or_not @mover_detail.cleaning}".html_safe
 
-      .panel-mover-detail
+      .panel
         .panel-heading
           %span.lead Other
         .panel-body
           .row
-            .col-xs-12.col-md-5
+            .col-xs-12.col-md-6
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Resources
                 %li= "Employees: #{@mover_detail.employees}"
                 %li= "Trucks: #{@mover_detail.trucks}"
-
+            .col-xs-12.col-md-6
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Address
                 %li= @mover_detail.address
-            .col-xs-12.col-md-5
-              %span.lead Testimonial
-              %blockquote= "#{@mover_detail.yelp_review_snippet}"
-
-    .col-md-4.hidden-xs.hidden-sm
-      %h1 Sidebar Shiz
 
 = render partial: 'booking_modal'
 :javascript
