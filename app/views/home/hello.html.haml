@@ -8,19 +8,20 @@
         = text_field_tag :to, nil, placeholder: 'To', autofocus: true, data: {label: "To:"}
         = submit_tag :discover, value: 'Discover', name: nil, class: "btn-discover"
 %section.row
-  .col-xs-12.col-md-10.col-md-offset-1.text-center
-    .col-xs-12.col-sm-4.col-md-4.explainer
-      %h2 Transparency
-      %p.lead
-        Transparency is about keeping you informed of all possible options you might want at every step of the process.
-    .col-xs-12.col-sm-4.col-md-4.explainer
-      %h2 Pricing
-      %p.lead
-        Pricing is at our core, because you should know exactly what you're signing up for and expected to pay at the end.
-    .col-xs-12.col-sm-4.col-md-4.explainer
-      %h2 Convenience
-      %p.lead
-        Convenience and Control go hand-in-hand. You should be able to communicate things that you need, whether through phone/email/text/carrier-pigeon
+  .container
+    .col-xs-12.col-md-12
+      .col-xs-12.col-sm-4.col-md-4.explainer
+        %h2 Transparency
+        %p.lead
+          Transparency is about keeping you informed of all possible options you might want at every step of the process.
+      .col-xs-12.col-sm-4.col-md-4.explainer
+        %h2 Pricing
+        %p.lead
+          Pricing is at our core, because you should know exactly what you're signing up for and expected to pay at the end.
+      .col-xs-12.col-sm-4.col-md-4.explainer
+        %h2 Convenience
+        %p.lead
+          Convenience and Control go hand-in-hand. You should be able to communicate things that you need, whether through phone/email/text/carrier-pigeon
 
 :javascript
   $(document).ready(function(){
