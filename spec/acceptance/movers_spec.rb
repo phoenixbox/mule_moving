@@ -56,7 +56,6 @@ describe 'Movers', type: :feature do
     expect(page).to have_content '123 Circle Road, Boulder, CO, 80301'
     expect(page).to have_content '$46 avg per hour'
     expect(page).to have_css('.rating')
-    expect(page).to have_content 'These guys took great care of our furniture!'
     expect(page).to have_content 'Company Registration: Z123'
     expect(page).to have_content 'PUC: A123'
     expect(page).to have_content 'State Dot: B123'
@@ -65,11 +64,5 @@ describe 'Movers', type: :feature do
     expect(page).to have_content 'Trucks: 2'
 
     expect(page).to have_button 'Book'
-
-    click_on 'Back'
-
-    expect(page).to have_content 'Mafia Movers'
-    expect(page).to have_content 'Boulder'
-    expect(page).to have_content 'Denver'
   end
 end

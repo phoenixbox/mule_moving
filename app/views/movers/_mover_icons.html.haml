@@ -10,7 +10,7 @@
   .col-xs-4.text-center
     = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
     - if mover_list_item.years_in_business
-      = pluralize(mover_list_item.years_in_business, "Year")
+      = "Operating #{pluralize(mover_list_item.years_in_business, "Year")}"
     - else
       Not Verified
   .col-xs-4.text-center
