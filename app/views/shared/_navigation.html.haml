@@ -1,9 +1,7 @@
 .navbar.navbar-mule{role: 'navigation'}
   .container
-    %ul.nav.navbar-nav
-      %li
-        = link_to root_path, class: "logo" do
-          = image_tag 'mule_logo.png', class: "logo"
-    %p.navbar-text.navbar-right
+    = link_to root_path, class: "logo brand" do
+      = image_tag 'mule_logo.png', class: "logo"
+    %p.navbar-text.pull-right
       Mover?
       %a.navbar-link{href: 'mailto:team@mulemoving.com?Subject=Mule%20Moving'} Contact Us
