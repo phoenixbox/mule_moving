@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe MoverDetailFinder do
   describe '#for_id' do

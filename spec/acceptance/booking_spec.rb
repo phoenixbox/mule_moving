@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'Booking', type: :feature, js: true do
   xit 'can be done on index page' do

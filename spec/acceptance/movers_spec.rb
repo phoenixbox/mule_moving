@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'Movers', type: :feature do
   it 'lists all movers' do

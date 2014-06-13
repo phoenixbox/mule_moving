@@ -1,28 +1,18 @@
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'rspec/autorun'
-require 'capybara/rails'
-
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-
-ActiveRecord::Migration.maintain_test_schema!
-
 RSpec.configure do |config|
-  config.include ObjectCreationMethods
-  config.include ActiveSupport::Testing::TimeHelpers
+  if config.files_to_run.one?
+    config.default_formatter = "doc"
+  end
 
-  config.use_transactional_fixtures = true
+  config.order = :random
+  Kernel.srand config.seed
 
-  config.infer_base_class_for_anonymous_controllers = false
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
+  end
 
-  config.order = "random"
-end
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = :expect
 
-def and_it(message)
-  if block_given?
-    yield
-  else
-    pending message
+    mocks.verify_partial_doubles = true
   end
 end

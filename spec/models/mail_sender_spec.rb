@@ -1,17 +1,17 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe MailSender do
   describe '#confirmation' do
     let(:mail_client) { double('mail client') }
 
     before do
-      mail_client.stub(:deliver)
+      allow(mail_client).to receive(:deliver)
     end
 
     subject { MailSender.new(mail_client) }
 
     it 'sends an email to the correct place outside of test environment' do
-      Rails.env.stub(:test?).and_return(false)
+      allow(Rails.env).to receive(:test?).and_return(false)
 
       subject.confirmation('customer@example.com', 'Boulder', 'Denver', Date.parse('31/12/2014'), 'Mafia Movers')
 
@@ -23,20 +23,16 @@ describe MailSender do
                                                             subject: 'Mule Moving: Got it!',
                                                             text_body: body
                                                           })
-
-      Rails.env.unstub(:test?)
     end
 
     it 'does not send the email if in test or development' do
       subject.confirmation('customer@example.com', 'Boulder', 'Denver', Date.parse('31/12/2014'), 'Mafia Movers')
       expect(mail_client).to_not have_received(:deliver)
 
-      Rails.env.stub(:development? => true)
+      allow(Rails.env).to receive(:development?).and_return(true)
 
       subject.confirmation('customer@example.com', 'Boulder', 'Denver', Date.parse('31/12/2014'), 'Mafia Movers')
       expect(mail_client).to_not have_received(:deliver)
-
-      Rails.env.unstub(:development?)
     end
   end
 end

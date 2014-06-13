@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe HealthCheckController do
   describe 'GET #show' do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'Home', type: :feature do
   it 'views homepage and navigates to the movers index' do

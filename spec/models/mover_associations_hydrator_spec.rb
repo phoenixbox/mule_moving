@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe MoverAssociationsHydrator do
   let(:hydratee_class) {
