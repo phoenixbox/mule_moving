@@ -24,6 +24,7 @@ group :development, :test do
   gem 'capybara', '2.3.0'
   gem 'selenium-webdriver', '2.42.0'
   gem 'pry'
+  gem 'database_cleaner', '1.3.0'
 end
 
 group :production, :staging do

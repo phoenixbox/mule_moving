@@ -1,29 +1,11 @@
 .container.movers
+  .col-md-4.hidden-xs.hidden-sm
+    = render partial: "movers_list_sidebar", locals: {from: @from, to: @to}
   .col-md-8.col-xs-12
-    %p.lead= "Here are #{@mover_list_items.size} movers we've found near #{@from.titleize}:"
+    %p.lead= "#{@mover_list_items.size} movers"
 
     %ul.list-unstyled
       = render partial: "mover_list_item", collection: @mover_list_items
-
-  .col-md-4.hidden-xs.hidden-sm
-    .lead
-      %ul.list-unstyled
-        %li Your Move
-        %li
-          %strong From
-          = @from.titleize
-        %li
-          %strong To
-          = @to.titleize
-      %hr
-        %p These movers have been hand-selected as the best candidates for your move. The information provided will help you make an educated decision on which is best for you.
-        %br
-        %p The process is simple:
-        %ul.list-unstyled
-          %li Step 1. Browse movers
-          %li Step 2. Book a date
-          %li Step 3. Schedule home visit
-          %li Step 4. Move!
 
 = render partial: 'booking_modal'
 :javascript

@@ -1,0 +1,64 @@
+.lead
+  %ul.list-unstyled
+    %li
+      %strong= "#{from.titleize} → #{to.titleize}"
+  %hr
+    %p Pickup Services
+    %ul.list-unstyled
+      %li
+        = check_box_tag "Packaging"
+        = label_tag "Packaging"
+      %li
+        = check_box_tag "Crating"
+        = label_tag "Crating"
+      %li
+        = check_box_tag "Furniture Wrapping"
+        = label_tag "Furniture Wrapping"
+      %li
+        = check_box_tag "Furniture Disassembly"
+        = label_tag "Furniture Disassembly"
+      %li
+        = check_box_tag "Personal Truck Loading"
+        = label_tag "Personal Truck Loading"
+      %li
+        = check_box_tag "Appliances Uninstall"
+        = label_tag "Appliances Uninstall"
+    %p Transport Services
+    %ul.list-unstyled
+      %li
+        = check_box_tag "Shuttling"
+        = label_tag "Shuttling"
+      %li
+        = check_box_tag "Storage"
+        = label_tag "Storage"
+      %li
+        = check_box_tag "Extra Stops"
+        = label_tag "Extra Stops"
+    %p Dropoff Services
+    %ul.list-unstyled
+      %li
+        = check_box_tag "Furniture Assembly"
+        = label_tag "Furniture Assembly"
+      %li
+        = check_box_tag "Appliances Install"
+        = label_tag "Appliances Install"
+    %p Special Services
+    %ul.list-unstyled
+      %li
+        = check_box_tag "Electronics Packaging"
+        = label_tag "Electronics Packaging"
+      %li
+        = check_box_tag "Auto Transport"
+        = label_tag "Auto Transport"
+      %li
+        = check_box_tag "Bulky Items"
+        = label_tag "Bulky Items"
+      %li
+        = check_box_tag "Pianos"
+        = label_tag "Pianos"
+      %li
+        = check_box_tag "Gun Safe"
+        = label_tag "Gun Safe"
+      %li
+        = check_box_tag "Cleaning"
+        = label_tag "Cleaning"
