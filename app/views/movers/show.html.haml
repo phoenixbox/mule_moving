@@ -17,7 +17,7 @@
             %span.lead
               = pluralize(@mover_detail.yelp_review_count || 0, "Review")
         .col-xs-12.col-sm-6{style: "padding-top: 30px"}
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
       .panel
         .panel-heading
           %span.lead Description
@@ -31,10 +31,10 @@
             .col-xs-12.col-md-6.license
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Licenses
-                %li= "State Dot: #{content_tag :span, @mover_detail.state_dot, class: 'pull-right'}".html_safe
-                %li= "US Dot: #{content_tag :span, @mover_detail.us_dot, class: 'pull-right'}".html_safe
-                %li= "Company Registration: #{content_tag :span, @mover_detail.company_registration, class: 'pull-right'}".html_safe
-                %li= "PUC: #{content_tag :span, @mover_detail.puc, class: 'pull-right'}".html_safe
+                %li= "State Dot: #{content_tag :span, @mover_detail.state_dot, class: "pull-right"}".html_safe
+                %li= "US Dot: #{content_tag :span, @mover_detail.us_dot, class: "pull-right"}".html_safe
+                %li= "Company Registration: #{content_tag :span, @mover_detail.company_registration, class: "pull-right"}".html_safe
+                %li= "PUC: #{content_tag :span, @mover_detail.puc, class: "pull-right"}".html_safe
             .col-xs-12.col-md-6.compliance
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Compliance
@@ -93,15 +93,15 @@
                 %li.mover-detail-list-heading Address
                 %li= @mover_detail.address
 
-= render partial: 'booking_modal'
+= render partial: "booking_modal"
 :javascript
-  $('[data-target=#bookModal]').click(function (e) {
+  $("[data-target=#bookModal]").click(function (e) {
     var $target = $(e.target);
-    var moverId = $target.data('mover-id');
-    var moverName = $target.data('mover');
-    var moverStars = $target.data('stars');
+    var moverId = $target.data("mover-id");
+    var moverName = $target.data("mover");
+    var moverStars = $target.data("stars");
 
-    $('#booking_mover_id').val(moverId);
-    $('#modalMoverName').text(moverName);
-    $('#modalMoverStars').attr('data-rating', moverStars);
+    $("#booking_mover_id").val(moverId);
+    $("#modalMoverName").text(moverName);
+    $("#modalMoverStars").attr("data-rating", moverStars);
   });

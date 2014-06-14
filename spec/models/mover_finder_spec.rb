@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe MoverFinder do
-  describe '#all' do
-    it 'returns all movers' do
+  describe "#all" do
+    it "returns all movers" do
       mover1 = create_mover
       mover2 = create_mover
 
@@ -13,8 +13,8 @@ describe MoverFinder do
     end
   end
 
-  describe '#find_by_id' do
-    it 'returns mover entity' do
+  describe "#find_by_id" do
+    it "returns mover entity" do
       mover = create_mover
 
       found = subject.find_by_id(mover.id)
@@ -23,7 +23,7 @@ describe MoverFinder do
       expect(found.class).to eq MoverEntity
     end
 
-    it 'raises when not found' do
+    it "raises when not found" do
       expect {
         subject.find_by_id(5)
       }.to raise_error ActiveRecord::RecordNotFound

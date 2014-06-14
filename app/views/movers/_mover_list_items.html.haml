@@ -32,5 +32,5 @@
               %a{href: "{{ mover_list_item.yelp_url }}", target: "_blank"}
                 = image_tag asset_path("yelp/yelp_logo_mini.png")
         .col-xs-12.col-md-5.col-md-offset-1
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: "{{ mover_list_item.name }}", mover_id: "{{ mover_list_item.id }}", stars: "{{ mover_list_item.yelp_stars }}" }} Book
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: "{{ mover_list_item.name }}", mover_id: "{{ mover_list_item.id }}", stars: "{{ mover_list_item.yelp_stars }}" }} Book
           %a.btn.btn-primary.col-xs-12{href: "{{ mover_list_item.path }}", style: "margin-bottom: 5px"} View Details

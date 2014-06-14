@@ -1,6 +1,6 @@
 module ObjectCreationMethods
   def new_mover(overrides = {})
-    defaults = { name: "My Little Mover #{counter}", description: 'I am the best mover.' }
+    defaults = { name: "My Little Mover #{counter}", description: "I am the best mover." }
     MoverRecord.new { |record| apply(record, defaults, overrides) }
   end
 
@@ -57,7 +57,7 @@ module ObjectCreationMethods
   private
 
   def method_missing(method, *args, &block)
-    new_method = method.to_s.gsub(/^create_/, 'new_')
+    new_method = method.to_s.gsub(/^create_/, "new_")
     if method.to_s != new_method && self.respond_to?(new_method)
       send(new_method, *args).tap(&:save!)
     else
@@ -66,7 +66,7 @@ module ObjectCreationMethods
   end
 
   def respond_to_missing?(method_name, include_private = false)
-    method_name.to_s.start_with?('create_') || super
+    method_name.to_s.start_with?("create_") || super
   end
 
   def counter

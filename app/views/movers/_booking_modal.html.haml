@@ -2,7 +2,7 @@
   .modal-dialog.modal-sm
     .modal-content
       .modal-header
-        %button.close{type: :button, data: {dismiss: :modal}, 'aria-hidden' => true} &times;
+        %button.close{type: :button, data: {dismiss: :modal}, "aria-hidden" => true} &times;
         %h4.modal-title Book Mover
       .modal-body
         %h4#modalMoverName
@@ -18,34 +18,34 @@
         %h4 To
         %p= @to.titleize
         = form_tag bookings_path do
-          = text_field_tag 'booking[mover_id]', nil, {hidden: true}
-          = text_field_tag 'booking[from]', @from, {hidden: true}
-          = text_field_tag 'booking[to]', @to, {hidden: true}
-          = text_field_tag 'booking[move_date]', nil, {hidden: true}
+          = text_field_tag "booking[mover_id]", nil, {hidden: true}
+          = text_field_tag "booking[from]", @from, {hidden: true}
+          = text_field_tag "booking[to]", @to, {hidden: true}
+          = text_field_tag "booking[move_date]", nil, {hidden: true}
           %h4 Moving Date
           #modalCalendar
           %h4 Email
-          = text_field_tag 'booking[email]', nil, {placeholder: 'Enter an email', class: 'form-control', required: true}
+          = text_field_tag "booking[email]", nil, {placeholder: "Enter an email", class: "form-control", required: true}
           .modal-footer
-            = submit_tag 'Book', class: 'btn btn-primary btn-block'
+            = submit_tag "Book", class: "btn btn-primary btn-block"
 
 
 :javascript
-  $('#modalCalendar').datepicker({
+  $("#modalCalendar").datepicker({
     autoclose: true
   });
 
-  $('form').submit(function (e) {
-    var $datepicker = $('.datepicker');
-    var day = $datepicker.find('.active.day').text();
-    var month = $datepicker.find('.active.month').text();
-    var year = $datepicker.find('.active.year').text();
-    var email = $('#modalEmail').text();
+  $("form").submit(function (e) {
+    var $datepicker = $(".datepicker");
+    var day = $datepicker.find(".active.day").text();
+    var month = $datepicker.find(".active.month").text();
+    var year = $datepicker.find(".active.year").text();
+    var email = $("#modalEmail").text();
 
-    if (day === '' || month === '' || year === '') {
+    if (day === "" || month === "" || year === "") {
       e.preventDefault();
-      alert('Please choose a moving date');
+      alert("Please choose a moving date");
     }
 
-    $('#booking_move_date').val(day + '/' + month + '/' + year);
+    $("#booking_move_date").val(day + "/" + month + "/" + year);
   });

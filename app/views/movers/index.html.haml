@@ -6,12 +6,12 @@
     %p.lead= "#{@mover_list_items.size} movers"
     = render partial: "mover_list_items"
 
-= render partial: 'booking_modal'
+= render partial: "booking_modal"
 
 :javascript
-  var app = angular.module('mule', []);
+  var app = angular.module("mule", []);
 
-  app.controller('MoversListCtrl', function($scope) {
+  app.controller("MoversListCtrl", function($scope) {
     $scope.mover_list_items = #{@mover_list_items.to_json}
     $scope.services = [
       {
@@ -55,12 +55,12 @@
   });
 
   // Define our filter
-  app.filter('selectedServices', function($filter) {
+  app.filter("selectedServices", function($filter) {
     return function(mover_list_items) {
       var i, len;
 
       // get customers that have been checked
-      var checkedServices = $filter('filter')(services, {checked: true});
+      var checkedServices = $filter("filter")(services, {checked: true});
 
       // Add in a check to see if any customers were selected. If none, return
       // them all without filters
@@ -71,7 +71,7 @@
       // get all the unique cities that come from these checked customers
       var cities = {};
       for(i = 0, len = checkedCustomers.length; i < len; ++i) {
-        // if this checked customers cities isn't already in the cities object
+        // if this checked customers cities isn"t already in the cities object
         // add it
         if(!cities.hasOwnProperty(checkedCustomers[i].city)) {
           cities[checkedCustomers[i].city] = true;
@@ -82,7 +82,7 @@
       //get all customers from those cities and return them
       var ret = [];
       for(i = 0, len = customers.length; i < len; ++i) {
-        // If this customer's city exists in the cities object, add it to the
+        // If this customer"s city exists in the cities object, add it to the
         // return array
         if(cities[customers[i].city]) {
           ret.push(customers[i]);
@@ -94,13 +94,13 @@
     };
   });
 
-  $('[data-target=#bookModal]').click(function (e) {
+  $("[data-target=#bookModal]").click(function (e) {
     var $target = $(e.target);
-    var moverId = $target.data('mover-id');
-    var moverName = $target.data('mover');
-    var moverStars = $target.data('stars');
+    var moverId = $target.data("mover-id");
+    var moverName = $target.data("mover");
+    var moverStars = $target.data("stars");
 
-    $('#booking_mover_id').val(moverId);
-    $('#modalMoverName').text(moverName);
-    $('#modalMoverStars').attr('data-rating', moverStars);
+    $("#booking_mover_id").val(moverId);
+    $("#modalMoverName").text(moverName);
+    $("#modalMoverStars").attr("data-rating", moverStars);
   });

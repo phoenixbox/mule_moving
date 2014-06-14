@@ -4,9 +4,9 @@
       .title.text-center
         Find your perfect mover
       = form_tag movers_path, method: :get do
-        = text_field_tag :from, 'Boulder', readonly: true, data: {label: "From:"}
-        = text_field_tag :to, nil, placeholder: 'To', autofocus: true, data: {label: "To:"}
-        = submit_tag :discover, value: 'Discover', name: nil, class: "btn-discover"
+        = text_field_tag :from, "Boulder", readonly: true, data: {label: "From:"}
+        = text_field_tag :to, nil, placeholder: "To", autofocus: true, data: {label: "To:"}
+        = submit_tag :discover, value: "Discover", name: nil, class: "btn-discover"
 
 %section.row
   .container
@@ -26,10 +26,10 @@
 
 :javascript
   $(document).ready(function(){
-    $('#hero input').floatlabel({
+    $("#hero input").floatlabel({
       slideInput: false,
       paddingOffset: "5px",
-      labelStartTop: '30px',
-      labelEndTop: '0px'
+      labelStartTop: "30px",
+      labelEndTop: "0px"
     });
   });

@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe MoverDetailFinder do
-  describe '#for_id' do
-    it 'returns a mover_detail' do
+  describe "#for_id" do
+    it "returns a mover_detail" do
       mover_entity = MoverEntity.new
       mover_detail = MoverDetail.new
       expect_any_instance_of(MoverFinder).to receive(:find_by_id).with(12).and_return(mover_entity)
@@ -24,7 +24,7 @@ describe MoverDetailFinder do
       expect(mover_detail).to eq mover_detail
     end
 
-    it 'handles mover not found' do
+    it "handles mover not found" do
       expect {
         subject.for_id(11)
       }.to raise_exception ActiveRecord::RecordNotFound

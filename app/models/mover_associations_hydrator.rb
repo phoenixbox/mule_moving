@@ -49,7 +49,7 @@ class MoverAssociationsHydrator
       mover_address_record.city,
       mover_address_record.state,
       mover_address_record.zip
-    ].compact.join(', '))
+    ].compact.join(", "))
   end
 
   def hero(hydratee)
@@ -95,7 +95,7 @@ class MoverAssociationsHydrator
   def hours(hydratee)
     mover_opening_hours_records = MoverOpeningHourRecord.where(mover_id: hydratee.id)
 
-    date_format = '%H:%M'
+    date_format = "%H:%M"
     mover_opening_hours_records.each do |opening_hour_record|
       hydratee.try(:hours_mon=, "#{opening_hour_record.open.strftime(date_format)} - #{opening_hour_record.close.strftime(date_format)}") if opening_hour_record.day_of_week == 1
       hydratee.try(:hours_tue=, "#{opening_hour_record.open.strftime(date_format)} - #{opening_hour_record.close.strftime(date_format)}") if opening_hour_record.day_of_week == 2

@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe MoverListFinder do
-  describe '#for_location' do
-    it 'currently ignores location and returns all movers' do
+  describe "#for_location" do
+    it "currently ignores location and returns all movers" do
       mover = MoverEntity.new
       list_item = MoverListItem.new
       movers = [mover]
@@ -14,7 +14,7 @@ describe MoverListFinder do
       expect_any_instance_of(MoverAssociationsHydrator).to receive(:statistics).with(list_item)
       expect_any_instance_of(MoverAssociationsHydrator).to receive(:hero).with(list_item)
 
-      results = subject.for_location('Boulder')
+      results = subject.for_location("Boulder")
 
       first_mover = results.first
       expect(results.length).to eq 1
