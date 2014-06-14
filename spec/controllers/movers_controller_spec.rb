@@ -23,12 +23,16 @@ describe MoversController do
     end
 
     it 'assigns mover_list_items for location' do
-      mover_list_items = [double]
-      allow_any_instance_of(MoverListFinder).to receive(:for_location).with('Madagascar').and_return(mover_list_items)
+      mover_list_item = MoverListItem.new
+      serializer = double
+      serialized_item = double
+      allow_any_instance_of(MoverListFinder).to receive(:for_location).with('Madagascar').and_return([mover_list_item])
+      allow(MoverListItemSerializer).to receive(:new).with(mover_list_item).and_return(serializer)
+      allow(serializer).to receive(:as_json).and_return(serialized_item)
 
       get :index, from: 'Madagascar'
 
-      expect(assigns(:mover_list_items)).to eq mover_list_items
+      expect(assigns(:mover_list_items)).to eq [serialized_item]
     end
   end
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Movers', type: :feature do
+describe 'Movers', type: :feature, pending: true do
   it 'lists all movers' do
     taylor_moving = create_mover name: 'Taylor Moving', description: 'Taylor Moving Description'
     create_mover_yelp mover_id: taylor_moving.id, yelp_id: 'taylors'

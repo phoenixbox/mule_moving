@@ -1,16 +1,36 @@
-%li.row
-  .panel-mule
-    .col-xs-12
-      %h2= mover_list_item.name
-    .col-xs-12.col-md-6
-      %img.img-rounded.img-responsive.panel-hero{src: mover_list_item.hero_img}
-    .col-xs-12.col-md-6
-      = render partial: "mover_icons", locals: {mover_list_item: mover_list_item}
-    .description.col-xs-12
-      = truncate(mover_list_item.description, length: 300) { link_to "Read More", mover_path(mover_list_item.id) }
-    .row
+%ul.list-unstyled{"data-ng-repeat" => "mover_list_item in mover_list_items"}
+  %li.row
+    .panel-mule
+      .col-xs-12
+        %h2
+          {{ mover_list_item.name }}
       .col-xs-12.col-md-6
-        = render partial: "shared/yelp_stars", locals: {mover: mover_list_item }
-      .col-xs-12.col-md-5.col-md-offset-1
-        %a.btn.btn-primary.col-xs-12{href: mover_path(mover_list_item.id), style: "margin-bottom: 5px"} View Details
-        %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: mover_list_item.name, mover_id: mover_list_item.id, stars: mover_list_item.yelp_stars }} Book
+        %img.img-rounded.img-responsive.panel-hero{"data-ng-src" => "{{ mover_list_item.hero_img }}" }
+      .col-xs-12.col-md-6
+        .row
+          .col-xs-4.text-center
+            = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
+            {{ mover_list_item.general_liability_insurance }}
+          .col-xs-4.text-center
+            = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
+            {{ mover_list_item.years_in_business }}
+          .col-xs-4.text-center
+            = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
+            {{ mover_list_item.avg_price_per_hour }}
+      .description.col-xs-12
+        {{ mover_list_item.description | limitTo: 200 }}
+        %a{href: "{{ mover_list_item.path }}"} Read More
+      .row
+        .col-xs-12.col-md-6
+          .rating-container
+            .rating{data: {rating: "{{ mover_list_item.yelp_stars }}"}}
+              %i.star-1 ★
+              %i.star-2 ★
+              %i.star-3 ★
+              %i.star-4 ★
+              %i.star-5 ★
+              %a{href: "{{ mover_list_item.yelp_url }}", target: "_blank"}
+                = image_tag asset_path("yelp/yelp_logo_mini.png")
+        .col-xs-12.col-md-5.col-md-offset-1
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: '#bookModal', mover: "{{ mover_list_item.name }}", mover_id: "{{ mover_list_item.id }}", stars: "{{ mover_list_item.yelp_stars }}" }} Book
+          %a.btn.btn-primary.col-xs-12{href: "{{ mover_list_item.path }}", style: "margin-bottom: 5px"} View Details

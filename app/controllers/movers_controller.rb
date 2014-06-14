@@ -5,7 +5,8 @@ class MoversController < ApplicationController
 
     @from = session[:from]
     @to = session[:to]
-    @mover_list_items = MoverListFinder.new.for_location(@from)
+    items = MoverListFinder.new.for_location(@from)
+    @mover_list_items = items.map { |item| MoverListItemSerializer.new(item).as_json }
   end
 
   def show

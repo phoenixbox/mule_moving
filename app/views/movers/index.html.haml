@@ -1,14 +1,99 @@
-.container.movers
+.container.movers{"data-ng-controller" => "MoversListCtrl"}
   .col-md-4.hidden-xs.hidden-sm
     = render partial: "movers_list_sidebar", locals: {from: @from, to: @to}
+
   .col-md-8.col-xs-12
     %p.lead= "#{@mover_list_items.size} movers"
-
-    %ul.list-unstyled
-      = render partial: "mover_list_item", collection: @mover_list_items
+    = render partial: "mover_list_items"
 
 = render partial: 'booking_modal'
+
 :javascript
+  var app = angular.module('mule', []);
+
+  app.controller('MoversListCtrl', function($scope) {
+    $scope.mover_list_items = #{@mover_list_items.to_json}
+    $scope.services = [
+      {
+        "category": "Pickup",
+        "items": [
+          { id: "packaging", name: "Packaging" },
+          { id: "crating", name: "Crating" },
+          { id: "furniture_wrapping", name: "Furniture Wrapping" },
+          { id: "furniture_disassembly", name: "Furniture Disassembly" },
+          { id: "personal_truck_loading", name: "Personal Truck Loading" },
+          { id: "appliances_uninstall", name: "Appliances Uninstall" }
+        ]
+      },
+      {
+        "category": "Transport",
+        "items": [
+          { id: "shuttling", name: "Shuttling" },
+          { id: "storage", name: "Storage" },
+          { id: "extra_stops", name: "Extra Stops" }
+        ]
+      },
+      {
+        "category": "Dropoff",
+        "items": [
+          { id: "furniture_assembly", name: "Furniture Assembly" },
+          { id: "appliances_install", name: "Appliances Install" }
+        ]
+      },
+      {
+        "category": "Special",
+        "items": [
+          { id: "electronics_packaging", name: "Electronics Packaging" },
+          { id: "auto_transport", name: "Auto Transport" },
+          { id: "bulky_items", name: "Bulky Items" },
+          { id: "pianos", name: "Pianos" },
+          { id: "gun_safe", name: "Gun Safe" },
+          { id: "cleaning", name: "Cleaning" }
+        ]
+      }
+    ]
+  });
+
+  // Define our filter
+  app.filter('selectedServices', function($filter) {
+    return function(mover_list_items) {
+      var i, len;
+
+      // get customers that have been checked
+      var checkedServices = $filter('filter')(services, {checked: true});
+
+      // Add in a check to see if any customers were selected. If none, return
+      // them all without filters
+      if(checkedCustomers.length == 0) {
+        return mover_list_items;
+      }
+
+      // get all the unique cities that come from these checked customers
+      var cities = {};
+      for(i = 0, len = checkedCustomers.length; i < len; ++i) {
+        // if this checked customers cities isn't already in the cities object
+        // add it
+        if(!cities.hasOwnProperty(checkedCustomers[i].city)) {
+          cities[checkedCustomers[i].city] = true;
+        }
+      }
+
+      // Now that we have the cities that come from the checked customers, we can
+      //get all customers from those cities and return them
+      var ret = [];
+      for(i = 0, len = customers.length; i < len; ++i) {
+        // If this customer's city exists in the cities object, add it to the
+        // return array
+        if(cities[customers[i].city]) {
+          ret.push(customers[i]);
+        }
+      }
+
+      // we have our result!
+      return ret;
+    };
+  });
+
   $('[data-target=#bookModal]').click(function (e) {
     var $target = $(e.target);
     var moverId = $target.data('mover-id');
