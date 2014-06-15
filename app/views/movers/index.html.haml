@@ -12,7 +12,7 @@
   var app = angular.module("mule", []);
 
   app.controller("MoversListCtrl", function($scope, ServiceService) {
-    $scope.mover_list_items = #{@mover_list_items.to_json}
+    $scope.moverListItems = #{@mover_list_items.to_json}
     $scope.filteredServices = {}
     $scope.services = ServiceService.getServices();
 
@@ -72,7 +72,7 @@
   })
 
   app.filter("serviceFilter", function($filter) {
-    return function(mover_list_items, filteredServices) {
+    return function(moverListItems, filteredServices) {
 
       // exclude services set to false
       var requestedServices = {}
@@ -82,7 +82,7 @@
         }
       });
 
-      return $filter("filter")(mover_list_items, requestedServices);
+      return $filter("filter")(moverListItems, requestedServices);
     }
   });
 

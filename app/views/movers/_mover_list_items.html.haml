@@ -1,36 +1,36 @@
-%ul.list-unstyled{"data-ng-repeat" => "mover_list_item in filteredMovers = ( mover_list_items | serviceFilter:filteredServices | orderBy:random )"}
+%ul.list-unstyled{"data-ng-repeat" => "moverListItem in filteredMovers = ( moverListItems | serviceFilter:filteredServices | orderBy:random )"}
   %li.row
     .panel-mule
       .col-xs-12
         %h2
-          {{ mover_list_item.name }}
+          {{ moverListItem.name }}
       .col-xs-12.col-md-6
-        %img.img-rounded.img-responsive.panel-hero{"data-ng-src" => "{{ mover_list_item.hero_img }}" }
+        %img.img-rounded.img-responsive.panel-hero{"data-ng-src" => "{{ moverListItem.hero_img }}" }
       .col-xs-12.col-md-6
         .row
           .col-xs-4.text-center
             = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ mover_list_item.general_liability_insurance }}
+            {{ moverListItem.general_liability_insurance }}
           .col-xs-4.text-center
             = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ mover_list_item.years_in_business }}
+            {{ moverListItem.years_in_business }}
           .col-xs-4.text-center
             = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ mover_list_item.avg_price_per_hour }}
+            {{ moverListItem.avg_price_per_hour }}
       .description.col-xs-12
-        {{ mover_list_item.description | limitTo: 200 }}
-        %a{href: "{{ mover_list_item.path }}"} Read More
+        {{ moverListItem.description | limitTo: 200 }}
+        %a{href: "{{ moverListItem.path }}"} Read More
       .row
         .col-xs-12.col-md-6
           .rating-container
-            .rating{data: {rating: "{{ mover_list_item.yelp_stars }}"}}
+            .rating{data: {rating: "{{ moverListItem.yelp_stars }}"}}
               %i.star-1 ★
               %i.star-2 ★
               %i.star-3 ★
               %i.star-4 ★
               %i.star-5 ★
-              %a{href: "{{ mover_list_item.yelp_url }}", target: "_blank"}
+              %a{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
                 = image_tag asset_path("yelp/yelp_logo_mini.png")
         .col-xs-12.col-md-5.col-md-offset-1
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: "{{ mover_list_item.name }}", mover_id: "{{ mover_list_item.id }}", stars: "{{ mover_list_item.yelp_stars }}" }} Book
-          %a.btn.btn-primary.col-xs-12{href: "{{ mover_list_item.path }}", style: "margin-bottom: 5px"} View Details
+          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: "{{ moverListItem.name }}", mover_id: "{{ moverListItem.id }}", stars: "{{ moverListItem.yelp_stars }}" }} Book
+          %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.path }}", style: "margin-bottom: 5px"} View Details
