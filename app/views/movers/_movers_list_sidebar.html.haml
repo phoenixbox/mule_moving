@@ -3,10 +3,17 @@
     %li
       %strong= "#{from.titleize} → #{to.titleize}"
   %hr
+    %p
+      Insurance
+    %div
+      %ul.list-unstyled{"data-ng-repeat" => "insurance in insurances"}
+        %li
+          %input{type: :checkbox, id: "{{ insurance.id }}", name: "{{ insurance.id }}", "data-ng-model" => "filters[insurance.id]"}
+          %label{for: "{{ insurance.id }}"} {{ insurance.name }}
     %div{"data-ng-repeat" => "service in services"}
       %p
         {{ service.category }} Services
       %ul.list-unstyled{"data-ng-repeat" => "item in service.items"}
         %li
-          %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}", "data-ng-model" => "filteredServices[item.id]"}
+          %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}", "data-ng-model" => "filters[item.id]"}
           %label{for: "{{ item.id }}"} {{ item.name }}

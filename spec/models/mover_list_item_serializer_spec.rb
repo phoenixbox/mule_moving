@@ -13,7 +13,10 @@ describe MoverListItemSerializer do
         item.yelp_review_count = 12
         item.employees = 9
         item.year_started = 1994
+        item.automobile_insurance = true
+        item.cargo_insurance = false
         item.general_liability_insurance = true
+        item.workers_compensation = false
         item.avg_price_per_hour = 2
         item.appliances_install = true
         item.appliances_uninstall = true
@@ -45,7 +48,10 @@ describe MoverListItemSerializer do
                                          yelp_url: "http://yelp-url.com",
                                          yelp_review_count: 12,
                                          employees: 9,
+                                         automobile_insurance: true,
+                                         cargo_insurance: false,
                                          general_liability_insurance: true,
+                                         workers_compensation: false,
                                          avg_price_per_hour: 2,
                                          years_in_business: 20,
                                          path: Rails.application.routes.url_helpers.mover_path(9),
