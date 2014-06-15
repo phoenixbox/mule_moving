@@ -15,10 +15,6 @@
     $scope.moverListItems = #{@mover_list_items.to_json}
     $scope.filteredServices = {}
     $scope.services = ServiceService.getServices();
-
-    $scope.random = function() {
-      return 0.5 - Math.random();
-    }
   });
 
   app.factory("ServiceService", function () {
