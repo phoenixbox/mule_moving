@@ -10,6 +10,7 @@ class MoverListFinder
       hydrator.pricing(mover_item)
       hydrator.statistics(mover_item)
       hydrator.hero(mover_item)
+      hydrator.services(mover_item)
     end
 
     mover_items

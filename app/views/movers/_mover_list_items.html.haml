@@ -1,4 +1,4 @@
-%ul.list-unstyled{"data-ng-repeat" => "mover_list_item in mover_list_items"}
+%ul.list-unstyled{"data-ng-repeat" => "mover_list_item in filteredMovers = ( mover_list_items | serviceFilter:filteredServices )"}
   %li.row
     .panel-mule
       .col-xs-12

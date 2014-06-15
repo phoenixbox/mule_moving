@@ -3,7 +3,7 @@
     = render partial: "movers_list_sidebar", locals: {from: @from, to: @to}
 
   .col-md-8.col-xs-12
-    %p.lead= "#{@mover_list_items.size} movers"
+    %p.lead= "displaying {{ filteredMovers.length }} of #{@mover_list_items.size} movers"
     = render partial: "mover_list_items"
 
 = render partial: "booking_modal"
@@ -11,9 +11,14 @@
 :javascript
   var app = angular.module("mule", []);
 
-  app.controller("MoversListCtrl", function($scope) {
+  app.controller("MoversListCtrl", function($scope, ServiceService) {
     $scope.mover_list_items = #{@mover_list_items.to_json}
-    $scope.services = [
+    $scope.filteredServices = {}
+    $scope.services = ServiceService.getServices();
+  });
+
+  app.factory("ServiceService", function () {
+    var services = [
       {
         "category": "Pickup",
         "items": [
@@ -52,46 +57,29 @@
         ]
       }
     ]
-  });
 
-  // Define our filter
-  app.filter("selectedServices", function($filter) {
-    return function(mover_list_items) {
-      var i, len;
+    var getServices = function () {
+      return services;
+    }
 
-      // get customers that have been checked
-      var checkedServices = $filter("filter")(services, {checked: true});
+    return {
+      getServices: getServices
+    }
+  })
 
-      // Add in a check to see if any customers were selected. If none, return
-      // them all without filters
-      if(checkedCustomers.length == 0) {
-        return mover_list_items;
-      }
+  app.filter("serviceFilter", function($filter) {
+    return function(mover_list_items, filteredServices) {
 
-      // get all the unique cities that come from these checked customers
-      var cities = {};
-      for(i = 0, len = checkedCustomers.length; i < len; ++i) {
-        // if this checked customers cities isn"t already in the cities object
-        // add it
-        if(!cities.hasOwnProperty(checkedCustomers[i].city)) {
-          cities[checkedCustomers[i].city] = true;
+      // exclude services set to false
+      var requestedServices = {}
+      $.each(filteredServices, function(key, val) {
+        if (val === true) {
+          requestedServices[key] = true
         }
-      }
+      });
 
-      // Now that we have the cities that come from the checked customers, we can
-      //get all customers from those cities and return them
-      var ret = [];
-      for(i = 0, len = customers.length; i < len; ++i) {
-        // If this customer"s city exists in the cities object, add it to the
-        // return array
-        if(cities[customers[i].city]) {
-          ret.push(customers[i]);
-        }
-      }
-
-      // we have our result!
-      return ret;
-    };
+      return $filter("filter")(mover_list_items, requestedServices);
+    }
   });
 
   $("[data-target=#bookModal]").click(function (e) {

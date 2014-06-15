@@ -8,5 +8,5 @@
         {{ service.category }} Services
       %ul.list-unstyled{"data-ng-repeat" => "item in service.items"}
         %li
-          %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}"}
+          %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}", "data-ng-model" => "filteredServices[item.id]"}
           %label{for: "{{ item.id }}"} {{ item.name }}

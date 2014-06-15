@@ -9,7 +9,24 @@ class MoverListItem
                 :employees,
                 :year_started,
                 :general_liability_insurance,
-                :avg_price_per_hour
+                :avg_price_per_hour,
+                :appliances_install,
+                :appliances_uninstall,
+                :auto_transport,
+                :bulky_items,
+                :cleaning,
+                :crating,
+                :electronics_packaging,
+                :extra_stops,
+                :furniture_assembly,
+                :furniture_disassembly,
+                :furniture_wrapping,
+                :gun_safe,
+                :packaging,
+                :personal_truck_loading,
+                :pianos,
+                :shuttling,
+                :storage
 
   def initialize(mover = nil)
     @id = mover.try(:id)
