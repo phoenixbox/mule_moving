@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require bootstrap-datepicker/core
 //= require angular.min
+//= require angular/textHelpers
 //= require_tree .
