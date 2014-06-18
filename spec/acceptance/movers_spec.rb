@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Movers", type: :feature, pending: true do
+describe "Movers", type: :feature, js: :true do
   it "lists all movers" do
     taylor_moving = create_mover name: "Taylor Moving", description: "Taylor Moving Description"
     create_mover_yelp mover_id: taylor_moving.id, yelp_id: "taylors"
@@ -62,7 +62,5 @@ describe "Movers", type: :feature, pending: true do
     expect(page).to have_content "US Dot: C123"
     expect(page).to have_content "Employees: 10"
     expect(page).to have_content "Trucks: 2"
-
-    expect(page).to have_button "Book"
   end
 end
