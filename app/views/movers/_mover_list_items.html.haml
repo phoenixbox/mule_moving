@@ -10,13 +10,13 @@
         .row
           .col-xs-4.text-center
             = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.general_liability_insurance }}
+            {{ moverListItem.general_liability_insurance | insuranceFormat }}
           .col-xs-4.text-center
             = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.years_in_business }}
+            {{ moverListItem.years_in_business | yearsOperatingFormat }}
           .col-xs-4.text-center
             = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.avg_price_per_hour }}
+            {{ moverListItem.avg_price_per_hour | pricePerHourFormat }}
       .description.col-xs-12
         {{ moverListItem.description | limitTo: 200 }}
         %a{href: "{{ moverListItem.path }}"} Read More
