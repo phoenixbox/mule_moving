@@ -1,4 +1,10 @@
 class BookingsController < ApplicationController
+  def new
+    @from = session[:from]
+    @to = session[:to]
+    @mover = MoverDetailFinder.new.for_id(params[:id])
+  end
+
   def create
     record = BookingRecord.create(booking_params)
 

@@ -6,8 +6,6 @@
     %p.lead= "displaying {{ filteredMovers.length }} of #{@mover_list_items.size} movers"
     = render partial: "mover_list_items"
 
-= render partial: "booking_modal"
-
 :javascript
   var app = angular.module("mule", ["textHelpers"]);
 

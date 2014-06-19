@@ -32,5 +32,5 @@
               %a{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
                 = image_tag asset_path("yelp/yelp_logo_mini.png")
         .col-xs-12.col-md-5.col-md-offset-1
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: "{{ moverListItem.name }}", mover_id: "{{ moverListItem.id }}", stars: "{{ moverListItem.yelp_stars }}" }} Book
+          %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.booking_path }}"} Book
           %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.path }}", style: "margin-bottom: 5px"} View Details

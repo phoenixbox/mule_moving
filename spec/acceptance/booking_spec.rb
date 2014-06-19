@@ -1,19 +1,21 @@
 require "rails_helper"
 
 describe "Booking", type: :feature, js: true do
-  xit "can be done on index page" do
+  it "can be done on index page" do
     create_mover name: "Mafioso Movers"
 
     visit movers_path(from: "Boulder", to: "Denver")
 
     first("a", text: "Book").click
 
-    within ".modal" do
-      click_on "14"
-      fill_in :email, with: "me@example.com"
+    expect(page).to have_field :booking_from, with: "Boulder"
+    expect(page).to have_field :booking_to, with: "Denver"
 
-      click_on "Book"
-    end
+    page.execute_script "$('td.day:contains(12)').click()"
+
+    fill_in :booking_email, with: "me@example.com"
+
+    click_on "Book"
 
     expect(page).to have_content "Success"
   end

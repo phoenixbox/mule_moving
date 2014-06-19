@@ -30,4 +30,19 @@ describe BookingsController do
       post :create, post_params
     end
   end
+
+  describe "GET #new" do
+    it "assigns from, to, and mover" do
+      session[:from] = "Boulder"
+      session[:to] = "Denver"
+      mover = MoverDetail.new
+      expect_any_instance_of(MoverDetailFinder).to receive(:for_id).with("1").and_return(mover)
+
+      get :new, id: 1
+
+      expect(assigns(:mover)).to eq mover
+      expect(assigns(:from)).to eq "Boulder"
+      expect(assigns(:to)).to eq "Denver"
+    end
+  end
 end

@@ -36,7 +36,8 @@ class MoverListItemSerializer
       shuttling: @mover_list_item.shuttling,
       storage: @mover_list_item.storage,
       years_in_business: years_in_business,
-      path: path
+      path: path,
+      booking_path: booking_path
     }
   end
 
@@ -50,6 +51,10 @@ class MoverListItemSerializer
 
   def path
     Rails.application.routes.url_helpers.mover_path(@mover_list_item.id)
+  end
+
+  def booking_path
+    Rails.application.routes.url_helpers.booking_path(@mover_list_item.id)
   end
 end
 

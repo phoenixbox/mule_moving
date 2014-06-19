@@ -55,6 +55,7 @@ describe MoverListItemSerializer do
                                          avg_price_per_hour: 2,
                                          years_in_business: 20,
                                          path: Rails.application.routes.url_helpers.mover_path(9),
+                                         booking_path: Rails.application.routes.url_helpers.booking_path(9),
                                          appliances_install: true,
                                          appliances_uninstall: true,
                                          auto_transport: true,
