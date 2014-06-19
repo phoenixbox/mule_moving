@@ -3,13 +3,17 @@ $hero-input-size: 2em;
   font-size: $hero-input-size;
 }
 
-.hero {
+.hero-container {
   background: url(<%= asset_path 'landing_hero.png' %>) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-bottom: $mule-aqua solid 5px;
+}
+
+.hero {
+  background: rgba(black,0.7);
+  border-bottom: rgba($mule-aqua, 1) solid 5px;
 
   padding: 80px 0;
   @media screen and (max-width: $screen-md) {
@@ -52,6 +56,6 @@ $hero-input-size: 2em;
 .btn-discover {
   @extend .btn;
   @extend .btn-block;
-  @extend .btn-default;
+  @extend .btn-primary;
   @include hero-form-element;
 }
