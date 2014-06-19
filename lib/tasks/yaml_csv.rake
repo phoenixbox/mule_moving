@@ -41,13 +41,29 @@ namespace :seed do
 
   desc "converts a CSV with dot paths into a yaml format we can seed."
   task :to_yaml do
-    doc = CSV.read(CSV_SEED_FILENAME)
+    doc = CSV.read('db/boulder_movers_seed_to_csv.csv')
     fields = doc.shift
+
     records = []
     doc.each_with_index do |row, i|
+
+      # the record is the entire mover
       record = Hash.new
+
       fields.each_with_index do |field, j|
-        record[field] = row[j]
+        field_value = row[j]
+
+        # if field looks like licenses.dot.taco
+        # needs to be stored as {licenses: {dot: {taco: field_value}}}
+
+        paths = field.split('.')
+        paths.each do |p, i|
+          if i == (paths.length-1)
+
+          end
+
+          record[field] =
+        end
       end
       records.push(record)
     end
