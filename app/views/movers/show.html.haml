@@ -17,7 +17,7 @@
             %span.lead
               = pluralize(@mover_detail.yelp_review_count || 0, "Review")
         .col-xs-12.col-sm-6{style: "padding-top: 30px"}
-          %a.btn.btn-primary.col-xs-12{data: { toggle: :modal, target: "#bookModal", mover: @mover_detail.name, mover_id: @mover_detail.id, stars: @mover_detail.yelp_stars }} Book
+          %a.btn.btn-primary.col-xs-12{href: booking_path(@mover_detail.id)} Book
       .panel
         .panel-heading
           %span.lead Description
@@ -92,16 +92,3 @@
               %ul.mover-detail-list
                 %li.mover-detail-list-heading Address
                 %li= @mover_detail.address
-
-= render partial: "booking_modal"
-:javascript
-  $("[data-target=#bookModal]").click(function (e) {
-    var $target = $(e.target);
-    var moverId = $target.data("mover-id");
-    var moverName = $target.data("mover");
-    var moverStars = $target.data("stars");
-
-    $("#booking_mover_id").val(moverId);
-    $("#modalMoverName").text(moverName);
-    $("#modalMoverStars").attr("data-rating", moverStars);
-  });
