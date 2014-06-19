@@ -1,27 +1,9 @@
 %ul.list-unstyled{"data-ng-repeat" => "moverListItem in filteredMovers = ( moverListItems | serviceFilter:filters | orderBy:'-yelp_stars' | emptyToEnd:'yelp_stars')"}
   %li.row
-    .panel-mule
-      .col-xs-12
-        %h2
-          {{ moverListItem.name }}
-      .col-xs-12.col-md-6
-        %img.img-rounded.img-responsive.panel-hero{"data-ng-src" => "{{ moverListItem.hero_img }}" }
-      .col-xs-12.col-md-6
-        .row
-          .col-xs-4.text-center
-            = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.general_liability_insurance | insuranceFormat }}
-          .col-xs-4.text-center
-            = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.years_in_business | yearsOperatingFormat }}
-          .col-xs-4.text-center
-            = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
-            {{ moverListItem.avg_price_per_hour | pricePerHourFormat }}
-      .description.col-xs-12
-        {{ moverListItem.description | limitTo: 200 }}
-        %a{href: "{{ moverListItem.path }}"} Read More
-      .row
-        .col-xs-12.col-md-6
+    .col-xs-12
+      %h4
+        {{ moverListItem.name }}
+        .pull-right
           .rating-container
             .rating{data: {rating: "{{ moverListItem.yelp_stars }}"}}
               %i.star-1 ★
@@ -29,8 +11,32 @@
               %i.star-3 ★
               %i.star-4 ★
               %i.star-5 ★
-              %a{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
-                = image_tag asset_path("yelp/yelp_logo_mini.png")
-        .col-xs-12.col-md-5.col-md-offset-1
-          %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.booking_path }}"} Book
-          %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.path }}", style: "margin-bottom: 5px"} View Details
+          %a.pull-right{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
+            = image_tag asset_path("yelp/yelp_logo_mini.png")
+
+    .col-xs-12.col-md-3
+      %img.img-rounded.img-responsive{"data-ng-src" => "{{ moverListItem.hero_img }}" }
+    .description.col-xs-9
+      %small
+        {{ moverListItem.description | limitTo: 200 }}
+      %a{href: "{{ moverListItem.path }}"} Read More
+    .col-xs-6.col-md-6
+      .row
+        .col-xs-4.text-center
+          = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
+          %small
+            {{ moverListItem.general_liability_insurance | insuranceFormat }}
+        .col-xs-4.text-center
+          = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
+          %small
+            {{ moverListItem.years_in_business | yearsOperatingFormat }}
+        .col-xs-4.text-center
+          = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
+          %small
+            {{ moverListItem.avg_price_per_hour | pricePerHourFormat }}
+    .row
+      .col-xs-12.col-md-6
+      .col-xs-12.col-md-5.col-md-offset-1
+        %a.btn.btn-default.btn-sm.col-xs-12{href: "{{ moverListItem.booking_path }}"} Book
+        %a.btn.btn-primary.col-xs-12{href: "{{ moverListItem.path }}", style: "margin-top: 5px"} View Details
+  %hr

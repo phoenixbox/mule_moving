@@ -1,9 +1,9 @@
-.container.movers{"data-ng-app" => "mule", "data-ng-controller" => "MoversListCtrl"}
+.container.mule-panel.movers{"data-ng-app" => "mule", "data-ng-controller" => "MoversListCtrl"}
   .col-md-4.hidden-xs.hidden-sm
     = render partial: "movers_list_sidebar", locals: {from: @from, to: @to}
 
   .col-md-8.col-xs-12
-    %p.lead= "displaying {{ filteredMovers.length }} of #{@mover_list_items.size} movers"
+    %p= "displaying {{ filteredMovers.length }} of #{@mover_list_items.size} movers"
     = render partial: "mover_list_items"
 
 :javascript
