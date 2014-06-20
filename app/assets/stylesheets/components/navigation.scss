@@ -1,4 +1,4 @@
-.navbar-mule {
+.navbar-mule-transparent {
   margin-bottom: 0px;
 
   a.logo {
@@ -7,4 +7,9 @@
   img.logo {
     height: 50px;
   }
+}
+
+.navbar-mule {
+  @extend .navbar-mule-transparent;
+  @include navbar-variant();
 }

@@ -1,4 +1,5 @@
-$hero-input-size: 2em;
+$hero-background: #34495e;
+$hero-input-size: 1.75em;
 @mixin hero-form-element() {
   font-size: $hero-input-size;
 }
@@ -12,7 +13,7 @@ $hero-input-size: 2em;
 }
 
 .hero {
-  background: rgba(black,0.7);
+  background: rgba($hero-background,0.7);
   border-bottom: rgba($mule-aqua, 1) solid 5px;
 
   padding: 80px 0;
@@ -21,23 +22,32 @@ $hero-input-size: 2em;
     padding-bottom: 20px;
   }
 
+	> .container {
+		padding: 100px 0;
+		@media screen and (max-width: $screen-md) {
+			padding: 0;
+		}
+	}
+
   .title {
-      // responsive font size from jquery fittext.js
-      @include white-with-border;
-      padding-bottom: 20px;
+    // responsive font size from jquery fittext.js
+    @include white-with-border;
+    padding: 0 0 80px;
+	  @media screen and (max-width: $screen-md) {
+		  padding: 0;
+	  }
   }
 
   form {
-    @extend .col-xs-10;
-    @extend .col-xs-offset-1;
-    @extend .col-sm-6;
-    @extend .col-sm-offset-3;
-    @extend .col-md-6;
-    @extend .col-md-offset-3;
-
+    @extend .col-xs-12;
 
     > div {
       @extend .form-group;
+      @extend .col-xs-12;
+	    @extend .col-sm-12;
+      @extend .col-md-4;
+	    padding-left: 5px;
+	    padding-right: 5px;
     }
 
     input[type="text"]{
@@ -51,11 +61,16 @@ $hero-input-size: 2em;
 
 .explainer {
   margin: 75px 0;
+	@media screen and (max-width: $screen-md) {
+		margin: 0;
+	}
+
 }
 
 .btn-discover {
   @extend .btn;
-  @extend .btn-block;
   @extend .btn-primary;
+  @extend .btn-block;
   @include hero-form-element;
+	padding: 3px 12px;
 }

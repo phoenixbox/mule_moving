@@ -8,5 +8,5 @@
     = csrf_meta_tags
   %body
     - unless params["controller"] =="home"
-      = render "shared/navigation"
+      = render partial: "shared/navigation", locals: {navbar_class: "navbar-mule"}
     = yield
