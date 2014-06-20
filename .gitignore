@@ -11,3 +11,4 @@
 /log/*.log
 /tmp
 seed_to_csv.csv
+/.idea
