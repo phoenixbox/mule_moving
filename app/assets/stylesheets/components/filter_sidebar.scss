@@ -1,0 +1,56 @@
+.services-sidebar {
+	margin-bottom: 20px;
+
+	.filter-header {
+		hr {
+			margin-top: 10px;
+			margin-bottom: 5px
+		}
+		.header, .instruction {
+			text-align: center;
+		}
+		.header {
+			font-size: 1.3em;
+
+		}
+		.instruction {
+			font-size: 0.9em;
+		}
+	}
+	.filter-panels {
+		.filter-panel {
+			display: inline-block;
+			width: 100%;
+
+			li {
+				width: 100%;
+				float: left;
+				height: 26px;
+
+				input {
+			    width:25px;
+			    height:25px;
+			    border-radius:5px;
+			    border: 1px solid rgba(237, 237, 237, .8);
+				}
+
+				input[type='checkbox'] + label {
+					color: #ccc;
+			    -webkit-appearance:none;
+			    font-style: italic;
+				}
+
+				input[type='checkbox']:checked + label {
+					font-style: normal;
+					color: black;
+				}
+
+				label {
+					font-size: .85em;
+					vertical-align: middle;
+					margin-bottom: 11px;
+				}
+			}
+		}
+	}
+}

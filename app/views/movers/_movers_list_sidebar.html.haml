@@ -1,17 +1,20 @@
-.lead
-  %ul.list-unstyled
-    %li
-      %strong= "#{from.titleize} → #{to.titleize}"
-  %hr
-    %p
-      Insurance
-    %div
-      %ul.list-unstyled{"data-ng-repeat" => "insurance in insurances"}
-        %li
+.services-sidebar
+  .filter-header
+    .header
+      Services Filter
+    .instruction
+      Select Which Services You Need Below
+    %hr
+  .filter-panels
+    %div.filter-panel
+      %h4
+        Insurance
+      %ul.list-unstyled
+        %li{"data-ng-repeat" => "insurance in insurances"}
           %input{type: :checkbox, id: "{{ insurance.id }}", name: "{{ insurance.id }}", "data-ng-model" => "filters[insurance.id]"}
           %label{for: "{{ insurance.id }}"} {{ insurance.name }}
-    %div{"data-ng-repeat" => "service in services"}
-      %p
+    %div.filter-panel{"data-ng-repeat" => "service in services"}
+      %h4
         {{ service.category }} Services
       %ul.list-unstyled{"data-ng-repeat" => "item in service.items"}
         %li

@@ -1,6 +1,44 @@
+.from-to, .display-count {
+  width: auto;
+}
+
+.from-to {
+  float: left;
+}
+
+.display-count {
+  float: right;
+}
+
 .panel-heros {
   img {
     margin: 20px auto;
+  }
+}
+
+.panel-mover-index {
+  margin: 0 auto;
+  height: 140px;
+
+  .icon {
+    img {
+      height: 50px;
+      width: 50px;
+      float: left;
+    }
+    small {
+      line-height: 50px;
+      padding-left: 20px;
+    }
+  }
+  .actions {
+    margin-top: 10px;
+    a {
+      width: 48%;
+    }
+    a:last-child{
+      float: right;
+    }
   }
 }
 

@@ -9,14 +9,18 @@ $star-width: 1.5em;
 
 .rating-container {
   font-size: $font-size;
+  margin-top: .6em;
   padding: 0em;
   @media screen and (max-width: $screen-sm-max) {
     padding: 0.75em;
   }
-}
-
-.rating {
-  margin: 0.20em 0;
+  .rating {
+    width: auto;
+    float: left;
+  }
+  .yelp-logo {
+    float: right;
+  }
 }
 
 .rating i {
