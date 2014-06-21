@@ -19,7 +19,7 @@ describe("textHelpers", function () {
 
   describe("yearsOperatingFormatFilter", function () {
     it("returns formatted text when given not null", inject(function (yearsOperatingFormatFilter) {
-      expect(yearsOperatingFormatFilter(12)).toEqual("Operating 12 Years");
+      expect(yearsOperatingFormatFilter(12)).toEqual("Est. 12 Years");
     }));
 
     it("returns not verified when null", inject(function (yearsOperatingFormatFilter) {
@@ -29,7 +29,7 @@ describe("textHelpers", function () {
 
   describe("pricePerHourFormatFilter", function () {
     it("returns formatted text when given not null", inject(function (pricePerHourFormatFilter) {
-      expect(pricePerHourFormatFilter(12)).toEqual("$12 avg per hour");
+      expect(pricePerHourFormatFilter(12)).toEqual("$12 avg p/hr");
     }));
 
     it("returns not verified when null", inject(function (pricePerHourFormatFilter) {
