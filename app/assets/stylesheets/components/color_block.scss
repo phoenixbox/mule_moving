@@ -40,6 +40,9 @@ $color-list:  'brand-color'   $brand-primary,
       background-color: rgba($color, 0.89);
     }
   }
+  .text-#{$name}{
+    color: $color;
+  }
 
   .border-top-#{$name} {
     border-top: 5px solid $color;

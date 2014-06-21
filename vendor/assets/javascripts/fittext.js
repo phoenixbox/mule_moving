@@ -43,5 +43,5 @@
 })( jQuery );
 
 $(document).ready(function(){
-  $('#hero .title').fitText(1.2, { minFontSize: '20px', maxFontSize: '60px' });
+  $('.hero-title').fitText(1.2, { minFontSize: '20px', maxFontSize: '60px' });
 });

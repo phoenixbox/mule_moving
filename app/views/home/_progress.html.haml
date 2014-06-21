@@ -1,0 +1,21 @@
+- current_step ||= :one
+- color_hash = {one: "white", two: "white", three: "wet-asphalt", four: "wet-asphalt"}
+%section.row{class: color_hash[current_step]}
+  .container
+    .col-xs-12
+      .row
+        %ol.progress-tracker.hidden-xs.hidden-sm{data: {'step-count' => "4"}}
+          %li{class: (current_step == :one ? "progress-done" : "progress-todo #{:one.to_s}")} Give Details
+          %li{class: (current_step == :two ? "progress-done" : "progress-todo #{:two.to_s}")} Measure Twice
+          %li{class: (current_step == :three ? "progress-done" : "progress-todo #{:three.to_s}")} Book a Mover
+          %li{class: (current_step == :four ? "progress-done" : "progress-todo #{:four.to_s}")} Relax
+        .center-block.hidden-md.hidden-lg
+          %h2= t("progress.header.#{current_step}")
+      .row
+        .hero-title{class: "col-md-8"}
+          %h1= t("progress.#{current_step.to_s}")
+        %div{class: "col-md-4"}
+          .thumbnail.hidden-sm.hidden-xs
+            = image_tag '//placehold.it/500/34495e/ffffff/', class: " img-rounded center-block img-responsive"
+      .row
+        %hr
