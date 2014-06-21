@@ -6,4 +6,4 @@
 //= require fittext
 //= require floatlabels
 
-//= require angular/textHelpers
+//= require mule/textHelpers.js
