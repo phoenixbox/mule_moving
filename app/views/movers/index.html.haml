@@ -20,7 +20,7 @@
     = render partial: "mover_list_items"
 
 :javascript
-  var app = angular.module("mule", ["textHelpers"]);
+  var app = angular.module("mule");
 
   app.controller("MoversListCtrl", function($scope, FilterService) {
     $scope.moverListItems = #{@mover_list_items.to_json}
@@ -37,33 +37,18 @@
       {id: "automobile_insurance", name: "Automobile Insurance"},
       {id: "workers_compensation", name: "Workers Compensation"},
       {id: "general_liability_insurance", name: "General Liability Insurance"},
-    ]
+    ];
 
     var getInsurances = function () {
       return insurances;
-    }
+    };
 
     var getServices = function () {
       return services;
-    }
+    };
 
     return {
       getServices: getServices,
       getInsurances: getInsurances
-    }
-  })
-
-  app.filter("serviceFilter", function($filter) {
-    return function(moverListItems, filters) {
-
-      // exclude services set to false
-      var requestedFilters = {}
-      $.each(filters, function(key, val) {
-        if (val === true) {
-          requestedFilters[key] = true
-        }
-      });
-
-      return $filter("filter")(moverListItems, requestedFilters);
     }
   });

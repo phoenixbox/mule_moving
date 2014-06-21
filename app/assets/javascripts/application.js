@@ -6,4 +6,6 @@
 //= require fittext
 //= require floatlabels
 
-//= require mule/textHelpers.js
+//= require utils/textHelpers
+//= require mule/app
+//= require mule/filters/moverFilters
