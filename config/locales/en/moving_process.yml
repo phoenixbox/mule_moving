@@ -1,0 +1,14 @@
+en:
+  mule_process:
+    one:
+      header: Tell us where you're moving
+      content: Let us know where you are going from and where you are going to. We will then show you a list of the most suitable quality movers for the job.
+    two:
+      header: Browse
+      content: Browse through the movers who might be right for you. Find out their rating, their price range, whether they are insured and how long they have been in business for to get a feel for the ones you like. Get the detailed information you need about which services they provide and the insurances they carry to make your most informed decision.
+    three:
+      header: Select
+      content: Found a mover you like? Great! Enter in your moving information and we will take care of the rest. We will arrange the next step between you and your chosen mover which is often a visit to your home to understand exactly what you have to move.
+    four:
+      header: Move
+      content: Once you are happy with the mover you have selected, you can make an official booking to secure the day. No deposits are required, and if you have any questions about your move, our expert customer service is always on-hand to help you figure it out.

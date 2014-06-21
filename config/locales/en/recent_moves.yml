@@ -1,0 +1,47 @@
+en:
+  recent_moves:
+    -
+      residence_type: house
+      bedrooms: 4
+      description: Sarah & John moved their 3 kids and 2 dogs from Boulder to Colorado Springs. With 2 trucks and 4 movers, they moved their 4 bedroom home in 9 hours.
+      Date: May 16th 2014
+      From: Boulder
+      To: Colorado Springs
+      Distance: 97
+      price_breakdown:
+        packaging: 495
+        packaging_materials: 120
+        loading: 330
+        transport: 330
+        unloading: 330
+        total: 1605
+    -
+      residence_type: house
+      bedrooms: 3
+      description: Amy & Brian and their dog Max moved from Boulder to Denver. With 1 trucks and 3 movers, they moved their 3 bedroom home in 6 hours.
+      Date: June 1st 2014
+      From: Boulder
+      To: Denver
+      Distance: 27.8
+      price_breakdown:
+        packaging: 405
+        packaging_materials: 100
+        loading: 200
+        transport: 135
+        unloading: 200
+        total: 1040
+    -
+      residence_type: apartment
+      bedrooms: 2
+      description: Louise moved from Boulder to Denver. With 1 trucks and 2 movers, she moved her 1 bedroom apartment in 5 hours.
+      Date: June 9th 2014
+      From: Boulder
+      To: Denver
+      Distance: 27.8
+      price_breakdown:
+        packaging: 270
+        packaging_materials: 60
+        loading: 135
+        transport: 135
+        unloading: 135
+        total: 735
