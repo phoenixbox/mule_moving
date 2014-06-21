@@ -3,8 +3,8 @@ class MoversController < ApplicationController
     session[:from] = params[:from] if params[:from]
     session[:to] = params[:to] if params[:to]
 
-    @from = session[:from]
-    @to = session[:to]
+    @from = session[:from] || ""
+    @to = session[:to] || ""
     items = MoverListFinder.new.for_location(@from)
     @mover_list_items = items.map { |item| MoverListItemSerializer.new(item).as_json }
     @services = MoverServicesRecord::SERVICES
