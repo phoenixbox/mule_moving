@@ -4,13 +4,27 @@
     %p.lead We've hand selected quality licensed movers and sorted them by rating to make sure you're not left in the dust.
     .col-xs-12
       .row
-        %ol.progress-tracker.hidden-xs.hidden-sm(data-step-count="4")
-          %li.progress-done Give Details
-          %li.progress-todo.two Filter
-          %li.progress-todo.three Book
-          %li.progress-todo.four Relax
-        .center-block.hidden-md.hidden-lg
-          %h2= t("progress.header.one")
-      .row.text-hero-color
-        .hero-title.col-md-12
-          %h1= t("progress.one")
+        .media
+          .pull-left.process-step
+            1
+          .media-body
+            %h4.media-heading Tell us where you're moving
+            %p Let us know where you are going from and where you are going to. We will then show you a list of the most suitable quality movers for the job.
+        .media
+          .pull-left.process-step
+            2
+          .media-body
+            %h4.media-heading Browse
+            %p Browse through the movers who might be right for you. Find out their rating, their price range, whether they are insured and how long they have been in business for to get a feel for the ones you like. Get the detailed information you need about which services they provide and the insurances they carry to make your most informed decision.
+        .media
+          .pull-left.process-step
+            3
+          .media-body
+            %h4.media-heading Select
+            %p Found a mover you like? Great! Enter in your moving information and we will take care of the rest. We will arrange the next step between you and your chosen mover which is often a visit to your home to understand exactly what you have to move.
+        .media
+          .pull-left.process-step
+            4
+          .media-body
+            %h4.media-heading Move
+            %p Once you are happy with the mover you have selected, you can make an official booking to secure the day. No deposits are required, and if you have any questions about your move, our expert customer service is always on-hand to help you figure it out.
