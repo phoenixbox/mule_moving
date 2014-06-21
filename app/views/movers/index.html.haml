@@ -23,10 +23,12 @@
   var app = angular.module("mule");
 
   app.controller("MoversListCtrl", function($scope, FilterService) {
-    $scope.moverListItems = #{@mover_list_items.to_json}
-    $scope.filters = {}
+    $scope.moverListItems = #{@mover_list_items.to_json};
+    $scope.filters = {};
+    $scope.priceFilters = {};
     $scope.services = FilterService.getServices();
     $scope.insurances = FilterService.getInsurances();
+    $scope.prices = FilterService.getPrices();
   });
 
   app.factory("FilterService", function () {
@@ -39,6 +41,13 @@
       {id: "general_liability_insurance", name: "General Liability Insurance"},
     ];
 
+    var prices = [
+      {id: "one", name: "$"},
+      {id: "two", name: "$$"},
+      {id: "three", name: "$$$"},
+      {id: "four", name: "$$$$"}
+    ]
+
     var getInsurances = function () {
       return insurances;
     };
@@ -47,8 +56,13 @@
       return services;
     };
 
+    var getPrices = function () {
+      return prices;
+    };
+
     return {
       getServices: getServices,
-      getInsurances: getInsurances
+      getInsurances: getInsurances,
+      getPrices: getPrices,
     }
   });

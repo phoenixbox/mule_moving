@@ -1,4 +1,4 @@
-%ul.list-unstyled(ng-repeat="moverListItem in filteredMovers = ( moverListItems | serviceFilter:filters | orderBy:'-yelp_stars' | emptyToEnd:'yelp_stars')")
+%ul.list-unstyled(ng-repeat="moverListItem in filteredMovers = ( moverListItems | serviceFilter:filters | priceFilter:priceFilters | orderBy:'-yelp_stars' | emptyToEnd:'yelp_stars')")
   %li.row.panel-mover-index
     .col-xs-12
       %h3

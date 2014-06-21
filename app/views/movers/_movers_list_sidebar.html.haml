@@ -1,9 +1,17 @@
 .services-sidebar
   .filter-header
     .header
-      Services Filter
+      Filters
     %hr
   .filter-panels
+    %div.filter-panel
+      %h4
+        Price
+      %ul.list-unstyled
+        %li(ng-repeat="price in prices")
+          %input(type="checkbox" id="{{ price.id }}" name="{{ price.id }}" ng-model="priceFilters[price.id]")
+          %label(for="{{ price.id }}")
+            {{ price.name }}
     %div.filter-panel
       %h4
         Insurance
