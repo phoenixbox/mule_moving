@@ -1,26 +1,26 @@
 $hero-background: #34495e;
 $hero-input-size: 1.75em;
-@mixin hero-form-element() {
-  font-size: $hero-input-size;
-}
 
 .hero-container {
-  background: url(<%= asset_path 'landing_hero.png' %>) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url(<%= asset_path 'landing_hero_gray.png' %>) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.hero-title {
+	font-size: 45px;
 }
 
 .hero {
-  background: rgba($hero-background,0.7);
-  border-bottom: rgba($mule-aqua, 1) solid 5px;
-
-  padding: 80px 0;
-  @media screen and (max-width: $screen-md) {
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+	background: rgba($hero-background,0.7);
+	border-bottom: rgba($mule-aqua, 1) solid 5px;
+	padding: 80px 0;
+	@media screen and (max-width: $screen-md) {
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
 
 	> .container {
 		padding: 100px 0;
@@ -29,48 +29,45 @@ $hero-input-size: 1.75em;
 		}
 	}
 
-  .title {
-    // responsive font size from jquery fittext.js
-    @include white-with-border;
-    padding: 0 0 80px;
-	  @media screen and (max-width: $screen-md) {
-		  padding: 0;
-	  }
-  }
+	.hero-title {
+		@include white-with-border;
+		padding: 0 0 80px;
+		@media screen and (max-width: $screen-md) {
+			padding: 0;
+		}
+	}
 
-  form {
-    @extend .col-xs-12;
+	form {
+		@extend .col-xs-12;
 
-    > div {
-      @extend .form-group;
-      @extend .col-xs-12;
-	    @extend .col-sm-12;
-      @extend .col-md-4;
-	    padding-left: 5px;
-	    padding-right: 5px;
-    }
+		> div {
+			@extend .form-group;
+			@extend .col-xs-12;
+			@extend .col-sm-12;
+			@extend .col-md-4;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
 
-    input[type="text"]{
-      @extend .form-control;
-      height: $hero-input-size;
-      @include hero-form-element;
-    }
-
-  }
+		input[type="text"]{
+			@extend .form-control;
+			height: $hero-input-size;
+			font-size: $hero-input-size;
+		}
+	}
 }
 
 .explainer {
-  margin: 75px 0;
+	margin: 75px 0;
 	@media screen and (max-width: $screen-md) {
 		margin: 0;
 	}
-
 }
 
 .btn-discover {
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .btn-block;
-  @include hero-form-element;
+	@extend .btn;
+	@extend .btn-primary;
+	@extend .btn-block;
+	font-size: $hero-input-size;
 	padding: 3px 12px;
 }
