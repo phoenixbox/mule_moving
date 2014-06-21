@@ -1,5 +1,5 @@
 .container
-  .row
+  .row.success
     .col-xs-12
       %h1.text-center Success!
       .row
@@ -7,4 +7,7 @@
           =image_tag "tick_circle_aqua_240.png", class: "center-block img-responsive"
         .col-xs-12
           %h3.text-center
-            We will respond Shortly!
+            You will receive a booking confirmation email shortly!
+        .col-xs-12
+          %h3.text-center
+            = link_to "Back to Movers List", movers_path
