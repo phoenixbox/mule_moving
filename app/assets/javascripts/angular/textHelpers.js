@@ -18,7 +18,7 @@
       if (yearsInBusiness === null) {
         return "Not Verified"
       } else {
-        return "Operating " + yearsInBusiness + " Years";
+        return "Est. " + yearsInBusiness + " Years";
       }
     }
   });
@@ -28,7 +28,7 @@
       if (avgPricePerHour === null) {
         return "Not Verified"
       } else {
-        return "$" + avgPricePerHour + " avg per hour";
+        return "$" + avgPricePerHour + " avg p/hr";
       }
     }
   });

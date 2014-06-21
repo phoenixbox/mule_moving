@@ -16,13 +16,14 @@ $white: #ffffff;
 $black: #000000;
 
 
-$mule-aqua:               #43C1C7;
-$mule-color:              $mule-aqua;
-$brand-primary:           $mule-aqua; // this overwrites bootstraps primary color
-$panel-mule-border:       $mule-color;
-$panel-mule-border-width: 3px;
-$panel-mule-text:         black;
-$panel-mule-heading-bg:   white;
+$mule-aqua:               		#43C1C7;
+$mule-color:              		$mule-aqua;
+$brand-primary:           		$mule-aqua; // this overwrites bootstraps primary color
+$panel-mule-border:       		$mule-color;
+$panel-mule-border-width: 		3px;
+$panel-mule-text:         		black;
+$panel-mule-heading-bg:   		white;
+$panel-mule-unselected-text:	#ccc;
 
 $container-desktop:       850px;
 $container-large-desktop: 850px;

@@ -16,9 +16,39 @@
   }
 }
 
+.mule-panel {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 10px;
+
+  background-color: white;
+
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; /* future proofing */
+  border: 1px solid #888888;
+  padding-bottom: 20px;
+
+  .dropdown {
+    li {
+      list-style: none;
+    }
+    .services-sidebar {
+      .filter-panel {
+        float: left;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
 .panel-mover-index {
   margin: 0 auto;
   height: 140px;
+
+  .index-hero {
+    max-height: 134px;
+  }
 
   .icon {
     img {
@@ -28,16 +58,20 @@
     }
     small {
       line-height: 50px;
-      padding-left: 20px;
+      padding-left: 12px;
     }
+  }
+  .icon-description {
+    font-size: 12px;
+    line-height: 45px;
+    padding-left: 60px;
   }
   .actions {
     margin-top: 10px;
-    a {
-      width: 48%;
-    }
-    a:last-child{
+
+    a:first-child{
       float: right;
+      margin-left: 10px;
     }
   }
 }

@@ -2,34 +2,21 @@
   .col-md-3.hidden-xs.hidden-sm
     = render partial: "movers_list_sidebar"
 
-  .col-md-9.col-xs-12
-    .from-to.col-xs-3
-      Your Move From:
-      %strong= " #{@from.titleize} → #{@to.titleize}"
-    .dropdown.services-dropdown.col-xs-3
+  .col-xs-12.visible-sm.visible-xs
+    .dropdown.services-dropdown.col-xs-12.col-sm-12
       %li.dropdown
         %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-          Schedule
+          Services Filter
           %b.caret
         %ul.dropdown-menu.unstyled.pull-left.dropdown-features
           %li
-            %div.filter-panel
-              %h4
-                Insurance
-              %ul.list-unstyled
-                %li{"data-ng-repeat" => "insurance in insurances"}
-                  %input{type: :checkbox, id: "{{ insurance.id }}", name: "{{ insurance.id }}", "data-ng-model" => "filters[insurance.id]"}
-                  %label{for: "{{ insurance.id }}"} {{ insurance.name }}
-          %li
-            %div.filter-panel{"data-ng-repeat" => "service in services"}
-              %h4
-                {{ service.category }} Services
-              %ul.list-unstyled{"data-ng-repeat" => "item in service.items"}
-                %li
-                  %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}", "data-ng-model" => "filters[item.id]"}
-                  %label{for: "{{ item.id }}"} {{ item.name }}
+            = render partial: "movers_list_sidebar"
+  .col-md-9.col-xs-12
+    .from-to.col-xs-3
+      Move From:
+      %strong= " #{@from.titleize} → #{@to.titleize}"
     .display-count.col-xs-3
-      = "displaying {{ filteredMovers.length }} of #{@mover_list_items.size} movers"
+      = "{{ filteredMovers.length }} of #{@mover_list_items.size} movers"
     = render partial: "mover_list_items"
 
 :javascript

@@ -22,7 +22,7 @@ describe "Movers", type: :feature, js: :true do
 
     within "li", text: "Taylor Moving" do
       expect(page).to have_content "10 Years"
-      expect(page).to have_content "$45 avg per hour"
+      expect(page).to have_content "$45 avg p/hr"
       expect(page).to have_content "Insured"
       rating = first(".rating")["data-rating"]
       expect(rating).to eq "2.5"

@@ -21,6 +21,7 @@
 		.filter-panel {
 			display: inline-block;
 			width: 100%;
+			padding-top: 5px;
 
 			li {
 				width: 100%;
@@ -35,14 +36,12 @@
 				}
 
 				input[type='checkbox'] + label {
-					color: #ccc;
-			    -webkit-appearance:none;
-			    font-style: italic;
+					color: $panel-mule-unselected-text;
 				}
 
 				input[type='checkbox']:checked + label {
 					font-style: normal;
-					color: black;
+					color: $panel-mule-text;
 				}
 
 				label {

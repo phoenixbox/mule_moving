@@ -3,7 +3,7 @@
     .col-xs-12
       %h3
         {{ moverListItem.name }}
-    .col-xs-12.col-md-4
+    .col-xs-12.col-sm-4.col-md-4
       %img.img-rounded.img-responsive.index-hero{"data-ng-src" => "{{ moverListItem.hero_img }}" }
       .rating-container
         .rating{data: {rating: "{{ moverListItem.yelp_stars }}"}}
@@ -14,24 +14,23 @@
           %i.star-5 ★
         %a.yelp-logo{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
           = image_tag asset_path("yelp/yelp_logo_mini.png")
-    .description.col-xs-9.col-md-4
+    .description.col-xs-12.col-sm-4.col-md-4
       %small
         {{ moverListItem.description | limitTo: 200 }}
       %a{href: "{{ moverListItem.path }}"} Read More
-    .col-xs-6.col-md-4
+    .col-xs-12.col-sm-4.col-md-4
       .row.col-md-12.icon
         = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
-        %small
+        .icon-description
           {{ moverListItem.general_liability_insurance | insuranceFormat }}
       .row.col-md-12.icon
         = image_tag "icons/gears_icon_grey_240.png", class: "img-responsive thumbnail"
-        %small
+        .icon-description
           {{ moverListItem.years_in_business | yearsOperatingFormat }}
       .row.col-md-12.icon
         = image_tag "icons/dollar_icon_grey_240.png", class: "img-responsive thumbnail"
-        %small
+        .icon-description
           {{ moverListItem.avg_price_per_hour | pricePerHourFormat }}
-      .row.col-xs-12.col-md-12.actions
-        %a.btn.btn-default.btn-sm.col-md-6.col-xs-12{href: "{{ moverListItem.booking_path }}"} Book
-        %a.btn.btn-default.btn-sm.col-md-6.col-xs-12{href: "{{ moverListItem.path }}"} View Details
-  %hr
+    .row.col-xs-12.col-md-12.actions
+      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right{href: "{{ moverListItem.path }}"} View Details
+      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right{href: "{{ moverListItem.booking_path }}"} Book
