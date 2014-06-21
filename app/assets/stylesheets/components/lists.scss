@@ -2,7 +2,7 @@
   padding-top: 20px;
 }
 
-.mover-detail-list {
+.mover-detail-list, .services-detail-list {
   @extend .list-group;
   li {
     @extend .list-group-item;
@@ -14,6 +14,11 @@
     color: white;
     font-weight: bold;
   }
+}
+
+.services-list {
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
 li label {

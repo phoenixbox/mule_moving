@@ -1,9 +1,9 @@
 .container.mule-panel
   .row
-    .col-xs-4
+    .col-xs-4.services-list
       - @services.each do |service_category|
         %p.lead= "#{service_category[:category]} Services"
-        %ul
+        %ul.services-detail-list
           - service_category[:items].each do |service|
             %li= link_to service[:name], service_path(service[:id])
     .col-xs-8
