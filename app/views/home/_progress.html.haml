@@ -1,19 +1,16 @@
-- current_step ||= :one
-%section.row.white
+%section.row.landing-section.white
   .container.text-hero-color
-    %h2 The Moving Process
+    %h2 Moving with Mule
     %p.lead We've hand selected quality licensed movers and sorted them by rating to make sure you're not left in the dust.
-%section.row.white
-  .container
     .col-xs-12
       .row
-        %ol.progress-tracker.hidden-xs.hidden-sm{data: {'step-count' => "4"}}
+        %ol.progress-tracker.hidden-xs.hidden-sm(data-step-count="4")
           %li.progress-done Give Details
           %li.progress-todo.two Filter
           %li.progress-todo.three Book
           %li.progress-todo.four Relax
         .center-block.hidden-md.hidden-lg
-          %h2= t("progress.header.#{current_step}")
+          %h2= t("progress.header.one")
       .row.text-hero-color
         .hero-title.col-md-12
-          %h1= t("progress.#{current_step.to_s}")
+          %h1= t("progress.one")

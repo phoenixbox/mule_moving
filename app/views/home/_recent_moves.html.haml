@@ -1,10 +1,105 @@
-%section.row.brand-color
+%section.row.landing-section.text-hero-color(ng-controller="LandingCtrl")
   .container
-    %h2.text-right Recent Moves
+    %h2 Recent Moves
     .row
-      .col-xs-12
-        .panel.panel-default
-          .panel-body.white
-            %h2.text-hero-color 3bedroom House: $1,789
-            %h2.text-hero-color 2bedroom Apartment(with Cleaning): $1,800
-            %h2.text-hero-color 1bedroom Apartment(with Cleaning/furniture dissasembly/packing): $1,624
+      .col-xs-3
+        %ul.nav.nav-pills.nav-stacked
+          %li(ng-class="activeTab(1)")
+            %a(ng-click="residence=1") Apartment
+          %li(ng-class="activeTab(2)")
+            %a(ng-click="residence=2") Small House
+          %li(ng-class="activeTab(3)")
+            %a(ng-click="residence=3") Large House
+      .col-xs-9(ng-show="residence === 1")
+        %p.lead
+          3 Bedroom House: $1,789
+          %small (March 23, 2014 – 25 mi)
+        %p.lead Sally and John moved their family and 3 bedroom house from Boulder to Denver with Taylor Movers. The whole move took about 8 hours with 6 movers.
+        %h3 Price breakdown
+        .row
+          .col-md-10
+            %table.table
+              %tbody
+                %tr
+                  %td Packaging:
+                  %td.text-right $640
+                %tr
+                  %td Loading:
+                  %td.text-right $890
+                %tr
+                  %td Transportation:
+                  %td.text-right $310
+                %tr
+                  %td Unloading:
+                  %td.text-right $1100
+                %tr
+                  %td
+                    %strong Total:
+                  %td.text-right
+                    %strong $1,789
+      .col-xs-9(ng-show="residence === 2")
+        %p.lead
+          DOSSSS CHICOS
+          %small (March 23, 2014 – 25 mi)
+        %p.lead Sally and John moved their family and 3 bedroom house from Boulder to Denver with Taylor Movers. The whole move took about 8 hours with 6 movers.
+        %h3 Price breakdown
+        .row
+          .col-md-10
+            %table.table
+              %tbody
+                %tr
+                  %td Packaging:
+                  %td.text-right $640
+                %tr
+                  %td Loading:
+                  %td.text-right $890
+                %tr
+                  %td Transportation:
+                  %td.text-right $310
+                %tr
+                  %td Unloading:
+                  %td.text-right $1100
+                %tr
+                  %td
+                    %strong Total:
+                  %td.text-right
+                    %strong $1,789
+      .col-xs-9(ng-show="residence === 3")
+        %p.lead
+          THREEEEEEE
+          %small (March 23, 2014 – 25 mi)
+        %p.lead Sally and John moved their family and 3 bedroom house from Boulder to Denver with Taylor Movers. The whole move took about 8 hours with 6 movers.
+        %h3 Price breakdown
+        .row
+          .col-md-10
+            %table.table
+              %tbody
+                %tr
+                  %td Packaging:
+                  %td.text-right $640
+                %tr
+                  %td Loading:
+                  %td.text-right $890
+                %tr
+                  %td Transportation:
+                  %td.text-right $310
+                %tr
+                  %td Unloading:
+                  %td.text-right $1100
+                %tr
+                  %td
+                    %strong Total:
+                  %td.text-right
+                    %strong $1,789
+
+:javascript
+  var app = angular.module("mule");
+
+  app.controller("LandingCtrl", function ($scope) {
+    $scope.residence = 1;
+    $scope.activeTab = function (tabIndex) {
+      if ($scope.residence === tabIndex) {
+        return "active"
+      }
+    }
+  });
