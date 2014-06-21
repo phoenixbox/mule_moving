@@ -111,8 +111,8 @@ en:
         - "Flat Screen TVs"
         - "Desktop Computers"
         - "Surround Sound Systems"
-    transportation_transport:
-      name: Transportation Transport
+    auto_transport:
+      name: Auto Transport
       why: Have something that moves which you need moved?! Most of our household goods moving companies do not provide this service, but if you have a car, motorbike, truck, boat or anything of the sort, one of our qualified service providers from our partner network will be perfect for the job. There is no item too big or small which we can’t make part of your move. Just let us know, and we will arrange for it to be taken care of.
       how_it_works: Our transporter service provider will arrange a date before your move to pickup your item and have it transported to your destination, usually delivered sometime after you have arrived. If for some reason you cant move into your new place after you have moved out of your old one, no worries, we can organize the transporter to deliver your item to a quality storage facility while you wait to move into your new place.
       actions_required_by_user: When you are booking just check the transportation transport option. We will get in touch to find out the nature of the item and then back to you with some pricing options for you to choose from. Pick the one you like and we will take care of the rest.
@@ -159,3 +159,12 @@ en:
         - "Gun safes"
         - "General Safes"
         - "Other very heavy items"
+    cleaning:
+      name: Cleaning
+      why: Moving home is a messy job. Running in and out the house, loading and unloading trucks, can bring a lot of dirt from the outside, inside. The last thing you want to do after a long a stressful move is to have to clean two homes. Never fear, cleaning services are here! If your chosen mover doesn’t perform cleaning services one of the service members of the Mule qualified network will be right for the job.
+      how_it_works: On or just after move day, your chosen cleaning professionals will come by the residence(s) you need cleaned and work hard to make sure it looks spick and  span. Your new and previous home will look like new. A clean home is a happy home.
+      actions_required_by_user: When booking a mover let us know that you will require cleaning services. If your mover doesn’t provide this service we will contact our cleaning service partners and get back to you with the best options for the job.
+      price:
+        - "+$35 hr"
+      suitable_inventory:
+        - "House"
