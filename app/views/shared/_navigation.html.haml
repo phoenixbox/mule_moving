@@ -1,8 +1,8 @@
-.navbar{role: "navigation", class: navbar_class}
+.navbar(role="navigation" class=navbar_class)
   .container
     = link_to root_path, class: "logo brand" do
       = image_tag "mule_logo.png", class: "logo"
     %p.navbar-text.pull-right
-      %a.navbar-link{href: "mailto:team@mulemoving.com?Subject=Mule%20Moving"} Contact Us
+      %a.navbar-link(href="mailto:team@mulemoving.com?Subject=Mule%20Moving") Contact Us
     %p.navbar-text.pull-right
       = link_to "Mover Services", service_path(:appliances_install), class: "navbar-link"

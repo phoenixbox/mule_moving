@@ -4,7 +4,7 @@
   %hr
   %h4= @mover.name
   .rating-container
-    .rating{data: {rating: @mover.yelp_stars}}
+    .rating(data-rating="#{@mover.yelp_stars}")
       %i.star-1 ★
       %i.star-2 ★
       %i.star-3 ★

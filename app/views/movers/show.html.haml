@@ -7,7 +7,7 @@
             %h2= @mover_detail.name
       .row.panel-heros
         .col-xs-12.col-sm-6
-          %img.img-rounded.img-responsive{src: @mover_detail.hero_img}
+          %img.img-rounded.img-responsive(src="#{@mover_detail.hero_img}")
         .col-xs-12.col-sm-6
           = render partial: "mover_icons", locals: {mover_list_item: @mover_detail}
       .row
@@ -16,8 +16,8 @@
           .text-center
             %span.lead
               = pluralize(@mover_detail.yelp_review_count || 0, "Review")
-        .col-xs-12.col-sm-6{style: "padding-top: 30px"}
-          %a.btn.btn-primary.col-xs-12{href: booking_path(@mover_detail.id)} Book
+        .col-xs-12.col-sm-6(style="padding-top: 30px")
+          %a.btn.btn-primary.col-xs-12(href="#{booking_path(@mover_detail.id)}") Book
       .panel
         .panel-heading
           %span.lead Description

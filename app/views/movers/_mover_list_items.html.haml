@@ -1,23 +1,23 @@
-%ul.list-unstyled{"data-ng-repeat" => "moverListItem in filteredMovers = ( moverListItems | serviceFilter:filters | orderBy:'-yelp_stars' | emptyToEnd:'yelp_stars')"}
+%ul.list-unstyled(ng-repeat="moverListItem in filteredMovers = ( moverListItems | serviceFilter:filters | orderBy:'-yelp_stars' | emptyToEnd:'yelp_stars')")
   %li.row.panel-mover-index
     .col-xs-12
       %h3
         {{ moverListItem.name }}
     .col-xs-12.col-sm-4.col-md-4
-      %img.img-rounded.img-responsive.index-hero{"data-ng-src" => "{{ moverListItem.hero_img }}" }
+      %img.img-rounded.img-responsive.index-hero(ng-src="{{ moverListItem.hero_img }}")
       .rating-container
-        .rating{data: {rating: "{{ moverListItem.yelp_stars }}"}}
+        .rating(data-rating="{{ moverListItem.yelp_stars }}")
           %i.star-1 ★
           %i.star-2 ★
           %i.star-3 ★
           %i.star-4 ★
           %i.star-5 ★
-        %a.yelp-logo{href: "{{ moverListItem.yelp_url }}", target: "_blank"}
+        %a.yelp-logo(href="{{ moverListItem.yelp_url }}" target="_blank")
           = image_tag asset_path("yelp/yelp_logo_mini.png")
     .description.col-xs-12.col-sm-4.col-md-4
       %small
         {{ moverListItem.description | limitTo: 200 }}
-      %a{href: "{{ moverListItem.path }}"} Read More
+      %a(href="{{ moverListItem.path }}") Read More
     .col-xs-12.col-sm-4.col-md-4
       .row.col-md-12.icon
         = image_tag "icons/certificate_icon_grey_240.png", class: "img-responsive thumbnail"
@@ -32,5 +32,5 @@
         .icon-description
           {{ moverListItem.avg_price_per_hour | pricePerHourFormat }}
     .row.col-xs-12.col-md-12.actions
-      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right{href: "{{ moverListItem.path }}"} View Details
-      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right{href: "{{ moverListItem.booking_path }}"} Book
+      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right(href="{{ moverListItem.path }}") View Details
+      %a.btn.btn-default.btn-sm.col-md-2.col-sm-2.col-xs-5.pull-right(href="{{ moverListItem.booking_path }}") Book

@@ -8,13 +8,15 @@
       %h4
         Insurance
       %ul.list-unstyled
-        %li{"data-ng-repeat" => "insurance in insurances"}
-          %input{type: :checkbox, id: "{{ insurance.id }}", name: "{{ insurance.id }}", "data-ng-model" => "filters[insurance.id]"}
-          %label{for: "{{ insurance.id }}"} {{ insurance.name }}
-    %div.filter-panel{"data-ng-repeat" => "service in services"}
+        %li(ng-repeat="insurance in insurances")
+          %input(type="checkbox" id="{{ insurance.id }}" name="{{ insurance.id }}" ng-model="filters[insurance.id]")
+          %label(for="{{ insurance.id }}")
+            {{ insurance.name }}
+    %div.filter-panel(ng-repeat="service in services")
       %h4
         {{ service.category }} Services
-      %ul.list-unstyled{"data-ng-repeat" => "item in service.items"}
+      %ul.list-unstyled(ng-repeat="item in service.items")
         %li
-          %input{type: :checkbox, id: "{{ item.id }}", name: "{{ item.id }}", "data-ng-model" => "filters[item.id]"}
-          %label{for: "{{ item.id }}"} {{ item.name }}
+          %input(type="checkbox" id="{{ item.id }}" name="{{ item.id }}" ng-model="filters[item.id]")
+          %label(for="{{ item.id }}")
+            {{ item.name }}

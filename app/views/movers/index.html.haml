@@ -1,11 +1,11 @@
-.container.mule-panel.movers{"data-ng-app" => "mule", "data-ng-controller" => "MoversListCtrl"}
+.container.mule-panel.movers(ng-app="mule" ng-controller="MoversListCtrl")
   .col-md-3.hidden-xs.hidden-sm
     = render partial: "movers_list_sidebar"
 
   .col-xs-12.visible-sm.visible-xs
     .dropdown.services-dropdown.col-xs-12.col-sm-12
       %li.dropdown
-        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+        %a.dropdown-toggle(data-toggle="dropdown" href="#")
           Services Filter
           %b.caret
         %ul.dropdown-menu.unstyled.pull-left.dropdown-features
