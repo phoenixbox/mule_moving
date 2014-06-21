@@ -1,0 +1,23 @@
+.container.mule-panel
+  .row
+    .col-xs-4
+      %h2 Services
+      %ul
+        - @services.each do |service|
+          %li= link_to service.to_s.humanize, service_path(service)
+    .col-xs-8
+      %h2= t("services.#{@service}.name")
+      %p.lead What is it?
+      %p= t("services.#{@service}.why")
+      %p.lead How it works
+      %p= t("services.#{@service}.how_it_works")
+      %p.lead Required Actions
+      %p= t("services.#{@service}.actions_required_by_user")
+      %p.lead Pricing
+      %ul
+        - t("services.#{@service}.price").each do |price|
+          %li= price
+      %p.lead Suitable Inventory Items
+      %ul
+        - t("services.#{@service}.suitable_inventory").each do |item|
+          %li= item

@@ -1,23 +1,161 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'home'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('home') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  services:
+    packaging:
+      name: Packaging
+      why: "Packing all of your stuff into boxes takes a lot of time. The good news is that most good moving companies provide a packaging service.. Packing your items in an organized, protected and efficient way is essential to ensure everything arrives to your new home in a good state. Estimates say it can take people between 50-60 hours to pack their 2,000 sqft home. Professional expert packers can accomplish this task in 8-12! The golden rule: everyone underestimates how much stuff they want as part of their move. Professional packaging services can save you time, stress & protect you from breakages."
+      how_it_works: Depending on the size of your move, movers will either come out to your place the day before or the day of your move to pack your things. You can choose to provide your own boxes and packaging materials or they can provide you with them for an additional charge. Good packaging materials are a must, and will give you peace of mind that your stuff is protected.
+      actions_required_by_user: When booking a mover, just check the professional services box and we will take care of the rest. If you require packaging materials you can do the same and your mover will bring boxes with them. Want to get your own boxes & materials? Home Depot has a great selection.
+      price:
+        - "Prices vary by box size and speciality"
+        - "Estimated Range: Small boxes $1.50 - Specialty Wardrobe Boxes $12"
+      suitable_inventory:
+        - "Books"
+        - "Fames"
+        - "Lamps"
+        - "Miscellanea"
+    crating:
+      name: Crating
+      why: Are some of your items very valuable, fragile or heavy? No worries, crating them will keep them safe. Crates are purpose built to protect items that need protection. When inside a crate your item is protected from bumps and knocks that are common during transport. They are the box with superpowers!
+      how_it_works: Your mover will have a crate built to the correct size to fit your item. They will pack the crate before your move and unload it at your destination, where you can choose to keep it or have your mover remove it.
+      actions_required_by_user: Just select the crating option when you are choosing your mover and we will contact you for a chat about the nature of the item and what your options are for crating.
+      price:
+        - "The price of a crate depends on the size of the item to be moved. Having a crate built can cost upwards of $70. A small price to pay to protect your most prized possessions."
+      suitable_inventory:
+        - "Statues"
+        - "Glass Items"
+        - "Chandeliers"
+        - "TVs"
+        - "Art"
+    furniture_wrapping:
+      name: Furniture Wrapping
+      why: Fabrics and Woods are vulnerable during a move. Stains, scuffs and dents are inevitable without any furniture protection. The good news is that our movers can wrap and pad your furniture to prevent any damage. Hurray!
+      how_it_works: On move day, your movers will bring rolls of shrink wrap and multiple furniture pads to wrap each piece of your furniture before loading it onto the truck.
+      actions_required_by_user: When booking a mover select whether you would like the furniture wrapping service. Many movers provide this service as standard, but others charge for the wrapping materials. On move day, you can point out which items require a little more padding and wrapping.
+      price:
+        - "Furniture Pads: $15"
+        - "Shrink Wrap Roll (1500ft): $12"
+      suitable_inventory:
+        - "Any item you feel could do with a protective layer is perfect for wrapping and padding."
+    furniture_disassembly: &furniture_disassembly
+      name: Furniture Disassembly
+      why: Furniture is big and oddly shaped, often too big to get in or out of a house without being taken apart and then put back together again. Not to worry! Movers are experts at taking furniture apart and putting it back just how it was. Ever spent hours frustrated at Ikea furniture? Your mover can take care of this frustrating process for you, and make the most of your space on the truck.
+      how_it_works: On move day, your movers will diligently disassemble the pieces you want them to. The components are packed & packaged neatly together, making the reassembly process seamless.
+      actions_required_by_user: When choosing your mover, be sure to check the furniture disassembly or assembly services if you require them. On move day just let your mover know what items need to be taken a part. At the destination you can let them know which pieces need to be reassembled where. If you happen to have old assembly instructions for your furniture, they can provide a lot of help for your mover and make the process go much quicker.
+      price:
+        - "Most movers provide this service as standard. If they dont, you can filter them from your search on Mule."
+      suitable_inventory:
+        - "Anything that has screams or removable joints which can be disassembled to help the moving process."
+    personal_truck_loading:
+      name: Personal Truck Loading
+      why: Got a few things you would like to transport in your own truck? Movers can help you load these items into any vehicle you have, however if any damage occurs to your vehicle or goods during your own transport they may not be covered under any mover insurance you have as part of your move. Personal truck loading can help take any overflow from the mover truck loading if you require it.
+      how_it_works: On move day, just point out to your movers what items you would like them to load into your personal vehicle.
+      actions_required_by_user: When selecting a mover be sure to check the personal loading box. Also make sure that you know whether the insurance level you get with your mover will cover any damage in transit within a personal vehicle.
+      price:
+        - "Movers whom provide this service will not charge you to do so."
+      suitable_inventory:
+        - "All items"
+    appliances_uninstall: &appliances
+      name: Appliances Uninstall
+      why: Appliances can be the heaviest items in your home and the most difficult to move. They also may be connected to a utility (gas/water/electricity etc.) source which requires specialist training to uninstall and reinstall. A professional mover may not have the qualifications to do this without an insurance concern, so leave it up to us to find you the best qualified service provider to fit your needs.
+      how_it_works: We will arrange a qualified 3rd party service provider to come out to your home before the day of your move. They will take care of your particular need, giving you assurance that your appliances are correctly disconnected/connected and that there is no damage to the property’s utility lines.
+      actions_required_by_user: When selecting a mover, let us know whether your require appliance disconnection/connection and we will provide you with a list of service providers from our qualified network.
+      price:
+        - "Disconnection / connection $45 - $85 each"
+      suitable_inventory:
+        - "Dishwashers"
+        - "Stoves"
+        - "Washer Dryer Units"
+    shuttling:
+      name: Shuttling
+      why: Do you live in a dense urban area? Most of us do, which can be a problem for a big moving truck. The truck might not have any space to park outside your place, the turns in your neighbourhood may be too tight, there may be low hanging electricity wires or even city zoning restrictions. Ugh! No problem, many hands make light work. Or in the case of shuttling, many trips with a smaller truck! Your mover will use a smaller truck to shuttle your goods from your home to a location where the larger truck can park safely. Unfortunately, this takes longer but its the only way to do it in dense urban areas.
+      how_it_works: Your mover will use a smaller truck to take multiple trips to the bigger truck’s location, filling it up, load by load.
+      actions_required_by_user: When you book your move, you can let us know what access restrictions you have at your pickup and dropoff location. That way we can judge whether shuttling will be necessary for your move. Your mover will take care of the rest on move day.
+      price:
+        - "Movers who provide this service often include the cost at the origin of your move but not at the destination. If required, prices for the destination shuttling can be estimated prior to any commitment."
+      suitable_inventory:
+        - "All Items"
+    storage:
+      name: Storage
+      why: Need to be out of your old place before your new place is ready? Did signing the papers on your new place get delayed? Never fear. Your stuff can be locked up safe and cosy in storage until the time is right to move into your new place.
+      how_it_works: Many of our movers have their own private storage facilities which you can use if you need. Often climate controlled and located on private property these storage facilities are as safe as the house you are moving into.
+      actions_required_by_user: You may not know whether you need storage yet. Often it becomes a last minute requirement. If your mover can’t accommodate you at short notice, find comfort in knowing that we are always here to provide excellent storage options from our qualified partners. If you know already that you need storage services, great!, check the box when booking your mover.
+      price:
+        - "Storage costs vary by provider, location and space required."
+        - "TBD - This needs to have $$$ figure on it"
+      suitable_inventory:
+        - ""
+    extra_stops:
+      name: Extra Stops
+      why: Sometimes you have things at different locations, or need to drop off things along the way. Thats ok. Movers can provide the service of multiple pickup and dropoff locations to solve this logistics headache for you. Whether it’s a pickup from a storage facility, or a dropoff of some items to a relatives place, they have you covered.
+      how_it_works: Movers will pickup or dropoff everything they can at your first location and then proceed to service the second locations. If the locations are quite far apart, this process may be spread over multiple delivery days, depending on the movers availability.
+      actions_required_by_user: Just let us know if you need multiple pickup or dropoff locations during your move by selecting the checkbox at the booking screen and we can take it from there.
+      price:
+        - "Price varies by distance and location, often movers will just charge by an extra standard hourly rate for such special requests."
+      suitable_inventory:
+        - "N/A"
+    furniture_assembly:
+      <<: *furniture_disassembly
+      name: Furniture Assembly
+    appliances_install:
+      <<: *appliances
+      name: Appliances Install
+    electronics_packaging:
+      name: Electronics Packaging
+      why: These days some of your more valuable possessions tend to be electronics. Laptop & desktop computers, surround sound systems and flat screen tvs are very fragile. If not protected correctly they can easily be damaged during a move. The good news is there are special packaging materials used for such valuable items which provide the right level of protection. Movers use special boxes and packing methods to ensure your items are safe in transit. If you have the original packaging, even better! We recommend that you take the smaller items such as laptops yourself, as nobody can provide a level of care quite like yourself, but if the item is big and bulky, our movers are more than qualified to take care of it.
+      how_it_works: If you have the original packaging, you can pre-pack the item and have it ready for move day at no extra cost. If you don’t have the original box thats ok, our movers will provide the specialty box for you and include the packing of it along with the packing of all your other items. If your TV is wall mounted, for insurance reasons, our movers are not able to assist with dismounting. Any structural damage to the wall would not be covered by their insurance policy. If you require a qualified technician to remove the TV, we can arrange for one to be sent out to you before move day.
+      actions_required_by_user: If you have bulky electronic items to be moved just let us know by checking the box during the booking process. We can give you a call to figure out the nature of the items and let your mover know that their special packaging services are required. If you would like to unmount/dismount your TV yourself, there are many great instructional videos online, but be aware it is usually a 2 person job.
+      price:
+        - "Technician to unmount/dismount TV +$150"
+        - "e.g 46” Tv box +$15"
+      suitable_inventory:
+        - "Flat Screen TVs"
+        - "Desktop Computers"
+        - "Surround Sound Systems"
+    transportation_transport:
+      name: Transportation Transport
+      why: Have something that moves which you need moved?! Most of our household goods moving companies do not provide this service, but if you have a car, motorbike, truck, boat or anything of the sort, one of our qualified service providers from our partner network will be perfect for the job. There is no item too big or small which we can’t make part of your move. Just let us know, and we will arrange for it to be taken care of.
+      how_it_works: Our transporter service provider will arrange a date before your move to pickup your item and have it transported to your destination, usually delivered sometime after you have arrived. If for some reason you cant move into your new place after you have moved out of your old one, no worries, we can organize the transporter to deliver your item to a quality storage facility while you wait to move into your new place.
+      actions_required_by_user: When you are booking just check the transportation transport option. We will get in touch to find out the nature of the item and then back to you with some pricing options for you to choose from. Pick the one you like and we will take care of the rest.
+      price:
+        - "Cross country auto transport +$500"
+      suitable_inventory:
+        - "Cars"
+        - "Boats"
+        - "Trucks"
+        - "Motorcycles"
+    bulky_items:
+      name: Bulky Items
+      why: Some things are just too heavy to move yourself. Items like pool tables, outdoor jacuzzis, jetskis, gym equipment are all things that the average person shouldn’t attempt to move themselves. Often movers are not best equipped to prepare these specialty items for moving, but that’s ok, one of our qualified partners can handle the job. They specialize in preparing & packaging these items for your move, and often carry service warranties to protect your items. Problem solved!
+      how_it_works: One of our qualified partners will come out one of the days before your move to prepare and package the item for removal by your moving company. We will make sure that the moving company you choose will be aware of the special item to be moved before your move day so they can be prepared to move it safely and efficiently.
+      actions_required_by_user: Got a bulky item to move? Just let us know on the booking page. Check the bulky item box and we will get in touch to find out about the nature of your item so that we know which of our qualified partners to delegate the task to.
+      price:
+        - Every bulky item is different, and requires different handling and care. A pool table for example may cost +$200 for disassembly, transit and reassembly. Bulky antiques and collectibles which require special handling cost a similar amount. Distance of the move will also increase the cost.
+      suitable_inventory:
+        - "Pool Tables"
+        - "Antiques"
+        - "Collectibles"
+        - "Jukeboxes"
+        - "Sculptures"
+        - "Athletic Equipment"
+    pianos:
+      name: Pianos
+      why: Pianos are beautifully & delicately sculpted instruments that deserve a high level of care. They are such specialized items that many moving companies move them. The good news is that Mule partners with the best piano movers in the industry. Our piano moving partners know exactly how to care for these beautiful instruments, using the correct techniques to disassemble, transport and reassemble your piano with care.
+      how_it_works: The piano removal company will come out to your house before your move day and carefully prepare your piano for removal. Depending on whether yours is a grand, baby grand or upright piano, your piano mover will remove the legs, pedals and pad everything for transport. With service warranties, you can be sure your piano will be moved with care.
+      actions_required_by_user: When selecting a mover, let us know you have a piano to move and we will source our best service providers. We will get back to you with some options and you can choose the best one you like. Simple!
+      price:
+        - "Price varies depending on type of piano and the distance to be moved. A good estimate starts at between $100-300. We will let you know whether there are service warranties included the options we provide you with."
+      suitable_inventory:
+        - "Grand Pianos"
+        - "Baby Grand"
+        - "Upright"
+    gun_safe:
+      name: Gun Safe
+      why: Gun safes can be extremely heavy, often over 500lbs! These items are dangerous for homeowners to move. The good news is we partner with many great service providers who know just how to transport such heavy items with care. What’s better is that many of them offer a service warranty to protect your item in transit. By choosing a professional service provider, you get the peace of mind that your item is in good hands and you avoid the dangers that come with an item that is so heavy.
+      how_it_works: One of our qualified service providers will come out to your home before move day and prepare the item for moving. They will arrange to have the item moved before you leave your old house and have it delivered after you get to your new place.
+      actions_required_by_user: When booking a mover, let us know you have a gun safe to move and we will source our best service providers providing you with a range of options to choose from. We will get in contact with you to find out about the nature of the item to make sure we get you the best price possible.
+      price:
+        - "Depending on where in the house the item is located, how heavy it is and how far it has to travel will determine the cost of the move. Usually moving gun safes can cost +$150."
+      suitable_inventory:
+        - "Gun safes"
+        - "General Safes"
+        - "Other very heavy items"

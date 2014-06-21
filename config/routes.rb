@@ -1,6 +1,8 @@
 MuleMoving::Application.routes.draw do
   root 'home#hello'
 
+  get '/services/:service', to: 'services#details', as: :service
+
   get '/movers', to: 'movers#index', as: :movers
   get '/mover/:id', to: 'movers#show', as: :mover
 
