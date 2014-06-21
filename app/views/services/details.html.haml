@@ -1,13 +1,14 @@
 .container.mule-panel
   .row
     .col-xs-4
-      %h2 Services
-      %ul
-        - @services.each do |service|
-          %li= link_to service.to_s.humanize, service_path(service)
+      - @services.each do |service_category|
+        %p.lead= "#{service_category[:category]} Services"
+        %ul
+          - service_category[:items].each do |service|
+            %li= link_to service[:name], service_path(service[:id])
     .col-xs-8
       %h2= t("services.#{@service}.name")
-      %p.lead What is it?
+      %hr
       %p= t("services.#{@service}.why")
       %p.lead How it works
       %p= t("services.#{@service}.how_it_works")

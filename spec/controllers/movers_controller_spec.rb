@@ -34,6 +34,12 @@ describe MoversController do
 
       expect(assigns(:mover_list_items)).to eq [serialized_item]
     end
+
+    it "assigns services" do
+      get :index
+
+      expect(assigns(:services)).to eq MoverServicesRecord::SERVICES
+    end
   end
 
   describe "GET #show" do
