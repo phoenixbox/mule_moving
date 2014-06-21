@@ -1,29 +1,8 @@
 = render partial: "hero_container"
 = render partial: "explainer_row"
-%section.row.white
-  .container
-    %h2 The Moving Process
-    %p.lead We've hand selected quality licensed movers and sorted them by rating to make sure you're not left in the dust.
-= render partial: 'progress', locals: {current_step: :one}
-= render partial: 'progress', locals: {current_step: :two}
-= render partial: 'progress', locals: {current_step: :three}
-= render partial: 'progress', locals: {current_step: :four}
-%section.row.white
-  .col-xs-12
-    %h1.text-center
-      Mule Moving, we help you move.
-
-.row.brand-color
-  .col-lg-12
-    %ul.nav.nav-pills.nav-justified
-      %li
-        %a.text-white{href: "/"}
-          = "© #{Date.today.year}  Mule Moving"
-      %li
-        %a.text-white Privacy
-      %li
-        %a.text-white Terms of Service
-
+= render partial: "recent_moves"
+= render partial: "progress"
+= render partial: "shared/footer"
 
 :javascript
   $(document).ready(function(){
