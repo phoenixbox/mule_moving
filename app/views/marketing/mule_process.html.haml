@@ -1,0 +1,52 @@
+.container.mule-panel
+  .row
+    .col-xs-4
+      %ul.nav.nav-pills.nav-stacked
+        %li{class: ("active" if @process == "problem")}
+          = link_to "The Problem", process_path(:problem)
+        %li{class: ("active" if @process == "solution")}
+          = link_to "How Mule Helps", process_path(:solution)
+        %li{class: ("active" if @process == "process")}
+          = link_to "The Mule Process", process_path(:process)
+    .col-xs-8
+      - if @process == "problem"
+        %h2 The Problem
+        %p
+          %strong Discovery
+        %p Finding a good quality moving company is hard. A quick search online will show you all the horror stories where people have not found the right company. The consequences can be serious, un-insured moving companies who breaking things in transit or holding them after the move demanding higher fees can be a huge headache.
+        %p
+          %strong Fees
+        %p Shady moving companies quote a low rate only to sneak in extra fees on the day of the move. Suddenly you are being charge for access problems to your home, trips the truck has to take and fuel surcharges! Moves with low quality companies can end up costing many times their original price.
+      - elsif @process == "solution"
+        %h2 How We Help
+        %p People should know upfront what the costs involved with moving are, before all of your possessions are loaded onto a truck. There should be no hidden price surprises from your moving company. Thats where Mule comes in.
+        %p We ensure that our moving companies meet a standard that customers expect. Companies whom you can trust to carefully package and transport your goods from your old home to your new home. We ensure that our moving companies are licensed by the Department of Transport and that they have insurance.
+        %p Choosing the right mover can be difficult if you are not sure what to look for. Mule lets you know the key pieces of information that affect your move. We let you know whether your chosen mover provides any specialized service you might need or whether a different qualified technician is required. We let you know what level of insurance you are protected by so that you know what’s covered before you move.
+        %p Mule provides all these quality moving companies in a handy list to browse and choose from. You can see which services different movers provide and select the one that best fits your upcoming move. Need a mover whom also moves pianos? Mule has a mover for that. Need to know what kind of prices you are dealing with? We tell you that too. Our goal is for you to be able to make your most informed moving provider decision.
+      - elsif @process == "process"
+        %h2 Moving with Mule
+        %p.lead We've hand selected quality licensed movers and sorted them by rating to make sure you're not left in the dust.
+        .media
+          .pull-left.process-step
+            1
+          .media-body
+            %h4.media-heading= t("mule_process.one.header")
+            %p= t("mule_process.one.content")
+        .media
+          .pull-left.process-step
+            2
+          .media-body
+            %h4.media-heading= t("mule_process.two.header")
+            %p= t("mule_process.two.content")
+        .media
+          .pull-left.process-step
+            3
+          .media-body
+            %h4.media-heading= t("mule_process.three.header")
+            %p= t("mule_process.three.content")
+        .media
+          .pull-left.process-step
+            4
+          .media-body
+            %h4.media-heading= t("mule_process.four.header")
+            %p= t("mule_process.four.content")
